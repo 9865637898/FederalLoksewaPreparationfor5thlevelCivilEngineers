@@ -98,8 +98,29 @@
         .btn-mistake { background: linear-gradient(135deg, #8b5cf6, #ec4899); box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); margin-bottom: 20px; }
         .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); margin-top: 15px; }
         @keyframes gradientBorder { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+     
+   /* --- HORIZONTAL NAV BUTTONS (APP HUB) --- */
+        .app-nav-row { display: flex; gap: 8px; width: 100%; margin-bottom: 25px; }
+        .nav-magic-btn {
+            flex: 1; background: #0f172a; position: relative; padding: 12px 2px;
+            font-size: 0.8rem; font-weight: 800; color: #fff; text-align: center;
+            text-transform: uppercase; border: none; border-radius: 12px; cursor: pointer;
+            z-index: 1; transition: 0.2s; letter-spacing: 0.5px;
+        }
+        .nav-magic-btn:active { transform: scale(0.95); }
+        .nav-magic-btn::before {
+            content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(90deg, #ff00cc, #333399, #00d2ff, #ff00cc);
+            background-size: 300%; z-index: -1; border-radius: 14px;
+            animation: gradientBorder 3s linear infinite;
+        }
+        .nav-magic-btn::after {
+            content: ''; position: absolute; inset: 0;
+            background: rgba(15, 23, 42, 0.95); border-radius: 12px; z-index: -1;
+        }
+        .nav-magic-btn:hover::before { filter: blur(6px); }
 
-        /* --- GRID --- */
+   /* --- GRID --- */
         .topic-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
         .topic-btn {
             background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255,255,255,0.1); padding: 20px; border-radius: 16px; 
@@ -164,10 +185,13 @@
     </div>
 
     <div id="screen-dash" class="screen">
-        <header>
-            <h1>Dashboard</h1>
-        </header>
-        <div class="container">
+        <div class="container" style="padding-top: 35px;">
+            
+            <div class="app-nav-row">
+                <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/MadheshQuiz/'">Madhesh</button>
+                <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/Designofbeamsinglyvsdoubly/'">Numericals</button>
+                <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/Designofcolumn/'">Random</button>
+            </div>
             
             <div class="profile-banner">
                 <div class="pb-avatar-wrap">

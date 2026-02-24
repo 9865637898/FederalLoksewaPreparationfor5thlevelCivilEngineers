@@ -38,7 +38,31 @@
             box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.05); margin-bottom: 20px;
         }
 
-        /* --- PROFILE UPLOAD UI --- */
+        /* --- DASHBOARD PROFILE BANNER --- */
+        .profile-banner {
+            background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 210, 255, 0.3);
+            border-radius: 20px; padding: 15px 20px; display: flex; align-items: center;
+            margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .pb-avatar-wrap {
+            position: relative; width: 65px; height: 65px; flex-shrink: 0;
+            border-radius: 50%; border: 2px solid #00d2ff; background: #1e293b;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .pb-avatar-wrap img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .pb-upload-badge {
+            position: absolute; bottom: -4px; right: -4px; background: #ff00cc;
+            width: 26px; height: 26px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; cursor: pointer;
+            font-size: 0.8rem; box-shadow: 0 0 10px rgba(255,0,204,0.6);
+            border: 2px solid #0f172a; transition: 0.2s;
+        }
+        .pb-upload-badge:active { transform: scale(0.9); }
+        .pb-info { margin-left: 15px; flex-grow: 1; }
+        .pb-name { font-size: 1.3rem; font-weight: 800; margin: 0; color: #fff; line-height: 1.2; }
+        .pb-qual { font-size: 0.9rem; color: #00d2ff; margin: 3px 0 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- HOME PROFILE UPLOAD UI --- */
         .profile-upload-wrapper {
             width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 20px auto;
             border: 3px dashed #00d2ff; display: flex; align-items: center; justify-content: center;
@@ -47,7 +71,7 @@
         .profile-upload-wrapper:hover { border-style: solid; box-shadow: 0 0 20px rgba(0,210,255,0.5); }
         .profile-upload-wrapper img { width: 100%; height: 100%; object-fit: cover; display: none; }
         .upload-text { font-size: 0.9rem; font-weight: 600; color: #00d2ff; text-align: center; position: absolute; }
-        #file-upload { display: none; }
+        .hidden-file { display: none; }
 
         /* --- INPUTS --- */
         input, select {
@@ -106,7 +130,7 @@
         .score-badge { background: rgba(0,0,0,0.6); border: 1px solid #00d2ff; padding: 8px 20px; border-radius: 20px; font-weight: 800; color: #00d2ff; }
 
         /* --- RESULT SCREEN --- */
-        .result-avatar { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #00d2ff; object-fit: cover; margin: -60px auto 15px auto; display: block; background: #0f172a; box-shadow: 0 0 20px rgba(0,210,255,0.5);}
+        .result-avatar { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #00d2ff; object-fit: cover; margin: -60px auto 15px auto; display: block; background: #1e293b; box-shadow: 0 0 20px rgba(0,210,255,0.5);}
         .result-score-text { font-size: 4rem; font-weight: 900; color: #00e676; text-shadow: 0 0 20px rgba(0,230,118,0.5); margin: 10px 0; line-height: 1;}
         .advice-box { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; }
         .hidden { display: none !important; }
@@ -121,11 +145,11 @@
         </header>
         <div class="container">
             <div class="card">
-                <label class="profile-upload-wrapper" for="file-upload" id="profile-preview-box">
-                    <span class="upload-text">Upload<br>Photo</span>
+                <label class="profile-upload-wrapper" for="file-upload-home" id="profile-preview-box">
+                    <span class="upload-text" id="home-upload-text">Upload<br>Photo</span>
                     <img id="profile-img-preview" src="">
                 </label>
-                <input type="file" id="file-upload" accept="image/*" onchange="app.handleImageUpload(event)">
+                <input type="file" id="file-upload-home" class="hidden-file" accept="image/*" onchange="app.handleImageUpload(event)">
 
                 <input type="text" id="input-name" placeholder="Enter Full Name">
                 <select id="input-qual">
@@ -141,10 +165,23 @@
 
     <div id="screen-dash" class="screen">
         <header>
-            <h1 id="dash-greeting">Dashboard</h1>
-            <p>Select a syllabus topic to begin.</p>
+            <h1>Dashboard</h1>
         </header>
         <div class="container">
+            
+            <div class="profile-banner">
+                <div class="pb-avatar-wrap">
+                    <img id="dash-profile-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2364748b'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
+                    
+                    <label for="file-upload-dash" id="dash-upload-btn" class="pb-upload-badge">📷</label>
+                    <input type="file" id="file-upload-dash" class="hidden-file" accept="image/*" onchange="app.handleImageUpload(event)">
+                </div>
+                <div class="pb-info">
+                    <h2 class="pb-name" id="dash-name">Name</h2>
+                    <p class="pb-qual" id="dash-qual">Qualification</p>
+                </div>
+            </div>
+
             <div id="topics-container" class="topic-grid"></div>
         </div>
     </div>
@@ -217,7 +254,7 @@
         </header>
         <div class="container">
             <div class="card" style="text-align: center; margin-top: 40px;">
-                <img id="result-profile-img" class="result-avatar hidden" src="">
+                <img id="result-profile-img" class="result-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2364748b'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
                 <h2 id="result-name" style="margin-top: 0; font-size: 1.8rem;">Outstanding work!</h2>
                 
                 <div id="result-percentage" class="result-score-text">0%</div>
@@ -264,19 +301,16 @@
             { id: "2.11", title: "मानवीय मूल्य मान्यता, नागरिक कर्तव्य र अनुशासन" }
         ];
 
-        // --- AUDIO ENGINE (Web Audio API Synth) ---
+        // --- AUDIO ENGINE ---
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const AudioEngine = {
             playTone: function(freq1, freq2, type, duration) {
                 if (app.state.isMuted) return;
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-                osc.type = type;
-                osc.frequency.setValueAtTime(freq1, audioCtx.currentTime);
+                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
+                osc.type = type; osc.frequency.setValueAtTime(freq1, audioCtx.currentTime);
                 osc.frequency.exponentialRampToValueAtTime(freq2, audioCtx.currentTime + duration);
-                gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+                gain.gain.setValueAtTime(0.5, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
                 osc.connect(gain); gain.connect(audioCtx.destination);
                 osc.start(); osc.stop(audioCtx.currentTime + duration);
             },
@@ -292,14 +326,8 @@
         const app = {
             state: {
                 user: { name: "", qual: "", pic: "" },
-                isPremium: false,
-                currentTopicId: null,
-                quizSet: [], 
-                currentIndex: 0,
-                score: 0,
-                isMuted: false,
-                mistakes: {}, // Format: { "1.1": [q1, q2], "1.2": [q4] }
-                isMistakeMode: false // True if playing the Mistake Bank
+                isPremium: false, currentTopicId: null, quizSet: [], 
+                currentIndex: 0, score: 0, isMuted: false, mistakes: {}, isMistakeMode: false
             },
 
             init: function() {
@@ -312,7 +340,6 @@
 
                 if (savedUser) {
                     this.state.user = JSON.parse(savedUser);
-                    if(this.state.user.pic) this.renderProfilePic(this.state.user.pic);
                     this.buildDashboard();
                     this.showScreen('screen-dash');
                 }
@@ -324,7 +351,7 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             },
 
-            // PROFILE PIC LOGIC (Canvas Compression)
+            // UNIVERSAL COMPRESSION LOGIC (Used for both Home and Dashboard)
             handleImageUpload: function(event) {
                 const file = event.target.files[0];
                 if (!file) return;
@@ -332,27 +359,39 @@
                 reader.onload = (e) => {
                     const img = new Image();
                     img.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
+                        const canvas = document.createElement('canvas'); const ctx = canvas.getContext('2d');
                         canvas.width = 200; canvas.height = 200;
                         const size = Math.min(img.width, img.height);
                         const sx = (img.width - size) / 2, sy = (img.height - size) / 2;
                         ctx.drawImage(img, sx, sy, size, size, 0, 0, 200, 200);
-                        const base64Pic = canvas.toDataURL('image/jpeg', 0.7); // Compress
+                        const base64Pic = canvas.toDataURL('image/jpeg', 0.7); 
+                        
                         this.state.user.pic = base64Pic;
-                        this.renderProfilePic(base64Pic);
+                        
+                        // If they are doing this from Dashboard, save immediately
+                        if(this.state.user.name) {
+                            localStorage.setItem('loksewa_user', JSON.stringify(this.state.user));
+                            this.updateProfileUIs();
+                        } else {
+                            // If they are doing this from Home before registering
+                            document.getElementById('home-upload-text').style.display = 'none';
+                            const preview = document.getElementById('profile-img-preview');
+                            preview.src = base64Pic; preview.style.display = 'block';
+                        }
                     };
                     img.src = e.target.result;
                 };
                 reader.readAsDataURL(file);
             },
 
-            renderProfilePic: function(base64Str) {
-                document.querySelector('.upload-text').style.display = 'none';
-                const preview = document.getElementById('profile-img-preview');
-                preview.src = base64Str; preview.style.display = 'block';
-                const resultImg = document.getElementById('result-profile-img');
-                resultImg.src = base64Str; resultImg.classList.remove('hidden');
+            updateProfileUIs: function() {
+                if(this.state.user.pic) {
+                    // Update Dashboard
+                    document.getElementById('dash-profile-img').src = this.state.user.pic;
+                    document.getElementById('dash-upload-btn').style.display = 'none'; // Erase Camera
+                    // Update Result Screen
+                    document.getElementById('result-profile-img').src = this.state.user.pic;
+                }
             },
 
             registerUser: function() {
@@ -366,7 +405,11 @@
             },
 
             buildDashboard: function() {
-                document.getElementById('dash-greeting').innerText = `Hello, ${this.state.user.name.split(" ")[0]}! 🚀`;
+                // Populate Profile Banner
+                document.getElementById('dash-name').innerText = this.state.user.name;
+                document.getElementById('dash-qual').innerText = this.state.user.qual;
+                this.updateProfileUIs(); // Triggers pic logic and hides camera if image exists
+
                 const container = document.getElementById('topics-container');
                 container.innerHTML = "";
                 allTopics.forEach((topic, index) => {
@@ -383,38 +426,28 @@
                 document.getElementById('detail-topic-title').innerText = `${topic.id}: ${topic.title}`;
                 
                 const btnB = document.getElementById('btn-set-b');
-                if (this.state.isPremium) {
-                    btnB.innerText = "Set B - Unlocked ✨"; btnB.className = "btn btn-magic";
-                } else {
-                    btnB.innerText = "Set B - Premium MCQs 🔐"; btnB.className = "btn btn-premium";
-                }
+                if (this.state.isPremium) { btnB.innerText = "Set B - Unlocked ✨"; btnB.className = "btn btn-magic"; } 
+                else { btnB.innerText = "Set B - Premium MCQs 🔐"; btnB.className = "btn btn-premium"; }
 
-                // Check Mistake Bank for this specific topic
                 const topicMistakes = this.state.mistakes[this.state.currentTopicId] || [];
                 const mBankBtn = document.getElementById('btn-mistake-bank');
                 if (topicMistakes.length > 0) {
                     document.getElementById('mistake-count').innerText = topicMistakes.length;
                     mBankBtn.classList.remove('hidden');
-                } else {
-                    mBankBtn.classList.add('hidden');
-                }
+                } else { mBankBtn.classList.add('hidden'); }
 
                 this.showScreen('screen-topic-detail');
             },
 
             loadSet: async function(setType) {
                 this.state.isMistakeMode = false;
-                if (setType === 'B' && !this.state.isPremium) {
-                    this.showScreen('screen-premium'); return;
-                }
+                if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
                 try {
                     const response = await fetch(`data/${this.state.currentTopicId}.json`);
                     if (!response.ok) return alert(`File not found: 'data/${this.state.currentTopicId}.json'. Please upload it.`);
                     const data = await response.json();
-                    
                     if (setType === 'A') this.state.quizSet = data.slice(0, 20);
                     else this.state.quizSet = data.slice(20);
-                    
                     if(this.state.quizSet.length === 0) return alert("No questions available in this set!");
                     this.startQuiz();
                 } catch (e) { alert("JSON error. Check format."); console.error(e); }
@@ -432,67 +465,48 @@
             },
 
             startQuiz: function() {
-                if (audioCtx.state === 'suspended') audioCtx.resume(); // Unlock audio
-                this.state.currentIndex = 0;
-                this.state.score = 0;
-                this.showScreen('screen-quiz');
-                this.renderQuestion();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                this.state.currentIndex = 0; this.state.score = 0;
+                this.showScreen('screen-quiz'); this.renderQuestion();
             },
 
             renderQuestion: function() {
                 const q = this.state.quizSet[this.state.currentIndex];
-                const total = this.state.quizSet.length;
-                const currentNum = this.state.currentIndex + 1;
-                
-                document.getElementById('quiz-progress-text').innerText = this.state.isMistakeMode ? `Mistake Bank: ${currentNum}/${total}` : `Q: ${currentNum}/${total}`;
+                const total = this.state.quizSet.length; const currentNum = this.state.currentIndex + 1;
+                document.getElementById('quiz-progress-text').innerText = this.state.isMistakeMode ? `Mistakes: ${currentNum}/${total}` : `Q: ${currentNum}/${total}`;
                 document.getElementById('quiz-score').innerText = `Score: ${this.state.score}`;
                 document.getElementById('progress-fill').style.width = `${((currentNum - 1) / total) * 100}%`;
                 document.getElementById('question-text').innerText = q.q;
                 
-                const optsDiv = document.getElementById('options-container');
-                optsDiv.innerHTML = "";
+                const optsDiv = document.getElementById('options-container'); optsDiv.innerHTML = "";
                 document.getElementById('explanation-box').style.display = 'none';
                 document.getElementById('btn-next').classList.add('hidden');
 
                 const labels = ['A', 'B', 'C', 'D'];
                 q.o.forEach((opt, index) => {
-                    const row = document.createElement('div');
-                    row.className = 'option-row';
+                    const row = document.createElement('div'); row.className = 'option-row';
                     row.innerHTML = `<span class="opt-letter">${labels[index]}</span> <span>${opt}</span>`;
-                    row.onclick = () => this.handleAnswer(index, row);
-                    optsDiv.appendChild(row);
+                    row.onclick = () => this.handleAnswer(index, row); optsDiv.appendChild(row);
                 });
             },
 
             handleAnswer: function(selectedIndex, rowElement) {
                 const allRows = document.querySelectorAll('.option-row');
                 allRows.forEach(r => r.style.pointerEvents = 'none');
-                
-                const topicId = this.state.currentTopicId;
-                const q = this.state.quizSet[this.state.currentIndex];
+                const topicId = this.state.currentTopicId; const q = this.state.quizSet[this.state.currentIndex];
                 const isCorrect = selectedIndex === q.a;
 
-                // MISTAKE LOGIC 
                 if (!this.state.mistakes[topicId]) this.state.mistakes[topicId] = [];
 
                 if (isCorrect) {
-                    rowElement.classList.add('correct');
-                    this.state.score++;
-                    AudioEngine.correct();
-                    
-                    // Eraser: If correct in Mistake Bank, remove it from bank!
+                    rowElement.classList.add('correct'); this.state.score++; AudioEngine.correct();
                     if (this.state.isMistakeMode) {
                         this.state.mistakes[topicId] = this.state.mistakes[topicId].filter(item => item.q !== q.q);
                         localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
                     }
                 } else {
-                    rowElement.classList.add('wrong');
-                    allRows[q.a].classList.add('correct');
-                    AudioEngine.wrong();
-
-                    // Add to Mistake Bank if not already there
-                    const exists = this.state.mistakes[topicId].find(item => item.q === q.q);
-                    if (!exists) {
+                    rowElement.classList.add('wrong'); allRows[q.a].classList.add('correct'); AudioEngine.wrong();
+                    if (!this.state.mistakes[topicId].find(item => item.q === q.q)) {
                         this.state.mistakes[topicId].push(q);
                         localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
                     }
@@ -506,9 +520,7 @@
                 if (this.state.currentIndex === this.state.quizSet.length - 1) {
                     document.getElementById('progress-fill').style.width = `100%`;
                     document.getElementById('btn-next').innerText = "Finish Exam 🎉";
-                } else {
-                    document.getElementById('btn-next').innerText = "Next Question ➔";
-                }
+                } else { document.getElementById('btn-next').innerText = "Next Question ➔"; }
             },
 
             nextQuestion: function() {
@@ -518,27 +530,18 @@
             },
 
             showResults: function() {
-                this.showScreen('screen-result');
-                AudioEngine.tada();
-
-                const total = this.state.quizSet.length;
-                const mistakesMade = total - this.state.score;
+                this.showScreen('screen-result'); AudioEngine.tada();
+                const total = this.state.quizSet.length; const mistakesMade = total - this.state.score;
                 const percentage = Math.round((this.state.score / total) * 100);
                 
-                // Personalize Texts
-                const firstName = this.state.user.name.split(" ")[0];
-                document.getElementById('result-name').innerText = `Exam Completed, ${firstName}!`;
+                document.getElementById('result-name').innerText = `Exam Completed, ${this.state.user.name.split(" ")[0]}!`;
                 document.getElementById('result-percentage').innerText = `${percentage}%`;
-                
-                document.getElementById('result-accuracy').innerText = 
-                    `You attempted ${total} questions, got ${this.state.score} correct, and made ${mistakesMade} mistake${mistakesMade===1?'':'s'}.`;
+                document.getElementById('result-accuracy').innerText = `You attempted ${total} questions, got ${this.state.score} correct, and made ${mistakesMade} mistake${mistakesMade===1?'':'s'}.`;
 
-                // Color Logic
                 const percentEl = document.getElementById('result-percentage');
                 let color = percentage >= 80 ? '#00e676' : percentage >= 60 ? '#00d2ff' : percentage >= 40 ? '#f59e0b' : '#ff1744';
                 percentEl.style.color = color; percentEl.style.textShadow = `0 0 20px ${color}80`;
 
-                // Dynamic Advice
                 let adviceStr = "";
                 if (percentage >= 80) adviceStr = "Outstanding! 🏆 Your preparation is excellent. Keep reviewing to maintain this mastery for the final exam.";
                 else if (percentage >= 60) adviceStr = "Good Job! 📈 You are very close to your goal. Focus on your Mistake Bank to push this score over 80%.";
@@ -549,19 +552,13 @@
                 advEl.innerText = adviceStr; advEl.style.color = color;
             },
 
-            requestWhatsAppCode: function() {
-                window.open(`${WHATSAPP_NUM}?text=${encodeURIComponent(`Hello! I am ${this.state.user.name} (${this.state.user.qual}). I want to unlock Set B Loksewa topics.`)}`, '_blank');
-            },
+            requestWhatsAppCode: function() { window.open(`${WHATSAPP_NUM}?text=${encodeURIComponent(`Hello! I am ${this.state.user.name} (${this.state.user.qual}). I want to unlock Set B Loksewa topics.`)}`, '_blank'); },
 
             verifyCode: function() {
-                const code = document.getElementById('input-code').value.trim();
-                const passBox = document.getElementById('input-password');
+                const code = document.getElementById('input-code').value.trim(); const passBox = document.getElementById('input-password');
                 if (!code) return alert("Code cannot be empty.");
-
-                const btn = document.getElementById('btn-verify');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = 'Verifying <div class="loader"></div>'; btn.style.pointerEvents = 'none';
-                passBox.value = ''; 
+                const btn = document.getElementById('btn-verify'); const originalText = btn.innerHTML;
+                btn.innerHTML = 'Verifying <div class="loader"></div>'; btn.style.pointerEvents = 'none'; passBox.value = ''; 
 
                 fetch(`${WEB_APP_URL}?code=${code}&name=${this.state.user.name}&qual=${this.state.user.qual}`)
                     .then(res => res.json())
@@ -575,10 +572,7 @@
                                 this.showScreen('screen-topic-detail');
                                 this.openTopic({ id: this.state.currentTopicId, title: document.getElementById('detail-topic-title').innerText.split(': ')[1] }); 
                             }, 1200);
-                        } else {
-                            alert(data.message || "Invalid Code");
-                            btn.innerHTML = originalText; btn.style.pointerEvents = 'auto';
-                        }
+                        } else { alert(data.message || "Invalid Code"); btn.innerHTML = originalText; btn.style.pointerEvents = 'auto'; }
                     }).catch(() => { alert("Network Error."); btn.innerHTML = originalText; btn.style.pointerEvents = 'auto'; });
             }
         };

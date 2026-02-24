@@ -301,25 +301,66 @@
             { id: "2.11", title: "मानवीय मूल्य मान्यता, नागरिक कर्तव्य र अनुशासन" }
         ];
 
-        // --- AUDIO ENGINE ---
+        // --- ADVANCED AUDIO ENGINE ---
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const AudioEngine = {
-            playTone: function(freq1, freq2, type, duration) {
+            playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null, isMuffled = false) {
                 if (app.state.isMuted) return;
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
-                osc.type = type; osc.frequency.setValueAtTime(freq1, audioCtx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(freq2, audioCtx.currentTime + duration);
-                gain.gain.setValueAtTime(0.5, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
-                osc.connect(gain); gain.connect(audioCtx.destination);
-                osc.start(); osc.stop(audioCtx.currentTime + duration);
+                
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                
+                // Frequency Envelope (Glide or Steady)
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                if (isGlide && endFreq) {
+                    osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
+                }
+
+                // Volume Envelope (Punchy attack, quick decay)
+                gain.gain.setValueAtTime(0, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+                // Optional Filter for "Wrong" sounds to make it a soft thud
+                if (isMuffled) {
+                    const filter = audioCtx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(800, audioCtx.currentTime);
+                    filter.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + duration);
+                    osc.connect(filter);
+                    filter.connect(gain);
+                } else {
+                    osc.connect(gain);
+                }
+
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
             },
-            correct: () => AudioEngine.playTone(600, 1200, 'sine', 0.15),
-            wrong: () => AudioEngine.playTone(150, 80, 'triangle', 0.25),
+            
+            // Bright, premium UI pop (Two rapid ascending notes)
+            correct: () => {
+                AudioEngine.playCustomTone(880, 'sine', 0.1, 0.4); // A5
+                setTimeout(() => AudioEngine.playCustomTone(1318.51, 'sine', 0.3, 0.3), 80); // E6
+            },
+            
+            // Soft, descending muffled thud
+            wrong: () => {
+                AudioEngine.playCustomTone(200, 'sawtooth', 0.3, 0.5, true, 50, true);
+            },
+            
+            // Grand major chord arpeggio
             tada: () => {
-                setTimeout(() => AudioEngine.playTone(400, 400, 'square', 0.1), 0);
-                setTimeout(() => AudioEngine.playTone(500, 500, 'square', 0.1), 150);
-                setTimeout(() => AudioEngine.playTone(600, 800, 'square', 0.4), 300);
+                const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+                notes.forEach((freq, i) => {
+                    setTimeout(() => AudioEngine.playCustomTone(freq, 'triangle', 0.4, 0.2), i * 100);
+                });
+                // Final sustained chord
+                setTimeout(() => {
+                    notes.forEach(freq => AudioEngine.playCustomTone(freq, 'sine', 1.2, 0.15));
+                }, notes.length * 100);
             }
         };
 
@@ -581,3 +622,4 @@
     </script>
 </body>
 </html>
+

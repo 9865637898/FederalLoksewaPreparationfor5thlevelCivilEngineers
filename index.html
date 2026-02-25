@@ -220,7 +220,7 @@
                 <p style="color:#cbd5e1; margin-bottom: 30px;">Engage in a realistic, time-efficient mock exam.</p>
 
                 <button class="btn btn-magic" style="margin-bottom: 20px;" onclick="app.loadSet('A')">
-                    Set A - Free Preview (First 20)
+                    Set A - Free Preview (First 10)
                 </button>
                 
                 <button id="btn-set-b" class="btn btn-premium" style="margin-bottom: 20px;" onclick="app.loadSet('B')">
@@ -504,19 +504,33 @@
                 this.showScreen('screen-topic-detail');
             },
 
-            loadSet: async function(setType) {
-                this.state.isMistakeMode = false;
-                if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
-                try {
-                    const response = await fetch(`data/${this.state.currentTopicId}.json`);
-                    if (!response.ok) return alert(`File not found: 'data/${this.state.currentTopicId}.json'. Please upload it.`);
-                    const data = await response.json();
-                    if (setType === 'A') this.state.quizSet = data.slice(0, 20);
-                    else this.state.quizSet = data.slice(20);
-                    if(this.state.quizSet.length === 0) return alert("No questions available in this set!");
-                    this.startQuiz();
-                } catch (e) { alert("JSON error. Check format."); console.error(e); }
-            },
+                    loadSet: async function(setType) {
+            this.state.isMistakeMode = false;
+            if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
+            try {
+                let data;
+                // 1. Try fetching specific file first (e.g., 1.2A.json or 1.2B.json)
+                let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
+                
+                if (response.ok) {
+                    // If the specific A or B file exists, use ALL its MCQs
+                    data = await response.json();
+                    this.state.quizSet = data; 
+                } else {
+                    // 2. Fallback to combined file (e.g., 1.2.json)
+                    response = await fetch(`data/${this.state.currentTopicId}.json`);
+                    if (!response.ok) return alert(`Data file not found for topic ${this.state.currentTopicId}.`);
+                    data = await response.json();
+                    
+                    // 3. Divide combined file: 10 for Set A, remaining for Set B
+                    if (setType === 'A') this.state.quizSet = data.slice(0, 10);
+                    else this.state.quizSet = data.slice(10);
+                }
+
+                if(this.state.quizSet.length === 0) return alert("No questions available in this set!");
+                this.startQuiz();
+            } catch (e) { alert("JSON error. Check format."); console.error(e); }
+        },
 
             loadMistakeBank: function() {
                 this.state.isMistakeMode = true;
@@ -646,6 +660,7 @@
     </script>
 </body>
 </html>
+
 
 
 

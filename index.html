@@ -150,6 +150,36 @@
         .progress-fill { height: 100%; background: linear-gradient(90deg, #00d2ff, #3a7bd5); width: 0%; transition: 0.4s; border-radius: 20px; box-shadow: 0 0 15px #00d2ff;}
         .score-badge { background: rgba(0,0,0,0.6); border: 1px solid #00d2ff; padding: 8px 20px; border-radius: 20px; font-weight: 800; color: #00d2ff; }
 
+        /* --- SKIP GRID MODAL STYLES --- */
+        .skip-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            z-index: 9999; display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: 0.3s ease;
+        }
+        .skip-modal-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .skip-modal-content {
+            background: #0f172a; border: 2px solid #00d2ff; border-radius: 20px;
+            width: 90%; max-width: 450px; max-height: 80vh; padding: 20px;
+            display: flex; flex-direction: column; box-shadow: 0 10px 50px rgba(0, 210, 255, 0.4);
+        }
+        .skip-grid {
+            display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px;
+            overflow-y: auto; padding-right: 5px; margin-top: 10px;
+        }
+        .skip-grid::-webkit-scrollbar { width: 6px; }
+        .skip-grid::-webkit-scrollbar-thumb { background: #00d2ff; border-radius: 10px; }
+        .skip-num-btn {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff; border-radius: 50%; width: 100%; aspect-ratio: 1/1; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: 0.2s; padding: 0;
+        }
+        .skip-num-btn:hover { background: #00d2ff; color: #000; transform: scale(1.1); border-color: #00d2ff; }
+        .skip-num-btn.current { background: #ff00cc; border-color: #ff00cc; color: #fff; box-shadow: 0 0 10px #ff00cc; }
+        .skip-num-btn.answered { background: #00e676; border-color: #00c853; color: #000; }
+
         /* --- RESULT SCREEN --- */
         .result-avatar { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #00d2ff; object-fit: cover; margin: -60px auto 15px auto; display: block; background: #1e293b; box-shadow: 0 0 20px rgba(0,210,255,0.5);}
         .result-score-text { font-size: 4rem; font-weight: 900; color: #00e676; text-shadow: 0 0 20px rgba(0,230,118,0.5); margin: 10px 0; line-height: 1;}
@@ -171,7 +201,6 @@
                     <img id="profile-img-preview" src="">
                 </label>
                 <input type="file" id="file-upload-home" class="hidden-file" accept="image/*" onchange="app.handleImageUpload(event)">
-
                 <input type="text" id="input-name" placeholder="Enter Full Name">
                 <select id="input-qual">
                     <option value="" disabled selected>Select Qualification</option>
@@ -186,22 +215,20 @@
 
     <div id="screen-dash" class="screen">
         <div class="container" style="padding-top: 35px;">
-            
             <div class="app-nav-row">
                 <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/MadheshQuiz/'">Madhesh</button>
                 <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/SMARTMOCK/'">Daily Tests</button>
                 <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/Try/'">Smart Mock Tests</button>
             </div>
-             <div class="app-nav-row">
+            <div class="app-nav-row">
                 <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/CivilNotes/'">Civil Engineering 7th,5th,4th Notes Package</button>
-             </div>
+            </div>
             <div class="app-nav-row">
                 <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/SmartMocktestresultlikeloksewa/'">Live Result Display</button>
-             </div>
+            </div>
             <div class="profile-banner">
                 <div class="pb-avatar-wrap">
                     <img id="dash-profile-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2364748b'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
-                    
                     <label for="file-upload-dash" id="dash-upload-btn" class="pb-upload-badge">📷</label>
                     <input type="file" id="file-upload-dash" class="hidden-file" accept="image/*" onchange="app.handleImageUpload(event)">
                 </div>
@@ -210,7 +237,6 @@
                     <p class="pb-qual" id="dash-qual">Qualification</p>
                 </div>
             </div>
-
             <div id="topics-container" class="topic-grid"></div>
         </div>
     </div>
@@ -223,19 +249,9 @@
             <div class="card" style="text-align: center;">
                 <h3 style="margin-top:0; font-size: 1.6rem;">Select Practice Set</h3>
                 <p style="color:#cbd5e1; margin-bottom: 30px;">Engage in a realistic, time-efficient mock exam.</p>
-
-                <button class="btn btn-magic" style="margin-bottom: 20px;" onclick="app.loadSet('A')">
-                    Set A - Free Preview (First 10)
-                </button>
-                
-                <button id="btn-set-b" class="btn btn-premium" style="margin-bottom: 20px;" onclick="app.loadSet('B')">
-                    Set B - Premium MCQs 🔐
-                </button>
-
-                <button id="btn-mistake-bank" class="btn btn-mistake hidden" onclick="app.loadMistakeBank()">
-                    📂 Review Mistakes (<span id="mistake-count">0</span>)
-                </button>
-
+                <button class="btn btn-magic" style="margin-bottom: 20px;" onclick="app.loadSet('A')">Set A - Free Preview (First 10)</button>
+                <button id="btn-set-b" class="btn btn-premium" style="margin-bottom: 20px;" onclick="app.loadSet('B')">Set B - Premium MCQs 🔐</button>
+                <button id="btn-mistake-bank" class="btn btn-mistake hidden" onclick="app.loadMistakeBank()">📂 Review Mistakes (<span id="mistake-count">0</span>)</button>
                 <button class="btn btn-outline" onclick="app.showScreen('screen-dash')">← Back to Topics</button>
             </div>
         </div>
@@ -264,7 +280,7 @@
             <div class="top-bar">
                 <span id="quiz-progress-text" style="font-weight: 900; font-size: 1.2rem;">Q: 1/20</span>
                 <button class="mute-btn" id="btn-mute" onclick="app.toggleMute()">🔊</button>
-                <span id="quiz-score" class="score-badge">Score: 0</span>
+                <button id="btn-skip" class="score-badge" style="cursor: pointer; transition: 0.2s;" onclick="app.openSkipGrid()">Skip ➔</button>
             </div>
             <div class="progress-container"><div id="progress-fill" class="progress-fill"></div></div>
             <div class="exam-paper">
@@ -285,25 +301,26 @@
             <div class="card" style="text-align: center; margin-top: 40px;">
                 <img id="result-profile-img" class="result-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2364748b'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/></svg>">
                 <h2 id="result-name" style="margin-top: 0; font-size: 1.8rem;">Outstanding work!</h2>
-                
                 <div id="result-percentage" class="result-score-text">0%</div>
-                
-                <p id="result-accuracy" style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
-                    You attempted 20 questions, got 15 correct, and made 5 mistakes.
-                </p>
-
-                <div class="advice-box">
-                    <p id="result-advice" style="margin:0; font-size: 1.1rem; color: #00d2ff; font-weight: 600;">Advice loading...</p>
-                </div>
-
+                <p id="result-accuracy" style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">Accuracy details...</p>
+                <div class="advice-box"><p id="result-advice" style="margin:0; font-size: 1.1rem; color: #00d2ff; font-weight: 600;">Advice loading...</p></div>
                 <button class="btn btn-magic" onclick="app.showScreen('screen-dash')">Return to Dashboard ➔</button>
             </div>
         </div>
     </div>
 
+    <div id="skip-modal" class="skip-modal-overlay">
+        <div class="skip-modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="margin: 0; color: #00d2ff; font-weight: 800;">Jump to Question</h3>
+                <button class="mute-btn" onclick="app.closeSkipGrid()" style="background: #ff1744; border: none;">✖</button>
+            </div>
+            <div id="skip-grid-container" class="skip-grid"></div>
+        </div>
+    </div>
+
     <script>
-        // --- CONFIGURATION ---
-        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzMzOG0rG6JUEsDUJymyOGevOjt750FgRD9UNdxeEmDbeHukwRZTvjwd8UyDbD5icR6/exec"; 
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw4EBwp_tSyWgTnNsdBNnCNRa0Nzj1bAjjCuG2SaffMU1_wHuIFpieOouOb0Zl5KjpsrA/exec"; 
         const WHATSAPP_NUM = "https://wa.me/qr/O7FO3PRTOUFGO1"; 
 
         const allTopics = [
@@ -330,66 +347,29 @@
             { id: "2.11", title: "मानवीय मूल्य मान्यता, नागरिक कर्तव्य र अनुशासन" }
         ];
 
-        // --- ADVANCED AUDIO ENGINE ---
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const AudioEngine = {
             playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null, isMuffled = false) {
                 if (app.state.isMuted) return;
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-                osc.type = type;
-                
-                // Frequency Envelope (Glide or Steady)
+                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain(); osc.type = type;
                 osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-                if (isGlide && endFreq) {
-                    osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
-                }
-
-                // Volume Envelope (Punchy attack, quick decay)
+                if (isGlide && endFreq) osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
                 gain.gain.setValueAtTime(0, audioCtx.currentTime);
                 gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.02);
                 gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-
-                // Optional Filter for "Wrong" sounds to make it a soft thud
                 if (isMuffled) {
-                    const filter = audioCtx.createBiquadFilter();
-                    filter.type = 'lowpass';
+                    const filter = audioCtx.createBiquadFilter(); filter.type = 'lowpass';
                     filter.frequency.setValueAtTime(800, audioCtx.currentTime);
-                    filter.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + duration);
-                    osc.connect(filter);
-                    filter.connect(gain);
-                } else {
-                    osc.connect(gain);
-                }
-
-                gain.connect(audioCtx.destination);
-                osc.start();
-                osc.stop(audioCtx.currentTime + duration);
+                    osc.connect(filter); filter.connect(gain);
+                } else { osc.connect(gain); }
+                gain.connect(audioCtx.destination); osc.start(); osc.stop(audioCtx.currentTime + duration);
             },
-            
-            // Bright, premium UI pop (Two rapid ascending notes)
-            correct: () => {
-                AudioEngine.playCustomTone(880, 'sine', 0.1, 0.4); // A5
-                setTimeout(() => AudioEngine.playCustomTone(1318.51, 'sine', 0.3, 0.3), 80); // E6
-            },
-            
-            // Soft, descending muffled thud
-            wrong: () => {
-                AudioEngine.playCustomTone(200, 'sawtooth', 0.3, 0.5, true, 50, true);
-            },
-            
-            // Grand major chord arpeggio
+            correct: () => { AudioEngine.playCustomTone(880, 'sine', 0.1, 0.4); setTimeout(() => AudioEngine.playCustomTone(1318.51, 'sine', 0.3, 0.3), 80); },
+            wrong: () => { AudioEngine.playCustomTone(200, 'sawtooth', 0.3, 0.5, true, 50, true); },
             tada: () => {
-                const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
-                notes.forEach((freq, i) => {
-                    setTimeout(() => AudioEngine.playCustomTone(freq, 'triangle', 0.4, 0.2), i * 100);
-                });
-                // Final sustained chord
-                setTimeout(() => {
-                    notes.forEach(freq => AudioEngine.playCustomTone(freq, 'sine', 1.2, 0.15));
-                }, notes.length * 100);
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((freq, i) => setTimeout(() => AudioEngine.playCustomTone(freq, 'triangle', 0.4, 0.2), i * 100));
             }
         };
 
@@ -397,22 +377,17 @@
             state: {
                 user: { name: "", qual: "", pic: "" },
                 isPremium: false, currentTopicId: null, quizSet: [], 
-                currentIndex: 0, score: 0, isMuted: false, mistakes: {}, isMistakeMode: false
+                currentIndex: 0, score: 0, isMuted: false, mistakes: {}, isMistakeMode: false,
+                answered: [] // Tracks answered questions for grid coloring
             },
 
             init: function() {
                 const savedUser = localStorage.getItem('loksewa_user');
                 const savedPremium = localStorage.getItem('loksewa_premium');
                 const savedMistakes = localStorage.getItem('loksewa_mistakes');
-                
                 if (savedPremium === 'true') this.state.isPremium = true;
                 if (savedMistakes) this.state.mistakes = JSON.parse(savedMistakes);
-
-                if (savedUser) {
-                    this.state.user = JSON.parse(savedUser);
-                    this.buildDashboard();
-                    this.showScreen('screen-dash');
-                }
+                if (savedUser) { this.state.user = JSON.parse(savedUser); this.buildDashboard(); this.showScreen('screen-dash'); }
             },
 
             showScreen: function(id) {
@@ -421,10 +396,8 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             },
 
-            // UNIVERSAL COMPRESSION LOGIC (Used for both Home and Dashboard)
             handleImageUpload: function(event) {
-                const file = event.target.files[0];
-                if (!file) return;
+                const file = event.target.files[0]; if (!file) return;
                 const reader = new FileReader();
                 reader.onload = (e) => {
                     const img = new Image();
@@ -432,22 +405,11 @@
                         const canvas = document.createElement('canvas'); const ctx = canvas.getContext('2d');
                         canvas.width = 200; canvas.height = 200;
                         const size = Math.min(img.width, img.height);
-                        const sx = (img.width - size) / 2, sy = (img.height - size) / 2;
-                        ctx.drawImage(img, sx, sy, size, size, 0, 0, 200, 200);
-                        const base64Pic = canvas.toDataURL('image/jpeg', 0.7); 
-                        
+                        ctx.drawImage(img, (img.width-size)/2, (img.height-size)/2, size, size, 0, 0, 200, 200);
+                        const base64Pic = canvas.toDataURL('image/jpeg', 0.7);
                         this.state.user.pic = base64Pic;
-                        
-                        // If they are doing this from Dashboard, save immediately
-                        if(this.state.user.name) {
-                            localStorage.setItem('loksewa_user', JSON.stringify(this.state.user));
-                            this.updateProfileUIs();
-                        } else {
-                            // If they are doing this from Home before registering
-                            document.getElementById('home-upload-text').style.display = 'none';
-                            const preview = document.getElementById('profile-img-preview');
-                            preview.src = base64Pic; preview.style.display = 'block';
-                        }
+                        if(this.state.user.name) { localStorage.setItem('loksewa_user', JSON.stringify(this.state.user)); this.updateProfileUIs(); } 
+                        else { document.getElementById('home-upload-text').style.display = 'none'; const preview = document.getElementById('profile-img-preview'); preview.src = base64Pic; preview.style.display = 'block'; }
                     };
                     img.src = e.target.result;
                 };
@@ -456,10 +418,8 @@
 
             updateProfileUIs: function() {
                 if(this.state.user.pic) {
-                    // Update Dashboard
                     document.getElementById('dash-profile-img').src = this.state.user.pic;
-                    document.getElementById('dash-upload-btn').style.display = 'none'; // Erase Camera
-                    // Update Result Screen
+                    document.getElementById('dash-upload-btn').style.display = 'none';
                     document.getElementById('result-profile-img').src = this.state.user.pic;
                 }
             },
@@ -467,90 +427,60 @@
             registerUser: function() {
                 const name = document.getElementById('input-name').value.trim();
                 const qual = document.getElementById('input-qual').value;
-                if(!name || !qual) return alert("Please enter your Name and Qualification to continue.");
+                if(!name || !qual) return alert("Fill all details.");
                 this.state.user.name = name; this.state.user.qual = qual;
                 localStorage.setItem('loksewa_user', JSON.stringify(this.state.user));
-                this.buildDashboard();
-                this.showScreen('screen-dash');
+                this.buildDashboard(); this.showScreen('screen-dash');
             },
 
             buildDashboard: function() {
-                // Populate Profile Banner
                 document.getElementById('dash-name').innerText = this.state.user.name;
                 document.getElementById('dash-qual').innerText = this.state.user.qual;
-                this.updateProfileUIs(); // Triggers pic logic and hides camera if image exists
-
-                const container = document.getElementById('topics-container');
-                container.innerHTML = "";
+                this.updateProfileUIs();
+                const container = document.getElementById('topics-container'); container.innerHTML = "";
                 allTopics.forEach((topic, index) => {
-                    const btn = document.createElement('div');
-                    btn.className = 'topic-btn'; btn.style.animationDelay = `${index * 0.05}s`; 
+                    const btn = document.createElement('div'); btn.className = 'topic-btn'; btn.style.animationDelay = `${index * 0.05}s`;
                     btn.innerHTML = `<span class="topic-badge">${topic.id}</span> <span>${topic.title}</span>`;
-                    btn.onclick = () => this.openTopic(topic);
-                    container.appendChild(btn);
+                    btn.onclick = () => this.openTopic(topic); container.appendChild(btn);
                 });
             },
 
             openTopic: async function(topic) {
                 this.state.currentTopicId = topic.id;
                 document.getElementById('detail-topic-title').innerText = `${topic.id}: ${topic.title}`;
-                
                 const btnB = document.getElementById('btn-set-b');
                 if (this.state.isPremium) { btnB.innerText = "Set B - Unlocked ✨"; btnB.className = "btn btn-magic"; } 
                 else { btnB.innerText = "Set B - Premium MCQs 🔐"; btnB.className = "btn btn-premium"; }
-
                 const topicMistakes = this.state.mistakes[this.state.currentTopicId] || [];
                 const mBankBtn = document.getElementById('btn-mistake-bank');
-                if (topicMistakes.length > 0) {
-                    document.getElementById('mistake-count').innerText = topicMistakes.length;
-                    mBankBtn.classList.remove('hidden');
-                } else { mBankBtn.classList.add('hidden'); }
-
+                if (topicMistakes.length > 0) { document.getElementById('mistake-count').innerText = topicMistakes.length; mBankBtn.classList.remove('hidden'); } 
+                else { mBankBtn.classList.add('hidden'); }
                 this.showScreen('screen-topic-detail');
             },
 
-                    loadSet: async function(setType) {
-            this.state.isMistakeMode = false;
-            if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
-            try {
-                let data;
-                // 1. Try fetching specific file first (e.g., 1.2A.json or 1.2B.json)
-                let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
-                
-                if (response.ok) {
-                    // If the specific A or B file exists, use ALL its MCQs
-                    data = await response.json();
-                    this.state.quizSet = data; 
-                } else {
-                    // 2. Fallback to combined file (e.g., 1.2.json)
-                    response = await fetch(`data/${this.state.currentTopicId}.json`);
-                    if (!response.ok) return alert(`Data file not found for topic ${this.state.currentTopicId}.`);
-                    data = await response.json();
-                    
-                    // 3. Divide combined file: 10 for Set A, remaining for Set B
-                    if (setType === 'A') this.state.quizSet = data.slice(0, 10);
-                    else this.state.quizSet = data.slice(10);
-                }
-
-                if(this.state.quizSet.length === 0) return alert("No questions available in this set!");
-                this.startQuiz();
-            } catch (e) { alert("JSON error. Check format."); console.error(e); }
-        },
-
-            loadMistakeBank: function() {
-                this.state.isMistakeMode = true;
-                this.state.quizSet = [...this.state.mistakes[this.state.currentTopicId]];
-                this.startQuiz();
+            loadSet: async function(setType) {
+                this.state.isMistakeMode = false;
+                if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
+                try {
+                    let data; let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
+                    if (response.ok) { data = await response.json(); this.state.quizSet = data; } 
+                    else {
+                        response = await fetch(`data/${this.state.currentTopicId}.json`);
+                        if (!response.ok) return alert("File not found.");
+                        data = await response.json();
+                        if (setType === 'A') this.state.quizSet = data.slice(0, 10); else this.state.quizSet = data.slice(10);
+                    }
+                    if(this.state.quizSet.length === 0) return alert("No questions found.");
+                    this.startQuiz();
+                } catch (e) { alert("JSON error."); console.error(e); }
             },
 
-            toggleMute: function() {
-                this.state.isMuted = !this.state.isMuted;
-                document.getElementById('btn-mute').innerText = this.state.isMuted ? '🔇' : '🔊';
-            },
+            loadMistakeBank: function() { this.state.isMistakeMode = true; this.state.quizSet = [...this.state.mistakes[this.state.currentTopicId]]; this.startQuiz(); },
+            toggleMute: function() { this.state.isMuted = !this.state.isMuted; document.getElementById('btn-mute').innerText = this.state.isMuted ? '🔇' : '🔊'; },
 
             startQuiz: function() {
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                this.state.currentIndex = 0; this.state.score = 0;
+                this.state.currentIndex = 0; this.state.score = 0; this.state.answered = [];
                 this.showScreen('screen-quiz'); this.renderQuestion();
             },
 
@@ -558,14 +488,11 @@
                 const q = this.state.quizSet[this.state.currentIndex];
                 const total = this.state.quizSet.length; const currentNum = this.state.currentIndex + 1;
                 document.getElementById('quiz-progress-text').innerText = this.state.isMistakeMode ? `Mistakes: ${currentNum}/${total}` : `Q: ${currentNum}/${total}`;
-                document.getElementById('quiz-score').innerText = `Score: ${this.state.score}`;
                 document.getElementById('progress-fill').style.width = `${((currentNum - 1) / total) * 100}%`;
                 document.getElementById('question-text').innerText = q.q;
-                
                 const optsDiv = document.getElementById('options-container'); optsDiv.innerHTML = "";
                 document.getElementById('explanation-box').style.display = 'none';
                 document.getElementById('btn-next').classList.add('hidden');
-
                 const labels = ['A', 'B', 'C', 'D'];
                 q.o.forEach((opt, index) => {
                     const row = document.createElement('div'); row.className = 'option-row';
@@ -577,34 +504,21 @@
             handleAnswer: function(selectedIndex, rowElement) {
                 const allRows = document.querySelectorAll('.option-row');
                 allRows.forEach(r => r.style.pointerEvents = 'none');
+                this.state.answered[this.state.currentIndex] = true; // Mark as answered for the grid
                 const topicId = this.state.currentTopicId; const q = this.state.quizSet[this.state.currentIndex];
                 const isCorrect = selectedIndex === q.a;
-
                 if (!this.state.mistakes[topicId]) this.state.mistakes[topicId] = [];
-
                 if (isCorrect) {
                     rowElement.classList.add('correct'); this.state.score++; AudioEngine.correct();
-                    if (this.state.isMistakeMode) {
-                        this.state.mistakes[topicId] = this.state.mistakes[topicId].filter(item => item.q !== q.q);
-                        localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
-                    }
+                    if (this.state.isMistakeMode) { this.state.mistakes[topicId] = this.state.mistakes[topicId].filter(item => item.q !== q.q); localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes)); }
                 } else {
                     rowElement.classList.add('wrong'); allRows[q.a].classList.add('correct'); AudioEngine.wrong();
-                    if (!this.state.mistakes[topicId].find(item => item.q === q.q)) {
-                        this.state.mistakes[topicId].push(q);
-                        localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
-                    }
+                    if (!this.state.mistakes[topicId].find(item => item.q === q.q)) { this.state.mistakes[topicId].push(q); localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes)); }
                 }
-
-                document.getElementById('quiz-score').innerText = `Score: ${this.state.score}`;
-                const expBox = document.getElementById('explanation-box');
-                if (q.e) { expBox.innerText = `💡 Info: ${q.e}`; expBox.style.display = 'block'; }
+                if (q.e) { const exp = document.getElementById('explanation-box'); exp.innerText = `💡 Info: ${q.e}`; exp.style.display = 'block'; }
                 document.getElementById('btn-next').classList.remove('hidden');
-                
-                if (this.state.currentIndex === this.state.quizSet.length - 1) {
-                    document.getElementById('progress-fill').style.width = `100%`;
-                    document.getElementById('btn-next').innerText = "Finish Exam 🎉";
-                } else { document.getElementById('btn-next').innerText = "Next Question ➔"; }
+                if (this.state.currentIndex === this.state.quizSet.length - 1) { document.getElementById('btn-next').innerText = "Finish Exam 🎉"; } 
+                else { document.getElementById('btn-next').innerText = "Next Question ➔"; }
             },
 
             nextQuestion: function() {
@@ -615,49 +529,45 @@
 
             showResults: function() {
                 this.showScreen('screen-result'); AudioEngine.tada();
-                const total = this.state.quizSet.length; const mistakesMade = total - this.state.score;
-                const percentage = Math.round((this.state.score / total) * 100);
-                
+                const total = this.state.quizSet.length; const percentage = Math.round((this.state.score / total) * 100);
                 document.getElementById('result-name').innerText = `Exam Completed, ${this.state.user.name.split(" ")[0]}!`;
                 document.getElementById('result-percentage').innerText = `${percentage}%`;
-                document.getElementById('result-accuracy').innerText = `You attempted ${total} questions, got ${this.state.score} correct, and made ${mistakesMade} mistake${mistakesMade===1?'':'s'}.`;
-
-                const percentEl = document.getElementById('result-percentage');
-                let color = percentage >= 80 ? '#00e676' : percentage >= 60 ? '#00d2ff' : percentage >= 40 ? '#f59e0b' : '#ff1744';
-                percentEl.style.color = color; percentEl.style.textShadow = `0 0 20px ${color}80`;
-
-                let adviceStr = "";
-                if (percentage >= 80) adviceStr = "Outstanding! 🏆 Your preparation is excellent. Keep reviewing to maintain this mastery for the final exam.";
-                else if (percentage >= 60) adviceStr = "Good Job! 📈 You are very close to your goal. Focus on your Mistake Bank to push this score over 80%.";
-                else if (percentage >= 40) adviceStr = "Fair Effort. ⚙️ You have a foundation, but you need to increase your study hours. Consistency is key for Loksewa.";
-                else adviceStr = "Needs Work. ⚠️ Don't lose hope, but you must work much harder to make your Loksewa journey successful. Practice daily!";
-                
-                const advEl = document.getElementById('result-advice');
-                advEl.innerText = adviceStr; advEl.style.color = color;
+                document.getElementById('result-accuracy').innerText = `You got ${this.state.score} correct out of ${total}.`;
+                let color = percentage >= 80 ? '#00e676' : percentage >= 40 ? '#00d2ff' : '#ff1744';
+                document.getElementById('result-percentage').style.color = color;
+                document.getElementById('result-advice').innerText = percentage >= 80 ? "Outstanding! Keep it up." : "Good effort. Focus on mistakes.";
             },
 
-            requestWhatsAppCode: function() { window.open(`${WHATSAPP_NUM}?text=${encodeURIComponent(`Hello! I am ${this.state.user.name} (${this.state.user.qual}). I want to unlock Set B Loksewa topics.`)}`, '_blank'); },
+            // --- SKIP GRID NAVIGATION ---
+            openSkipGrid: function() {
+                const container = document.getElementById('skip-grid-container');
+                container.innerHTML = ''; const total = this.state.quizSet.length;
+                for (let i = 0; i < total; i++) {
+                    const btn = document.createElement('button'); btn.className = 'skip-num-btn'; btn.innerText = i + 1;
+                    if (i === this.state.currentIndex) btn.classList.add('current');
+                    else if (this.state.answered[i]) btn.classList.add('answered');
+                    btn.onclick = () => this.jumpToQuestion(i); container.appendChild(btn);
+                }
+                document.getElementById('skip-modal').classList.add('active');
+            },
+
+            closeSkipGrid: function() { document.getElementById('skip-modal').classList.remove('active'); },
+            jumpToQuestion: function(index) { this.state.currentIndex = index; this.renderQuestion(); this.closeSkipGrid(); },
+
+            requestWhatsAppCode: function() { window.open(`${WHATSAPP_NUM}?text=${encodeURIComponent(`Hello! I am ${this.state.user.name}. I want to unlock Set B topics.`)}`, '_blank'); },
 
             verifyCode: function() {
-                const code = document.getElementById('input-code').value.trim(); const passBox = document.getElementById('input-password');
-                if (!code) return alert("Code cannot be empty.");
-                const btn = document.getElementById('btn-verify'); const originalText = btn.innerHTML;
-                btn.innerHTML = 'Verifying <div class="loader"></div>'; btn.style.pointerEvents = 'none'; passBox.value = ''; 
-
+                const code = document.getElementById('input-code').value.trim();
+                if (!code) return alert("Enter code.");
+                const btn = document.getElementById('btn-verify'); btn.innerText = 'Verifying...';
                 fetch(`${WEB_APP_URL}?code=${code}&name=${this.state.user.name}&qual=${this.state.user.qual}`)
-                    .then(res => res.json())
-                    .then(data => {
+                    .then(res => res.json()).then(data => {
                         if (data.status === 'success') {
-                            passBox.value = data.password || Math.floor(100000 + Math.random() * 900000); 
-                            btn.innerHTML = 'Access Granted ✨'; btn.classList.add('btn-magic');
-                            setTimeout(() => {
-                                alert("Premium Access Granted. 🚀");
-                                this.state.isPremium = true; localStorage.setItem('loksewa_premium', 'true');
-                                this.showScreen('screen-topic-detail');
-                                this.openTopic({ id: this.state.currentTopicId, title: document.getElementById('detail-topic-title').innerText.split(': ')[1] }); 
-                            }, 1200);
-                        } else { alert(data.message || "Invalid Code"); btn.innerHTML = originalText; btn.style.pointerEvents = 'auto'; }
-                    }).catch(() => { alert("Network Error."); btn.innerHTML = originalText; btn.style.pointerEvents = 'auto'; });
+                            document.getElementById('input-password').value = data.password || "VERIFIED";
+                            btn.innerText = 'Unlocked ✨';
+                            setTimeout(() => { this.state.isPremium = true; localStorage.setItem('loksewa_premium', 'true'); this.openTopic({ id: this.state.currentTopicId, title: "" }); }, 1200);
+                        } else alert(data.message || "Invalid Code");
+                    });
             }
         };
 
@@ -665,15 +575,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

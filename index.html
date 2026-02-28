@@ -217,8 +217,8 @@
         <div class="container" style="padding-top: 35px;">
             <div class="app-nav-row">
                 <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/MadheshQuiz/'">Madhesh Gk PM</button>
-                <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/SMARTMOCK/'">Daily Tests</button>
-                <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/Try/'">Test Collection</button>
+                <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/SMARTMOCK/'">Mix Masala</button>
+                <button class="nav-magic-btn" onclick="window.location.href='https://antinogutress-maker.github.io/Try/'">Mock Tests</button>
             </div>
             <div class="app-nav-row">
                 <button class="nav-magic-btn" onclick="window.location.href='https://9865637898.github.io/CivilNotes/'">Civil Eng 7th,5th,4th Notes Package</button>
@@ -349,51 +349,28 @@
         ];
 
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                const AudioEngine = {
-            playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null) {
+        const AudioEngine = {
+            playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null, isMuffled = false) {
                 if (app.state.isMuted) return;
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                
-                const osc = audioCtx.createOscillator(); 
-                const gain = audioCtx.createGain(); 
-                osc.type = type;
-                
+                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain(); osc.type = type;
                 osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-                if (isGlide && endFreq) {
-                    osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
-                }
-                
-                // Faster attack for "punchy" sound
+                if (isGlide && endFreq) osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
                 gain.gain.setValueAtTime(0, audioCtx.currentTime);
-                gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.01); 
+                gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.02);
                 gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-                
-                osc.connect(gain); 
-                gain.connect(audioCtx.destination); 
-                
-                osc.start(); 
-                osc.stop(audioCtx.currentTime + duration);
+                if (isMuffled) {
+                    const filter = audioCtx.createBiquadFilter(); filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(800, audioCtx.currentTime);
+                    osc.connect(filter); filter.connect(gain);
+                } else { osc.connect(gain); }
+                gain.connect(audioCtx.destination); osc.start(); osc.stop(audioCtx.currentTime + duration);
             },
-
-            // High-energy "Chime" - Psychologically rewarding
-            correct: () => { 
-                AudioEngine.playCustomTone(1046.50, 'triangle', 0.1, 0.6); // C6
-                setTimeout(() => AudioEngine.playCustomTone(1318.51, 'triangle', 0.15, 0.5), 60); // E6
-                setTimeout(() => AudioEngine.playCustomTone(1567.98, 'triangle', 0.3, 0.4), 120); // G6
-            },
-
-            // Sharp "Double-Buzz" - Distinct but not depressing
-            wrong: () => { 
-                AudioEngine.playCustomTone(150, 'square', 0.1, 0.5); 
-                setTimeout(() => AudioEngine.playCustomTone(110, 'square', 0.2, 0.5), 120);
-            },
-
-            // Grand Fanfare - For finishing the exam
+            correct: () => { AudioEngine.playCustomTone(880, 'sine', 0.1, 0.4); setTimeout(() => AudioEngine.playCustomTone(1318.51, 'sine', 0.3, 0.3), 80); },
+            wrong: () => { AudioEngine.playCustomTone(200, 'sawtooth', 0.3, 0.5, true, 50, true); },
             tada: () => {
-                const fanfare = [523.25, 659.25, 783.99, 1046.50, 1318.51];
-                fanfare.forEach((f, i) => {
-                    setTimeout(() => AudioEngine.playCustomTone(f, 'triangle', 0.4, 0.4), i * 80);
-                });
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((freq, i) => setTimeout(() => AudioEngine.playCustomTone(freq, 'triangle', 0.4, 0.2), i * 100));
             }
         };
 
@@ -482,42 +459,22 @@
                 this.showScreen('screen-topic-detail');
             },
 
-                        loadSet: async function(setType) {
+            loadSet: async function(setType) {
                 this.state.isMistakeMode = false;
                 if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
                 try {
-                    let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
-                    if (!response.ok) {
+                    let data; let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
+                    if (response.ok) { data = await response.json(); this.state.quizSet = data; } 
+                    else {
                         response = await fetch(`data/${this.state.currentTopicId}.json`);
+                        if (!response.ok) return alert("File not found.");
+                        data = await response.json();
+                        if (setType === 'A') this.state.quizSet = data.slice(0, 10); else this.state.quizSet = data.slice(10);
                     }
-                    if (!response.ok) return alert("File not found: " + this.state.currentTopicId);
-
-                    // Read the file as text first
-                    const rawText = await response.text();
-                    
-                    // CLEANER: This Regex removes trailing commas (e.g., "a": 2, }) 
-                    // that cause standard JSON.parse to crash.
-                    const cleanedText = rawText.replace(/,\s*([\]}])/g, '$1');
-                    
-                    const data = JSON.parse(cleanedText);
-
-                    // Logic to split set A and B if using a single file
-                    if (setType === 'A' && !rawText.includes(this.state.currentTopicId + 'A.json')) {
-                        this.state.quizSet = data.slice(0, 10);
-                    } else if (setType === 'B' && !rawText.includes(this.state.currentTopicId + 'B.json')) {
-                        this.state.quizSet = data.slice(10);
-                    } else {
-                        this.state.quizSet = data;
-                    }
-
                     if(this.state.quizSet.length === 0) return alert("No questions found.");
                     this.startQuiz();
-                } catch (e) { 
-                    console.error("Data Error:", e);
-                    alert("JSON formatting error in your file! Please check for missing or extra brackets."); 
-                }
+                } catch (e) { alert("JSON error."); console.error(e); }
             },
-
 
             loadMistakeBank: function() { this.state.isMistakeMode = true; this.state.quizSet = [...this.state.mistakes[this.state.currentTopicId]]; this.startQuiz(); },
             toggleMute: function() { this.state.isMuted = !this.state.isMuted; document.getElementById('btn-mute').innerText = this.state.isMuted ? '🔇' : '🔊'; },
@@ -528,37 +485,22 @@
                 this.showScreen('screen-quiz'); this.renderQuestion();
             },
 
-                        renderQuestion: function() {
+            renderQuestion: function() {
                 const q = this.state.quizSet[this.state.currentIndex];
-                if (!q) return this.showScreen('screen-dash'); // Safety Exit
-
-                const total = this.state.quizSet.length; 
-                const currentNum = this.state.currentIndex + 1;
-                
+                const total = this.state.quizSet.length; const currentNum = this.state.currentIndex + 1;
                 document.getElementById('quiz-progress-text').innerText = this.state.isMistakeMode ? `Mistakes: ${currentNum}/${total}` : `Q: ${currentNum}/${total}`;
                 document.getElementById('progress-fill').style.width = `${((currentNum - 1) / total) * 100}%`;
-                
-                // Fallback for missing text
-                document.getElementById('question-text').innerText = q.q || "No question text available.";
-                
-                const optsDiv = document.getElementById('options-container'); 
-                optsDiv.innerHTML = "";
+                document.getElementById('question-text').innerText = q.q;
+                const optsDiv = document.getElementById('options-container'); optsDiv.innerHTML = "";
                 document.getElementById('explanation-box').style.display = 'none';
                 document.getElementById('btn-next').classList.add('hidden');
-                
                 const labels = ['A', 'B', 'C', 'D'];
-                // Safety: ensure options exist
-                const options = q.o && Array.isArray(q.o) ? q.o : ["Option missing", "Option missing", "Option missing", "Option missing"];
-                
-                options.forEach((opt, index) => {
-                    const row = document.createElement('div'); 
-                    row.className = 'option-row';
+                q.o.forEach((opt, index) => {
+                    const row = document.createElement('div'); row.className = 'option-row';
                     row.innerHTML = `<span class="opt-letter">${labels[index]}</span> <span>${opt}</span>`;
-                    row.onclick = () => this.handleAnswer(index, row); 
-                    optsDiv.appendChild(row);
+                    row.onclick = () => this.handleAnswer(index, row); optsDiv.appendChild(row);
                 });
             },
-
 
             handleAnswer: function(selectedIndex, rowElement) {
                 const allRows = document.querySelectorAll('.option-row');
@@ -634,8 +576,5 @@
     </script>
 </body>
 </html>
-
-
-
 
 

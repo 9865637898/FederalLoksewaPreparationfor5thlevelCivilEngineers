@@ -459,22 +459,42 @@
                 this.showScreen('screen-topic-detail');
             },
 
-            loadSet: async function(setType) {
+                        loadSet: async function(setType) {
                 this.state.isMistakeMode = false;
                 if (setType === 'B' && !this.state.isPremium) { this.showScreen('screen-premium'); return; }
                 try {
-                    let data; let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
-                    if (response.ok) { data = await response.json(); this.state.quizSet = data; } 
-                    else {
+                    let response = await fetch(`data/${this.state.currentTopicId}${setType}.json`);
+                    if (!response.ok) {
                         response = await fetch(`data/${this.state.currentTopicId}.json`);
-                        if (!response.ok) return alert("File not found.");
-                        data = await response.json();
-                        if (setType === 'A') this.state.quizSet = data.slice(0, 10); else this.state.quizSet = data.slice(10);
                     }
+                    if (!response.ok) return alert("File not found: " + this.state.currentTopicId);
+
+                    // Read the file as text first
+                    const rawText = await response.text();
+                    
+                    // CLEANER: This Regex removes trailing commas (e.g., "a": 2, }) 
+                    // that cause standard JSON.parse to crash.
+                    const cleanedText = rawText.replace(/,\s*([\]}])/g, '$1');
+                    
+                    const data = JSON.parse(cleanedText);
+
+                    // Logic to split set A and B if using a single file
+                    if (setType === 'A' && !rawText.includes(this.state.currentTopicId + 'A.json')) {
+                        this.state.quizSet = data.slice(0, 10);
+                    } else if (setType === 'B' && !rawText.includes(this.state.currentTopicId + 'B.json')) {
+                        this.state.quizSet = data.slice(10);
+                    } else {
+                        this.state.quizSet = data;
+                    }
+
                     if(this.state.quizSet.length === 0) return alert("No questions found.");
                     this.startQuiz();
-                } catch (e) { alert("JSON error."); console.error(e); }
+                } catch (e) { 
+                    console.error("Data Error:", e);
+                    alert("JSON formatting error in your file! Please check for missing or extra brackets."); 
+                }
             },
+
 
             loadMistakeBank: function() { this.state.isMistakeMode = true; this.state.quizSet = [...this.state.mistakes[this.state.currentTopicId]]; this.startQuiz(); },
             toggleMute: function() { this.state.isMuted = !this.state.isMuted; document.getElementById('btn-mute').innerText = this.state.isMuted ? '🔇' : '🔊'; },
@@ -485,22 +505,37 @@
                 this.showScreen('screen-quiz'); this.renderQuestion();
             },
 
-            renderQuestion: function() {
+                        renderQuestion: function() {
                 const q = this.state.quizSet[this.state.currentIndex];
-                const total = this.state.quizSet.length; const currentNum = this.state.currentIndex + 1;
+                if (!q) return this.showScreen('screen-dash'); // Safety Exit
+
+                const total = this.state.quizSet.length; 
+                const currentNum = this.state.currentIndex + 1;
+                
                 document.getElementById('quiz-progress-text').innerText = this.state.isMistakeMode ? `Mistakes: ${currentNum}/${total}` : `Q: ${currentNum}/${total}`;
                 document.getElementById('progress-fill').style.width = `${((currentNum - 1) / total) * 100}%`;
-                document.getElementById('question-text').innerText = q.q;
-                const optsDiv = document.getElementById('options-container'); optsDiv.innerHTML = "";
+                
+                // Fallback for missing text
+                document.getElementById('question-text').innerText = q.q || "No question text available.";
+                
+                const optsDiv = document.getElementById('options-container'); 
+                optsDiv.innerHTML = "";
                 document.getElementById('explanation-box').style.display = 'none';
                 document.getElementById('btn-next').classList.add('hidden');
+                
                 const labels = ['A', 'B', 'C', 'D'];
-                q.o.forEach((opt, index) => {
-                    const row = document.createElement('div'); row.className = 'option-row';
+                // Safety: ensure options exist
+                const options = q.o && Array.isArray(q.o) ? q.o : ["Option missing", "Option missing", "Option missing", "Option missing"];
+                
+                options.forEach((opt, index) => {
+                    const row = document.createElement('div'); 
+                    row.className = 'option-row';
                     row.innerHTML = `<span class="opt-letter">${labels[index]}</span> <span>${opt}</span>`;
-                    row.onclick = () => this.handleAnswer(index, row); optsDiv.appendChild(row);
+                    row.onclick = () => this.handleAnswer(index, row); 
+                    optsDiv.appendChild(row);
                 });
             },
+
 
             handleAnswer: function(selectedIndex, rowElement) {
                 const allRows = document.querySelectorAll('.option-row');
@@ -576,5 +611,6 @@
     </script>
 </body>
 </html>
+
 
 

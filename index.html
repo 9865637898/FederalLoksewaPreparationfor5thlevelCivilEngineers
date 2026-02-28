@@ -349,28 +349,51 @@
         ];
 
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const AudioEngine = {
-            playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null, isMuffled = false) {
+                const AudioEngine = {
+            playCustomTone: function(freq, type, duration, vol, isGlide = false, endFreq = null) {
                 if (app.state.isMuted) return;
                 if (audioCtx.state === 'suspended') audioCtx.resume();
-                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain(); osc.type = type;
+                
+                const osc = audioCtx.createOscillator(); 
+                const gain = audioCtx.createGain(); 
+                osc.type = type;
+                
                 osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-                if (isGlide && endFreq) osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
+                if (isGlide && endFreq) {
+                    osc.frequency.exponentialRampToValueAtTime(endFreq, audioCtx.currentTime + duration);
+                }
+                
+                // Faster attack for "punchy" sound
                 gain.gain.setValueAtTime(0, audioCtx.currentTime);
-                gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.02);
+                gain.gain.linearRampToValueAtTime(vol, audioCtx.currentTime + 0.01); 
                 gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-                if (isMuffled) {
-                    const filter = audioCtx.createBiquadFilter(); filter.type = 'lowpass';
-                    filter.frequency.setValueAtTime(800, audioCtx.currentTime);
-                    osc.connect(filter); filter.connect(gain);
-                } else { osc.connect(gain); }
-                gain.connect(audioCtx.destination); osc.start(); osc.stop(audioCtx.currentTime + duration);
+                
+                osc.connect(gain); 
+                gain.connect(audioCtx.destination); 
+                
+                osc.start(); 
+                osc.stop(audioCtx.currentTime + duration);
             },
-            correct: () => { AudioEngine.playCustomTone(880, 'sine', 0.1, 0.4); setTimeout(() => AudioEngine.playCustomTone(1318.51, 'sine', 0.3, 0.3), 80); },
-            wrong: () => { AudioEngine.playCustomTone(200, 'sawtooth', 0.3, 0.5, true, 50, true); },
+
+            // High-energy "Chime" - Psychologically rewarding
+            correct: () => { 
+                AudioEngine.playCustomTone(1046.50, 'triangle', 0.1, 0.6); // C6
+                setTimeout(() => AudioEngine.playCustomTone(1318.51, 'triangle', 0.15, 0.5), 60); // E6
+                setTimeout(() => AudioEngine.playCustomTone(1567.98, 'triangle', 0.3, 0.4), 120); // G6
+            },
+
+            // Sharp "Double-Buzz" - Distinct but not depressing
+            wrong: () => { 
+                AudioEngine.playCustomTone(150, 'square', 0.1, 0.5); 
+                setTimeout(() => AudioEngine.playCustomTone(110, 'square', 0.2, 0.5), 120);
+            },
+
+            // Grand Fanfare - For finishing the exam
             tada: () => {
-                const notes = [523.25, 659.25, 783.99, 1046.50];
-                notes.forEach((freq, i) => setTimeout(() => AudioEngine.playCustomTone(freq, 'triangle', 0.4, 0.2), i * 100));
+                const fanfare = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+                fanfare.forEach((f, i) => {
+                    setTimeout(() => AudioEngine.playCustomTone(f, 'triangle', 0.4, 0.4), i * 80);
+                });
             }
         };
 
@@ -611,6 +634,7 @@
     </script>
 </body>
 </html>
+
 
 
 

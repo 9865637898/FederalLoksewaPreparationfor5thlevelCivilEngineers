@@ -185,6 +185,11 @@
         .result-score-text { font-size: 4rem; font-weight: 900; color: #00e676; text-shadow: 0 0 20px rgba(0,230,118,0.5); margin: 10px 0; line-height: 1;}
         .advice-box { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 30px; }
         .hidden { display: none !important; }
+
+        .unclickable-btn {
+    pointer-events: none !important;
+    cursor: default !important;
+}
     </style>
 </head>
 <body>
@@ -325,7 +330,7 @@
         const WHATSAPP_NUM = "https://wa.me/qr/O7FO3PRTOUFGO1"; 
 
         const allTopics = [
-            { id: "1.0", title: "२५००+ संघीय सामान्य ज्ञान PM लोकसेवा अभ्यास MCqs" },
+            { id: "👇", title: "2500+ संघीय,बागमती,गण्डकी Gk PM लोकसेवा MCqs" },
             { id: "1.1", title: "नेपालको भौगोलिक अवस्था, प्राकृतिक स्रोत र साधनहरू" },
             { id: "1.2", title: "नेपालको ऐतिहासिक, सांस्कृतिक र सामाजिक अवस्था" },
             { id: "1.3", title: "नेपालको आर्थिक अवस्था र चालु आवधिक योजना" },
@@ -435,15 +440,26 @@
                 this.buildDashboard(); this.showScreen('screen-dash');
             },
 
-            buildDashboard: function() {
+                        buildDashboard: function() {
                 document.getElementById('dash-name').innerText = this.state.user.name;
                 document.getElementById('dash-qual').innerText = this.state.user.qual;
                 this.updateProfileUIs();
                 const container = document.getElementById('topics-container'); container.innerHTML = "";
                 allTopics.forEach((topic, index) => {
-                    const btn = document.createElement('div'); btn.className = 'topic-btn'; btn.style.animationDelay = `${index * 0.05}s`;
+                    const btn = document.createElement('div'); 
+                    btn.style.animationDelay = `${index * 0.05}s`;
                     btn.innerHTML = `<span class="topic-badge">${topic.id}</span> <span>${topic.title}</span>`;
-                    btn.onclick = () => this.openTopic(topic); container.appendChild(btn);
+                    
+                    // If the topic is 1.0, make it unclickable
+                    if (topic.id === "1.0") {
+                        btn.className = 'topic-btn unclickable-btn';
+                    } else {
+                        // For all other topics, keep them clickable
+                        btn.className = 'topic-btn';
+                        btn.onclick = () => this.openTopic(topic); 
+                    }
+                    
+                    container.appendChild(btn);
                 });
             },
 
@@ -577,6 +593,7 @@
     </script>
 </body>
 </html>
+
 
 
 

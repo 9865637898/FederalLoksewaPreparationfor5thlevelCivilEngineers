@@ -1,0 +1,1766 @@
+[
+  {
+    "id": 1,
+    "q": "​In structural and architectural engineering drawings, what is the universally accepted standard unit for linear dimensions unless otherwise explicitly specified on the sheet?",
+    "o": [
+      "Meter",
+      "Centimeter",
+      "Millimeter",
+      "Inch"
+    ],
+    "a": 2,
+    "e": "In civil engineering drawing practices globally and in Nepal, millimeters are the default unit. This prevents the need to write \"mm\" after every single dimension on a crowded drawing, reducing visual clutter and preventing conversion errors during construction."
+  },
+  {
+    "id": 2,
+    "q": "​When converting dimensions from the Imperial system to the SI system, what is the exact value of 1 inch in millimeters?",
+    "o": [
+      "2.54 mm",
+      "25.4 mm",
+      "254 mm",
+      "0.254 mm"
+    ],
+    "a": 1,
+    "e": "This is a fundamental, fixed conversion factor. Knowing this exact value is highly critical for Assistant Sub Engineers when reading older architectural plans or dealing with materials like pipes or reinforcing bars that are sometimes still referred to in inches in the local market."
+  },
+  {
+    "id": 3,
+    "q": "​If a scale on a site plan is given as 1 cm = 10 m, what is the correct Representative Fraction RF for this drawing?",
+    "o": [
+      "1:10",
+      "1:100",
+      "1:1000",
+      "1:10000"
+    ],
+    "a": 2,
+    "e": "The Representative Fraction RF must be a unitless ratio. To find it, both sides must be in the same unit. Since 10 meters = 1000 cm, the ratio is 1 cm on paper to 1000 cm on the ground, making the RF 1:1000."
+  },
+  {
+    "id": 4,
+    "q": "​In the SI system, what is the standard derived unit of pressure or stress commonly used in structural drawings to denote the grade of concrete e.g. M20 or steel?",
+    "o": [
+      "Newton per meter",
+      "Megapascal MPa or N/mm²",
+      "Kilogram per square centimeter",
+      "Joule"
+    ],
+    "a": 1,
+    "e": "1 MPa is exactly equal to 1 N/mm². This specific unit is used in working drawings because it allows engineers to easily relate the structural load in Newtons to the cross-sectional area of structural members which are drawn in millimeters."
+  },
+  {
+    "id": 5,
+    "q": "​Site plans often express large land areas. How many square meters m² are exactly contained in one Hectare?",
+    "o": [
+      "100 m²",
+      "1,000 m²",
+      "10,000 m²",
+      "100,000 m²"
+    ],
+    "a": 2,
+    "e": "A hectare is a metric unit of area defined as a square with 100-meter sides 100m x 100m. This is a highly probable Loksewa question for 4th-level exams when testing area conversions related to surveying and site layouts."
+  },
+  {
+    "id": 6,
+    "q": "​Which of the following is considered a Base Unit in the International System of Units SI?",
+    "o": [
+      "Newton",
+      "Pascal",
+      "Meter",
+      "Joule"
+    ],
+    "a": 2,
+    "e": "The SI system is built on seven fundamental base units Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela. All other units relevant to civil engineering like Newtons for force or Pascals for pressure are derived units formed by combining these base units."
+  },
+  {
+    "id": 7,
+    "q": "​For accurate estimation and billing of quantities from a drawing, what is the standard accepted conversion factor to convert 1 meter into feet?",
+    "o": [
+      "3.1415 feet",
+      "3.2808 feet",
+      "3.3333 feet",
+      "3.8208 feet"
+    ],
+    "a": 1,
+    "e": "While the syllabus emphasizes the SI system, Loksewa exams frequently test the metric-to-imperial conversion because the working reality in Nepal involves communicating dimensions to local contractors who often still use feet and inches."
+  },
+  {
+    "id": 8,
+    "q": "​A working drawing specifies a required underground water tank volume of 1 cubic meter 1 m³. What is the equivalent capacity in liters?",
+    "o": [
+      "10 Liters",
+      "100 Liters",
+      "1000 Liters",
+      "10000 Liters"
+    ],
+    "a": 2,
+    "e": "This is a crucial volumetric conversion fact. 1 liter is defined as 1 cubic decimeter. Since there are 10 decimeters in a meter, a cubic meter is 10 x 10 x 10 = 1000 cubic decimeters, or 1000 liters. This is essential for converting drawing dimensions into practical storage capacities."
+  },
+  {
+    "id": 9,
+    "q": "​In architectural and building drawings, what does a Floor Plan strictly represent from an engineering perspective?",
+    "o": [
+      "A top view of the roof",
+      "A vertical slice through the center of the building",
+      "A horizontal section cut of the building viewed from above, typically taken at sill level",
+      "A detailed view of the foundation layout"
+    ],
+    "a": 2,
+    "e": "A plan is not just a top view. It is technically a horizontal cross-section taken roughly 1.2 meters above the floor level. This specific cut height ensures that wall thicknesses, door openings, and window positions are accurately captured in the drawing."
+  },
+  {
+    "id": 10,
+    "q": "​What is the standard projection method used in civil engineering to represent a 3D building on a 2D sheet of paper accurately and to scale?",
+    "o": [
+      "Isometric Projection",
+      "Perspective Projection",
+      "Oblique Projection",
+      "Orthographic Projection"
+    ],
+    "a": 3,
+    "e": "Orthographic projection uses parallel projection lines that intersect the projection plane at 90 degrees perpendicular. This method ensures that the true shape and proportion of the building's faces are maintained, which is essential for taking accurate measurements during construction."
+  },
+  {
+    "id": 11,
+    "q": "​In Nepal, which angle of projection is the standard convention adopted for preparing engineering drawings?",
+    "o": [
+      "First Angle Projection",
+      "Second Angle Projection",
+      "Third Angle Projection",
+      "Fourth Angle Projection"
+    ],
+    "a": 0,
+    "e": "Following standard practices often aligned with the Bureau of Indian Standards in our region, First Angle Projection is the norm. In this method, the object is placed between the observer and the projection plane. Knowing this convention is critical to avoid reversing left/right or top/bottom views when reading drawings on site."
+  },
+  {
+    "id": 12,
+    "q": "​Which type of standard line is explicitly used in object drawing to represent hidden edges, foundations, or invisible outlines of a structure?",
+    "o": [
+      "Continuous thick line",
+      "Chain line",
+      "Dashed line or short dotted line",
+      "Wavy line"
+    ],
+    "a": 2,
+    "e": "Dashed lines communicate to the engineer that a specific feature exists but is blocked from the current viewing angle. For example, the foundation footings buried underground are shown as dashed lines on a ground floor plan."
+  },
+  {
+    "id": 13,
+    "q": "​What is the primary functional difference between an Elevation and a Section in a set of building drawings?",
+    "o": [
+      "An elevation shows structural steel, while a section shows architectural finishes",
+      "An elevation shows the exterior vertical faces, while a section shows the internal vertical details by virtually slicing the building",
+      "An elevation is drawn to scale, while a section is a rough sketch",
+      "An elevation shows horizontal details, while a section shows vertical details"
+    ],
+    "a": 1,
+    "e": "Elevations are used to understand the external aesthetics, overall height, and window placements. Sections are much more critical for structural understanding, as they reveal floor-to-floor heights, slab thickness, staircase details, and foundation depths."
+  },
+  {
+    "id": 14,
+    "q": "​Which of the following scales is most standard and practically preferred for drawing the Floor Plan of a typical residential building for municipal approval?",
+    "o": [
+      "1:10",
+      "1:50",
+      "1:100",
+      "1:500"
+    ],
+    "a": 2,
+    "e": "A scale of 1:100 provides the perfect balance for standard building sizes. It allows the entire floor plan to fit neatly on standard paper sizes like A3 or A4 while keeping room dimensions, wall thicknesses, and text clearly readable for the site supervisor."
+  },
+  {
+    "id": 15,
+    "q": "​In an elementary object drawing, what critical administrative and technical information must be placed in the Title Block usually at the bottom right corner?",
+    "o": [
+      "The contractor's contact details and material prices",
+      "Project name, scale, date, drawing title, and signatures of the designer/checker",
+      "The complete Bill of Quantities",
+      "The site's soil test report summary"
+    ],
+    "a": 1,
+    "e": "The title block acts as the official identification for the drawing. In Loksewa and practical engineering, a drawing without a properly filled title block has no legal validity on a construction site and can lead to severe miscommunication and errors."
+  },
+  {
+    "id": 16,
+    "q": "​When drawing a site plan, what does the term Setback refer to?",
+    "o": [
+      "The depth of the foundation excavation",
+      "The mandatory open space left between the building footprint and the property boundary line",
+      "The distance between two internal partition walls",
+      "The slope of the roof"
+    ],
+    "a": 1,
+    "e": "Site plans are primarily drawn to ensure building bylaws are followed. The setback distance is a critical regulatory dimension to ensure ventilation, sunlight, and emergency access, making it a very common exam question for municipal/provincial engineering roles."
+  },
+  {
+    "id": 17,
+    "q": "​When taking horizontal measurements of an existing room that is visibly not perfectly rectangular, which technique must be used to accurately plot its true shape on the drawing?",
+    "o": [
+      "Squaring",
+      "Triangulation measuring the diagonals",
+      "Parallelogram method",
+      "Chaining"
+    ],
+    "a": 1,
+    "e": "If you only measure the four walls of a skewed room, you can draw infinite parallelograms. By measuring the walls and at least one diagonal, you divide the room into rigid triangles. This guarantees the drawn room matches the exact, potentially irregular shape of the real room."
+  },
+  {
+    "id": 18,
+    "q": "​While preparing a measured drawing, what is the most reliable, simple, and traditional tool used to check the verticality of an existing column or to transfer a point straight down to the floor?",
+    "o": [
+      "Spirit level",
+      "Plumb bob",
+      "Theodolite",
+      "Try square"
+    ],
+    "a": 1,
+    "e": "A plumb bob uses gravity to provide an absolute, exact vertical reference line. It is essential for verifying if existing walls or columns are truly vertical plumb before drafting their sections, as old buildings often have settling or leaning issues."
+  },
+  {
+    "id": 19,
+    "q": "​In the absence of a leveling instrument like a Dumpy level, what is the most highly accurate, low-cost method for transferring a horizontal level such as a sill level across multiple rooms in an existing building?",
+    "o": [
+      "Long straight edge",
+      "Measuring tape",
+      "Water level tube",
+      "Line string"
+    ],
+    "a": 2,
+    "e": "Based on the fundamental physics principle that water always seeks its own level, a transparent, flexible tube filled with water is extremely accurate. It allows an engineer to mark exact horizontal planes across walls and corners that block the line of sight."
+  },
+  {
+    "id": 20,
+    "q": "​Where is the most practical and accurate location to measure the total, exact thickness of an existing masonry wall for a sectional drawing?",
+    "o": [
+      "At the exact center of the wall",
+      "At the corner joints",
+      "At door or window openings the jambs",
+      "Near the ceiling level"
+    ],
+    "a": 2,
+    "e": "In a finished building, the actual brickwork is hidden by plaster on both sides, making it impossible to measure the thickness by just looking at a solid wall. The only places the full cross-section of the wall is exposed and measurable with a tape are at the cutouts for doors and windows."
+  },
+  {
+    "id": 21,
+    "q": "​What is the most accessible and accurate location in a multi-story building to drop a tape and measure the exact floor-to-floor vertical height for a sectional drawing?",
+    "o": [
+      "An exterior window",
+      "The balcony edge",
+      "The staircase well",
+      "The ventilation shaft"
+    ],
+    "a": 2,
+    "e": "Measuring floor-to-floor height from the outside can be difficult due to roof overhangs or lack of access. The stairwell provides a continuous, open vertical shaft inside the building. Dropping a tape directly from the upper landing to the lower landing gives a precise measurement without having to calculate the sum of individual stair risers."
+  },
+  {
+    "id": 22,
+    "q": "​When preparing a sectional measured drawing of an existing, older building, you cannot excavate to see the foundation details. How MUST this be represented on your technical drawing?",
+    "o": [
+      "It must be assumed as a standard spread footing and drawn normally",
+      "It must be omitted entirely without any indication",
+      "It must be omitted using a standard break line, or drawn with dashed lines and explicitly labeled as Assumed",
+      "It must be copied from a neighboring building's drawing"
+    ],
+    "a": 2,
+    "e": "An engineer's drawing is a legal document. You must never invent or guess hidden structural data. If a foundation cannot be physically measured, you must use standard drafting conventions like break lines to honestly communicate that the sub-surface information is unknown."
+  },
+  {
+    "id": 23,
+    "q": "​When using a steel measuring tape for long horizontal dimensions e.g. 20 meters across a building courtyard, what is the primary source of error the engineer must actively avoid?",
+    "o": [
+      "Temperature expansion of the tape",
+      "Sagging of the tape",
+      "Misreading the numbers",
+      "Wind deflection"
+    ],
+    "a": 1,
+    "e": "When a tape is pulled across a long distance in the air, gravity pulls the center down, creating a curve catenary. This sagging makes the measured distance appear longer than the actual straight-line distance. The tape must be pulled taut and, if possible, laid flat on the ground."
+  },
+  {
+    "id": 24,
+    "q": "​What is the absolute critical first step an engineer must take on-site before beginning to pull a tape measure for a measured drawing?",
+    "o": [
+      "Setting up a total station",
+      "Marking grid lines on the floor",
+      "Preparing a rough, proportional hand sketch single-line diagram of the plan and sections",
+      "Finding the north direction"
+    ],
+    "a": 2,
+    "e": "You cannot just start measuring randomly. A rough hand sketch acts as your map. As you take measurements, you write the dimensions directly onto this sketch. This ensures no walls or recesses are missed and that the overall layout is logically recorded before you head back to the office to draft it to scale."
+  },
+  {
+    "id": 25,
+    "q": "​In a working drawing, if the reinforcement detailing such as the bar bending schedule is omitted or ambiguous, which of the following project documents will suffer the most immediate and severe financial inaccuracy?",
+    "o": [
+      "The site layout plan",
+      "The Bill of Quantities BOQ and cost estimation",
+      "The municipal approval certificate",
+      "The architectural elevation"
+    ],
+    "a": 1,
+    "e": "Without precise detailing of lap lengths, bends, hooks, and spacing, the exact tonnage of steel cannot be calculated. Since steel is typically the most expensive material on a site, lacking these details directly compromises the BOQ's accuracy, leading to massive budget overruns or under-bidding."
+  },
+  {
+    "id": 26,
+    "q": "​What is the primary purpose of providing large-scale e.g. 1:10 or 1:20 junction details in structural working drawings for site supervision?",
+    "o": [
+      "To make the drawing look more professional",
+      "To show the exact paint colors used at the junction",
+      "To ensure proper placement, spacing, and anchorage of overlapping reinforcement bars at critical stress points without causing concrete honeycombing",
+      "To detail the formwork requirements"
+    ],
+    "a": 2,
+    "e": "Beam-column junctions are heavily congested with steel. Large-scale details guide the site supervisor to verify that concrete aggregates can actually flow through the reinforcement and that structural continuity anchorage is strictly maintained as per the design codes."
+  },
+  {
+    "id": 27,
+    "q": "​In the structural working drawing of an isolated footing, what does the cover or clear cover dimension specifically indicate to the construction supervisor?",
+    "o": [
+      "The thickness of the concrete slab",
+      "The clear distance between the outer surface of the concrete and the nearest surface of the reinforcing steel",
+      "The distance from the ground level to the top of the footing",
+      "The spacing between the steel bars"
+    ],
+    "a": 1,
+    "e": "Clear cover is vital to protect the steel from soil moisture, chemical attack, and corrosion. For foundations, a standard heavy cover e.g. 50mm or 75mm depending on soil conditions is mandatory. Verifying cover blocks are placed correctly is a primary duty of an Assistant Sub Engineer before casting."
+  },
+  {
+    "id": 28,
+    "q": "​In a column working drawing, what is the critical structural function of closely spaced lateral ties or stirrups specified near the beam-column joints?",
+    "o": [
+      "To make tying the vertical bars easier",
+      "To confine the concrete core and prevent the buckling of longitudinal main bars under high shear and seismic forces",
+      "To resist the vertical compressive loads directly",
+      "To prevent the concrete from drying too quickly"
+    ],
+    "a": 1,
+    "e": "Especially in earthquake-prone regions like Nepal, building joints experience extreme shear stress during tremors. Closely spaced ties provide confinement, ensuring the column remains ductile, dissipates seismic energy, and doesn't suffer sudden, brittle failure."
+  },
+  {
+    "id": 29,
+    "q": "​When reading the reinforcement detailing of a simply supported or continuous RCC slab, why are the alternate main tensile bars often shown cranked or bent up near the supports?",
+    "o": [
+      "To resist negative bending moments that develop at the supports and to safely handle shear forces",
+      "To save steel material",
+      "To provide a place to tie the top distribution bars",
+      "To increase the thickness of the slab at the supports"
+    ],
+    "a": 0,
+    "e": "In a slab, the tension zone is at the bottom in the middle of the span, but it shifts to the top at the supports. Cranking the bars economizes the use of steel by moving the same continuous bar from the bottom tension zone to the top tension zone exactly where it is needed."
+  },
+  {
+    "id": 30,
+    "q": "​On a structural beam detailing sheet, the symbol L_d is frequently denoted at the ends where the beam meets the exterior column. What does this represent?",
+    "o": [
+      "Live load",
+      "Lateral dimension",
+      "Development Length",
+      "Longitudinal depth"
+    ],
+    "a": 2,
+    "e": "L_d is the absolute minimum length of the reinforcement bar that must be embedded into the column concrete. This ensures the stresses from the steel are safely transferred to the concrete by bond friction, preventing the bar from pulling out when the beam is loaded."
+  },
+  {
+    "id": 31,
+    "q": "​If there is a direct contradiction between the architectural floor plan and the structural working drawing regarding the exact dimension or position of a load-bearing column, which document must the site supervisor prioritize?",
+    "o": [
+      "The architectural floor plan",
+      "The structural working drawing while immediately issuing a Request for Information",
+      "Whichever is easier to construct",
+      "The municipal approved plan"
+    ],
+    "a": 1,
+    "e": "Structural drawings dictate the safety, load-bearing capacity, and stability of the building. While discrepancies must always be reported for official clarification, structural integrity always supersedes architectural aesthetics or room layouts on a construction site."
+  },
+  {
+    "id": 32,
+    "q": "​In the structural working drawing of a standard dog-legged staircase, what is the waist slab?",
+    "o": [
+      "The landing slab connecting the two flights",
+      "The horizontal surface where the foot rests",
+      "The inclined RCC slab on which the steps treads and risers are constructed",
+      "The vertical face of the step"
+    ],
+    "a": 2,
+    "e": "The waist slab acts as an inclined beam carrying the dead load of the concrete steps and the live load of the people using the stairs. Its thickness and the main reinforcement running along its slope are the primary structural components you must supervise during stair construction."
+  },
+  {
+    "id": 33,
+    "q": "​What is the standard, verified unit weight of mild steel used in working drawings to calculate the total tonnage for the Bill of Quantities BOQ?",
+    "o": [
+      "2400 kg per m³",
+      "2500 kg per m³",
+      "7850 kg per m³",
+      "8500 kg per m³"
+    ],
+    "a": 2,
+    "e": "This is a non-negotiable data point for any civil engineer. To convert the volume of steel reinforcement calculated from the length and diameter in the drawing into weight for purchasing and estimating, you must multiply it by exactly 7850 kg per cubic meter."
+  },
+  {
+    "id": 34,
+    "q": "​In standard SI unit conversions crucial for material estimation, what is the exact volume of one standard 50 kg bag of Portland cement?",
+    "o": [
+      "0.0245 m³",
+      "0.0347 m³ or 34.7 Liters",
+      "0.0450 m³",
+      "0.0500 m³"
+    ],
+    "a": 1,
+    "e": "Mix designs and concrete quantities in working drawings are given in cubic meters e.g. 10 m³ of M20 concrete. Knowing that one bag equals exactly 0.0347 m³ allows an Assistant Sub Engineer to instantly calculate how many bags of cement need to be ordered for the site."
+  },
+  {
+    "id": 35,
+    "q": "​According to the ISO 216 standard internationally adopted for engineering drawing sheets, what are the exact dimensions of the base A0 size paper?",
+    "o": [
+      "594 mm × 841 mm",
+      "841 mm × 1189 mm",
+      "420 mm × 594 mm",
+      "1000 mm × 1000 mm"
+    ],
+    "a": 1,
+    "e": "Loksewa exams frequently test standard paper dimensions. A0 is the base size with an area of exactly 1 square meter. Every subsequent size A1, A2, A3 is derived by halving the longer dimension of the previous size."
+  },
+  {
+    "id": 36,
+    "q": "​When preparing an elementary building section drawing, at what specific standard angle should the hatching lines be drawn to represent brick masonry in the cut section?",
+    "o": [
+      "30 degrees",
+      "45 degrees",
+      "60 degrees",
+      "90 degrees"
+    ],
+    "a": 1,
+    "e": "To maintain uniformity and professional standard in building drawings, section lines hatching for solid materials like brickwork are conventionally drawn at exactly 45 degrees to the main horizontal or vertical outlines of the section."
+  },
+  {
+    "id": 37,
+    "q": "​When taking vertical sectional measurements of a standard residential building in Nepal, what are the standard, assumed datum heights from the floor level for the sill and lintel respectively?",
+    "o": [
+      "0.6 meters Sill Level and 1.8 meters Lintel Level",
+      "0.9 meters Sill Level and 2.1 meters Lintel Level",
+      "1.0 meters Sill Level and 2.5 meters Lintel Level",
+      "1.2 meters Sill Level and 2.4 meters Lintel Level"
+    ],
+    "a": 1,
+    "e": "While taking measured drawings, if architectural plans are missing, engineers assume a door/window top height lintel of 2.1m approx 7 feet and a window base height sill of 0.9m approx 3 feet. This is critical data for estimating brickwork deductions."
+  },
+  {
+    "id": 38,
+    "q": "​When verifying horizontal measurements on a site plan using a standard metric chain 20m or 30m length, what is the exact length of one individual chain link?",
+    "o": [
+      "10 cm",
+      "15 cm",
+      "20 cm or 200 mm",
+      "25 cm"
+    ],
+    "a": 2,
+    "e": "Whether a metric chain is 20 meters long 100 links or 30 meters long 150 links, the data fact remains absolute: the distance from the center of one connecting ring to the center of the next is exactly 20 cm. This is a classic, high-probability measurement question."
+  },
+  {
+    "id": 39,
+    "q": "​According to standard structural detailing codes such as IS 456 widely referenced in Nepal, what is the specified minimum nominal clear cover for longitudinal reinforcing bars in an underground RCC footing?",
+    "o": [
+      "25 mm",
+      "40 mm",
+      "50 mm",
+      "75 mm"
+    ],
+    "a": 2,
+    "e": "This is a vital piece of structural data for site supervision Topic 1.4. Footings are in direct contact with earth and moisture. A minimum of 50mm clear cover is legally required to prevent the steel from rusting. For columns, it is 40mm, and for slabs, it is generally 15mm or 20mm."
+  },
+  {
+    "id": 40,
+    "q": "​In structural working drawings designed for earthquake-resistant zones, what is the mandatory minimum extension length for a 135-degree seismic hook on a column stirrup or tie?",
+    "o": [
+      "6d",
+      "8d",
+      "10d where d is the diameter of the tie bar or 75 mm, whichever is strictly greater",
+      "12d"
+    ],
+    "a": 2,
+    "e": "This data dictates the safety of the entire building during an earthquake. If a working drawing specifies an 8mm tie, the hook extension must be calculated as 10 x 8mm = 80mm. If the contractor cuts the steel shorter than this data point, the column ties will burst open under seismic load."
+  },
+  {
+    "id": 41,
+    "q": "​What is the exact mathematical formula used to calculate the unit weight in kg per m of a steel reinforcing bar of diameter D in mm?",
+    "o": [
+      "D squared / 144",
+      "D squared / 162",
+      "D squared / 180",
+      "D / 162"
+    ],
+    "a": 1,
+    "e": "This standard empirical formula is derived from the density of steel 7850 kg/m³. It is used universally on sites and in drawing offices to instantly calculate the weight of steel per meter length for BOQ preparation."
+  },
+  {
+    "id": 42,
+    "q": "​In volume calculations for concrete and masonry, how many cubic feet cft are exactly equivalent to one cubic meter 1 m3?",
+    "o": [
+      "3.28 cft",
+      "10.76 cft",
+      "35.31 cft",
+      "100 cft"
+    ],
+    "a": 2,
+    "e": "Local sand and aggregate in Nepal are often supplied in tractors or trucks measured in cubic feet, while structural drawings and BOQs specify cubic meters. Memorizing 35.31 is critical for material estimation."
+  },
+  {
+    "id": 43,
+    "q": "​What is the standard assumed unit weight of Reinforced Cement Concrete RCC used in structural design and load calculations?",
+    "o": [
+      "2200 kg per m³",
+      "2400 kg per m³",
+      "2500 kg per m³ or 25 kN per m³",
+      "7850 kg per m³"
+    ],
+    "a": 2,
+    "e": "Plain Cement Concrete PCC is 2400 kg/m³. The addition of steel reinforcement which is much heavier increases the average design unit weight to 2500 kg/m³."
+  },
+  {
+    "id": 44,
+    "q": "​According to standard engineering drawing practices, what are the exact dimensions of a standard Title Block placed at the bottom right corner of a drawing sheet?",
+    "o": [
+      "150 mm × 50 mm",
+      "185 mm × 65 mm",
+      "200 mm × 100 mm",
+      "170 mm × 70 mm"
+    ],
+    "a": 1,
+    "e": "Standardized globally and adopted in Nepal, these exact dimensions ensure uniformity in filing, folding, and binding all working drawings so that the title block is always visible on top."
+  },
+  {
+    "id": 45,
+    "q": "​In standard orthographic projection, what is the specified length of the short dashes used to draw a hidden line representing invisible features?",
+    "o": [
+      "1 mm to 2 mm",
+      "2 mm to 3 mm long, separated by 1 mm gaps",
+      "4 mm to 5 mm long, separated by 2 mm gaps",
+      "5 mm to 10 mm"
+    ],
+    "a": 1,
+    "e": "Hidden lines must be uniform to maintain a professional standard. Knowing the exact data for dash lengths ensures they are not confused with center lines which use long and short dashes."
+  },
+  {
+    "id": 46,
+    "q": "​What is the standard recommended height of lettering text for writing dimensions and notes on a general building working drawing?",
+    "o": [
+      "1 mm",
+      "3 mm or a range of 2.5 mm to 3.5 mm",
+      "5 mm",
+      "10 mm"
+    ],
+    "a": 1,
+    "e": "Text smaller than 2.5 mm becomes unreadable when drawings are printed, photocopied, or viewed in poor site lighting."
+  },
+  {
+    "id": 47,
+    "q": "​According to the National Building Code NBC of Nepal, what is the mandatory minimum floor area required for a habitable room in a residential building?",
+    "o": [
+      "6.0 square meters",
+      "7.5 square meters",
+      "9.0 square meters",
+      "12.0 square meters"
+    ],
+    "a": 2,
+    "e": "When doing a measured drawing or checking a drafted plan for municipal approval, the Assistant Sub Engineer must verify this exact data to ensure the building meets legal health standards."
+  },
+  {
+    "id": 48,
+    "q": "​When verifying an existing building's ventilation during a measured drawing, the total openable area of windows should be at least what percentage of the floor area?",
+    "o": [
+      "5 percent",
+      "10 percent or 1/10th",
+      "15 percent",
+      "20 percent"
+    ],
+    "a": 1,
+    "e": "This is a standard building bye-law requirement to ensure adequate natural light and airflow."
+  },
+  {
+    "id": 49,
+    "q": "​When drafting a measured section of a standard residential staircase, what is the standard recommended height for a single riser?",
+    "o": [
+      "100 mm to 125 mm",
+      "150 mm to 175 mm",
+      "200 mm to 225 mm",
+      "250 mm to 300 mm"
+    ],
+    "a": 1,
+    "e": "This specific numerical range ensures ergonomic comfort and safety. A measured existing stair that exceeds this height is considered steep and potentially hazardous."
+  },
+  {
+    "id": 50,
+    "q": "​In structural detailing, what is the absolute minimum diameter of a longitudinal steel bar that can be used in an RCC column?",
+    "o": [
+      "8 mm",
+      "10 mm",
+      "12 mm",
+      "16 mm"
+    ],
+    "a": 2,
+    "e": "Structural code provisions strictly prohibit using 10 mm or 8 mm bars as main vertical reinforcement in columns because they lack the stiffness to resist buckling under heavy compressive loads."
+  },
+  {
+    "id": 51,
+    "q": "​How many minimum longitudinal steel bars must be detailed in the working drawing of a circular RCC column?",
+    "o": [
+      "4 bars",
+      "6 bars",
+      "8 bars",
+      "10 bars"
+    ],
+    "a": 1,
+    "e": "While a rectangular column requires a minimum of 4 bars one in each corner, circular columns require a minimum of 6 equally spaced bars to maintain structural confinement and circular symmetry."
+  },
+  {
+    "id": 52,
+    "q": "​What is the standard required lap length in direct tension for a deformed steel bar in a column, expressed in terms of bar diameter d?",
+    "o": [
+      "20d",
+      "30d",
+      "Generally taken as 50d or equal to development length L_d",
+      "75d"
+    ],
+    "a": 2,
+    "e": "When a bar runs out and needs to be spliced with another, they must overlap by this exact mathematical ratio e.g. 50 x 12mm = 600mm to safely transfer the load through concrete friction without slipping."
+  },
+  {
+    "id": 53,
+    "q": "​In the working drawing of an RCC beam, what is the maximum permissible spacing between vertical stirrups shear reinforcement?",
+    "o": [
+      "0.5d or 150 mm",
+      "0.75d or 300 mm, whichever is less where d is the effective depth",
+      "1.0d or 450 mm",
+      "1.5d"
+    ],
+    "a": 1,
+    "e": "Stirrups prevent diagonal shear cracks. If the spacing exceeds 300 mm, the beam becomes highly vulnerable to sudden, catastrophic shear failure."
+  },
+  {
+    "id": 54,
+    "q": "​For measuring horizontal distances accurately on old cadastral surveys, what is the exact standard length of a Gunter's Chain?",
+    "o": [
+      "20 meters",
+      "30 meters",
+      "66 feet comprising 100 links",
+      "100 feet"
+    ],
+    "a": 2,
+    "e": "While metric chains 20m or 30m are the modern standard, the Gunter's chain is a historical data point frequently tested in Loksewa for older land measured drawings."
+  },
+  {
+    "id": 55,
+    "q": "​When reading a slab reinforcement detail, what is the minimum required clear cover specifically for an internal RCC roof slab?",
+    "o": [
+      "15 mm",
+      "25 mm",
+      "40 mm",
+      "50 mm"
+    ],
+    "a": 0,
+    "e": "Slabs require less clear cover than foundations 50mm or columns 40mm because they are thinner and not exposed directly to soil moisture, but 15mm is the absolute minimum to protect the steel from fire and rust."
+  },
+  {
+    "id": 56,
+    "q": "​To ensure precision in measured drawings involving angular measurements for site boundaries, how many seconds are there in exactly one degree?",
+    "o": [
+      "60 seconds",
+      "360 seconds",
+      "3600 seconds",
+      "4000 seconds"
+    ],
+    "a": 2,
+    "e": "1 degree = 60 minutes, and 1 minute = 60 seconds. Therefore, 60 x 60 = 3600 seconds."
+  },
+  {
+    "id": 57,
+    "q": "​In municipal drawing standards, what is the typical assumed thickness of a standard load-bearing exterior brick wall represented on a floor plan in Nepal?",
+    "o": [
+      "115 mm",
+      "150 mm",
+      "230 mm or 9 inches",
+      "300 mm"
+    ],
+    "a": 2,
+    "e": "A standard one-brick thick wall uses the length of the brick with mortar/plaster as the wall thickness. This is a fundamental dimension needed to read and draft building boundaries accurately."
+  },
+  {
+    "id": 58,
+    "q": "​When measuring an existing building's Plinth Area for valuation, which of the following is strictly EXCLUDED from the numerical calculation?",
+    "o": [
+      "Internal walls",
+      "Built-in cupboards",
+      "Cantilevered porches, sunshades chajjas, and open unroofed balconies",
+      "Staircase rooms"
+    ],
+    "a": 2,
+    "e": "Plinth area is the covered, enclosed built-up area measured at the floor level. Open projections are explicitly excluded by standard measurement codes."
+  },
+  {
+    "id": 59,
+    "q": "​In site surveying and land measurement within Nepal, exactly how many square feet are contained in 1 Anna?",
+    "o": [
+      "100 square feet",
+      "342.25 square feet",
+      "500 square feet",
+      "1000 square feet"
+    ],
+    "a": 1,
+    "e": "Although SI units are the engineering standard, local land records Lalpurja are in Ropani-Anna-Paisa-Daam. Knowing that 1 Anna equals 342.25 sq. ft. is absolutely mandatory for verifying property boundaries on a site plan."
+  },
+  {
+    "id": 60,
+    "q": "​For BOQ estimation from a working drawing, what percentage of the total weight of reinforcement steel is typically added as a data standard to account for binding wire?",
+    "o": [
+      "1 percent or 0.9 to 1 kg per 100 kg of steel",
+      "3 percent",
+      "5 percent",
+      "10 percent"
+    ],
+    "a": 0,
+    "e": "Binding wire is never drawn on the structural plans, but it must be estimated. Using the standard 1 percent rule allows the Assistant Sub Engineer to accurately price the structural works."
+  },
+  {
+    "id": 61,
+    "q": "​What is the universally accepted standard density unit weight of ordinary Portland cement used to calculate bag volumes on a construction site?",
+    "o": [
+      "1000 kg per m³",
+      "1440 kg per m³",
+      "2400 kg per m³",
+      "2500 kg per m³"
+    ],
+    "a": 1,
+    "e": "This exact density is how we derive the volume of a 50 kg cement bag. By dividing the mass 50 kg by the density 1440 kg/m³, you get the standard volume of 0.0347 m³, which is essential for working drawing material estimations."
+  },
+  {
+    "id": 62,
+    "q": "​In land measurement for large-scale site plans, exactly how many square meters are contained in 1 standard Acre?",
+    "o": [
+      "1000 m²",
+      "4046.86 m²",
+      "10000 m²",
+      "43560 m²"
+    ],
+    "a": 1,
+    "e": "While Hectares are the primary metric unit, Acres are frequently used in older deeds and regional land planning. Knowing this exact conversion is critical for an Assistant Sub Engineer verifying plot sizes."
+  },
+  {
+    "id": 63,
+    "q": "​For regional land records in the hilly and mountainous areas of Nepal, what is the exact metric equivalent of 1 Ropani of land?",
+    "o": [
+      "100 m²",
+      "342.25 m²",
+      "508.72 m²",
+      "1000 m²"
+    ],
+    "a": 2,
+    "e": "This is a localized data fact that frequently appears in provincial Loksewa exams. Understanding the conversion between traditional Nepali measurements and the SI system is a daily requirement for preparing official site plans."
+  },
+  {
+    "id": 64,
+    "q": "​According to standard drafting conventions based on the ISO A-series, what are the exact dimensions of an A1 size drawing sheet?",
+    "o": [
+      "297 mm × 420 mm",
+      "420 mm × 594 mm",
+      "594 mm × 841 mm",
+      "841 mm × 1189 mm"
+    ],
+    "a": 2,
+    "e": "A1 is the most commonly used sheet size for printing large structural and architectural working drawings for site use. It is exactly half the area of an A0 sheet."
+  },
+  {
+    "id": 65,
+    "q": "​According to standard building codes like the National Building Code of Nepal, what is the mandatory minimum vertical headroom clearance for any staircase?",
+    "o": [
+      "1.8 meters",
+      "2.0 meters",
+      "2.1 meters",
+      "2.5 meters"
+    ],
+    "a": 2,
+    "e": "When drawing a section of a building, the vertical distance from any step tread to the ceiling or soffit of the flight above must never be less than 2.1m to ensure occupants can safely walk without hitting their heads."
+  },
+  {
+    "id": 66,
+    "q": "​To prevent accidents, what is the legally required minimum height for a roof parapet wall or balcony railing shown in an elevation drawing?",
+    "o": [
+      "0.5 meters",
+      "0.6 meters",
+      "0.9 meters or 900 mm",
+      "1.2 meters"
+    ],
+    "a": 2,
+    "e": "A parapet wall shorter than 0.9m is considered a fatal fall hazard by building bye-laws. You must actively check this dimension when verifying architectural plans before construction."
+  },
+  {
+    "id": 67,
+    "q": "​According to standard ergonomic and building code provisions, what is the accepted range for the pitch angle of inclination of a standard indoor staircase?",
+    "o": [
+      "10 to 20 degrees",
+      "25 to 40 degrees",
+      "45 to 60 degrees",
+      "60 to 75 degrees"
+    ],
+    "a": 1,
+    "e": "If an existing staircase is measured and its angle is steeper than 40 degrees, it is fundamentally unsafe. If it is less than 25 degrees, it acts more like a ramp and wastes valuable floor space in the floor plan."
+  },
+  {
+    "id": 68,
+    "q": "​When recording measurements for a Bill of Quantities BOQ from a working drawing, what is the standard degree of precision for measuring length?",
+    "o": [
+      "Nearest 1 m",
+      "Nearest 0.1 m",
+      "Nearest 0.01 m or 1 cm",
+      "Nearest 0.001 m"
+    ],
+    "a": 2,
+    "e": "Engineering estimation rules dictate that linear dimensions should not be rounded to the nearest meter. They must be recorded strictly to two decimal places e.g. 4.25 m to prevent massive financial discrepancies in material costs."
+  },
+  {
+    "id": 69,
+    "q": "​During site surveying for a measured drawing, what is the absolute least count smallest readable dimension of a standard metric leveling staff?",
+    "o": [
+      "1 mm",
+      "5 mm or 0.005 m",
+      "10 mm",
+      "20 mm"
+    ],
+    "a": 1,
+    "e": "This is a fundamental instrument limitation fact. You cannot read a level with a standard staff more accurately than 5mm. Knowing this prevents engineers from recording impossibly precise elevations like 102.342 m on their site plans."
+  },
+  {
+    "id": 70,
+    "q": "​What is the exact nominal size of a standard modular brick including the thickness of the mortar joint used for drafting masonry walls?",
+    "o": [
+      "190 mm × 90 mm × 90 mm",
+      "200 mm × 100 mm × 100 mm",
+      "230 mm × 115 mm × 75 mm",
+      "250 mm × 125 mm × 75 mm"
+    ],
+    "a": 1,
+    "e": "The actual size of a standard IS modular brick is 190 x 90 x 90 mm. However, when drafting plans or calculating wall volumes, engineers must use the nominal size which adds a standard 10mm mortar thickness to all dimensions."
+  },
+  {
+    "id": 71,
+    "q": "​In RCC structural detailing, what is the standard specified thickness for a horizontal Damp Proof Course DPC applied at the plinth level?",
+    "o": [
+      "10 mm",
+      "15 mm",
+      "25 mm or 2.5 cm",
+      "50 mm"
+    ],
+    "a": 2,
+    "e": "The DPC is a critical waterproof barrier. Structural drawings and BOQs universally mandate a standard 25mm thickness of rich cement concrete usually 1:1.5:3 ratio mixed with waterproofing compounds to stop capillary moisture from ruining walls."
+  },
+  {
+    "id": 72,
+    "q": "​According to IS 456 widely used in Nepal, what is the absolute minimum grade of concrete that can be specified in a working drawing for any Reinforced Cement Concrete RCC work?",
+    "o": [
+      "M10",
+      "M15",
+      "M20",
+      "M25"
+    ],
+    "a": 2,
+    "e": "M15 is no longer permitted for RCC due to durability concerns. Any structural drawing for beams, columns, or slabs must explicitly specify M20 which means a characteristic compressive strength of 20 N/mm2 or higher."
+  },
+  {
+    "id": 73,
+    "q": "​In column detailing, what is the maximum permissible percentage of longitudinal steel reinforcement relative to the gross cross-sectional area of the column?",
+    "o": [
+      "2 percent",
+      "4 percent",
+      "6 percent though practically restricted to 4 percent at lap zones",
+      "8 percent"
+    ],
+    "a": 2,
+    "e": "If the steel exceeds 6 percent, the column becomes so congested that the concrete aggregate cannot flow between the bars, leading to fatal honeycombing and void formation during casting."
+  },
+  {
+    "id": 74,
+    "q": "​Conversely, what is the mandatory minimum percentage of longitudinal steel reinforcement required in an RCC column?",
+    "o": [
+      "0.5 percent",
+      "0.8 percent of the gross cross-sectional area",
+      "1.0 percent",
+      "1.5 percent"
+    ],
+    "a": 1,
+    "e": "Even if the compressive loads are very small, standard codes mandate at least 0.8 percent steel to handle unpredictable bending moments, shrinkage, and temperature stresses without cracking."
+  },
+  {
+    "id": 75,
+    "q": "​What is the standard maximum size of coarse aggregate gravel typically specified in general RCC working drawings for slabs, beams, and columns?",
+    "o": [
+      "10 mm",
+      "20 mm",
+      "40 mm",
+      "75 mm"
+    ],
+    "a": 1,
+    "e": "Using aggregates larger than 20mm in standard residential buildings risks the stones getting jammed between the tightly spaced reinforcement bars, preventing proper concrete compaction."
+  },
+  {
+    "id": 76,
+    "q": "​In the detailing of a structural door or window lintel over a masonry wall, what is the standard minimum required bearing length on each side of the opening?",
+    "o": [
+      "50 mm",
+      "100 mm",
+      "150 mm or equal to the lintel depth whichever is greater",
+      "230 mm"
+    ],
+    "a": 2,
+    "e": "A lintel must rest solidly on the brickwork to transfer the load safely. If the bearing length is less than 150mm, the concentrated pressure can crush the bricks immediately under the edges of the lintel."
+  },
+  {
+    "id": 77,
+    "q": "​According to reinforcement detailing rules, what is the maximum allowable spacing between longitudinal bars in a column, measured along the periphery?",
+    "o": [
+      "150 mm",
+      "200 mm",
+      "300 mm",
+      "450 mm"
+    ],
+    "a": 2,
+    "e": "If vertical bars are placed more than 300mm apart, the concrete in between them is not adequately confined and can spall break off under heavy compressive or seismic loads."
+  },
+  {
+    "id": 78,
+    "q": "​When preparing a bar bending schedule for a working drawing, what is the exact extra length added to account for a standard 180-degree semi-circular hook at the end of a steel bar?",
+    "o": [
+      "4d",
+      "6d",
+      "9d where d is the diameter of the bar",
+      "12d"
+    ],
+    "a": 2,
+    "e": "Bending a bar stretches the steel. To ensure the final cut length is perfect, estimators use the absolute formula of 9d for a full U-turn hook and 45d to 50d for an overlap."
+  },
+  {
+    "id": 79,
+    "q": "​When checking standard door sizes in a residential building plan, what is the typical, standard internal clear width for a main entrance door?",
+    "o": [
+      "0.75 meter",
+      "0.9 meter",
+      "1.0 meter to 1.2 meters",
+      "1.5 meters"
+    ],
+    "a": 2,
+    "e": "While bathroom doors can be 0.75m wide, main entrance doors are standardized at 1.0m to 1.2m to allow for the safe passage of furniture, appliances, and multiple people during an emergency."
+  },
+  {
+    "id": 80,
+    "q": "​What is the exact mathematical relationship between Megapascals MPa and Newtons per square millimeter N/mm2 used constantly in material strength drawings?",
+    "o": [
+      "1 MPa equals 0.1 N/mm2",
+      "1 MPa equals 1 N/mm2",
+      "1 MPa equals 10 N/mm2",
+      "1 MPa equals 100 N/mm2"
+    ],
+    "a": 1,
+    "e": "This 1:1 ratio is the most useful conversion fact in structural engineering. When a drawing states concrete is M25, it means its strength is 25 MPa, which instantly translates to 25 N/mm2 for the engineer doing the load calculations."
+  },
+  {
+    "id": 81,
+    "q": "​In standard engineering drafting practices IS 10714, what is the specified numerical ratio of line thickness between a Visible Outline continuous thick line and a Dimension or Center Line continuous thin line?",
+    "o": [
+      "1:1",
+      "2:1 or exactly double",
+      "3:1",
+      "4:1"
+    ],
+    "a": 1,
+    "e": "If your main building outline is drawn with a 0.5 mm pen, your dimension lines and center lines must be drawn with a 0.25 mm pen. Examiners test this ratio to see if you understand how to create visual depth and hierarchy on a printed sheet."
+  },
+  {
+    "id": 82,
+    "q": "​According to standard IS specifications for drawing equipment, what are the exact standard dimensions of a D2 also known as B2 size wooden drawing board?",
+    "o": [
+      "500 mm × 350 mm × 15 mm",
+      "700 mm × 500 mm × 15 mm",
+      "1000 mm × 700 mm × 25 mm",
+      "1500 mm × 1000 mm × 25 mm"
+    ],
+    "a": 1,
+    "e": "While you learned paper sizes A0, A1, etc., examiners frequently test the board sizes that hold them. The D2 or B2 board is the standard size used in technical diploma colleges for A2 size drawing sheets."
+  },
+  {
+    "id": 83,
+    "q": "​When using the two standard set squares the 45 degree and the 30-60 degree set squares combined together on a T-square, what is the absolute minimum incremental angle that can be accurately drawn without using a protractor?",
+    "o": [
+      "5 degrees",
+      "10 degrees",
+      "15 degrees",
+      "30 degrees"
+    ],
+    "a": 2,
+    "e": "By placing the 45 degree set square over the 30 degree angle, or subtracting them 45 minus 30, you can construct lines at exactly 15, 75, 105 degrees, etc. This is a classic, pure data question about drafting tool capabilities."
+  },
+  {
+    "id": 84,
+    "q": "​To maintain standard lightness and prevent smudging on a final drawing sheet, which specific grade of pencil is strictly recommended by drafting codes for drawing initial construction lines and center lines?",
+    "o": [
+      "HB",
+      "H",
+      "2H or 3H",
+      "6B"
+    ],
+    "a": 2,
+    "e": "The H stands for Hardness. 2H and 3H pencils have harder clay/graphite mixtures, leaving a very light, sharp line of roughly 0.2 mm thickness that won't smear when you drag a mini-drafter over it. HB is for lettering, H is for outlines."
+  },
+  {
+    "id": 85,
+    "q": "​A plain scale can only measure up to two consecutive units like meters and decimeters. How many consecutive units, or decimal places, is a Diagonal Scale mathematically capable of reading?",
+    "o": [
+      "1 consecutive unit",
+      "2 consecutive units",
+      "3 consecutive units or 2 decimal places",
+      "4 consecutive units"
+    ],
+    "a": 2,
+    "e": "A diagonal scale uses the geometric principle of similar triangles to measure units, tenths, and hundredths e.g. Meters, Decimeters, and Centimeters, or reading a value like 4.56 meters."
+  },
+  {
+    "id": 86,
+    "q": "​In the classification of engineering curves, what is the exact mathematical eccentricity e value that defines a perfectly drawn Parabola?",
+    "o": [
+      "e equals 0",
+      "e is less than 1",
+      "e equals 1",
+      "e is greater than 1"
+    ],
+    "a": 2,
+    "e": "Eccentricity is the ratio of the distance from the focus to the distance from the directrix. For an ellipse, e is less than 1. For a hyperbola, e is greater than 1. But for a parabola used in bridge arches and bending moment diagrams, it is exactly 1."
+  },
+  {
+    "id": 87,
+    "q": "​When drafting standard engineering material symbols, what is the recommended minimum spacing distance between two parallel 45-degree hatching lines to prevent the ink from blotting when printed?",
+    "o": [
+      "Not less than 0.5 mm",
+      "Not less than 1 mm",
+      "Not less than 2 mm typically kept between 2 mm to 3 mm",
+      "Not less than 5 mm"
+    ],
+    "a": 2,
+    "e": "If hatching lines are drawn less than 2 mm apart, modern photocopy machines or blueprint plotters will bleed the ink together, turning the section into a solid black blob instead of a readable material symbol."
+  },
+  {
+    "id": 88,
+    "q": "​If an engineer draws a small mechanical bracket on a sheet at a scale of 5:1, what does this specific numerical ratio indicate?",
+    "o": [
+      "A reducing scale",
+      "An enlarging scale the drawing is exactly 5 times larger than the actual physical object",
+      "A full size scale",
+      "A diagonal scale"
+    ],
+    "a": 1,
+    "e": "Most civil drawings are reducing scales like 1:100, where paper is smaller than reality. Examiners test enlarging scales 5:1, 10:1 to ensure you understand that the first number always represents the drawing and the second represents the actual object."
+  },
+  {
+    "id": 89,
+    "q": "​For standard single-stroke vertical engineering lettering used in title blocks, if the height h of the capital letters is specified as 5 mm, what must be the exact thickness d of the pen line used to write them?",
+    "o": [
+      "0.1 mm",
+      "0.25 mm",
+      "0.5 mm or d equals h/10",
+      "1.0 mm"
+    ],
+    "a": 2,
+    "e": "Standard drafting codes dictate that the line thickness for lettering must be exactly one-tenth 1/10 of the character's height. This ensures the letters remain bold and readable regardless of what size they are drawn."
+  },
+  {
+    "id": 90,
+    "q": "​When drawing a regular hexagon on a site plan to represent a specialized structural column, what exact internal angle must be maintained between every adjacent side?",
+    "o": [
+      "60 degrees",
+      "90 degrees",
+      "108 degrees",
+      "120 degrees"
+    ],
+    "a": 3,
+    "e": "The formula for the interior angle of a regular polygon is n minus 2 times 180 divided by n. For a hexagon n equals 6, it is 4 times 180 divided by 6 equals 120 degrees. This is pure, non-negotiable geometric data."
+  },
+  {
+    "id": 91,
+    "q": "​In modern engineering drafting, AutoCAD is the industry standard. What is the specific default keyboard shortcut key used to instantly toggle Ortho Mode locking lines to exactly 0, 90, 180, and 270 degrees?",
+    "o": [
+      "F3",
+      "F5",
+      "F8",
+      "F10"
+    ],
+    "a": 2,
+    "e": "While not traditional manual drafting, basic CAD data is frequently appearing in recent Loksewa 4th and 5th level exams because it is the actual tool used in government offices today."
+  },
+  {
+    "id": 92,
+    "q": "​When setting up a dimension line on a drawing, the arrowheads at the ends must be drawn closed and filled. What is the standard required ratio of the length of the arrowhead to its width?",
+    "o": [
+      "1:1",
+      "2:1",
+      "3:1",
+      "4:1"
+    ],
+    "a": 2,
+    "e": "An arrowhead should not be an arbitrary triangle. If the arrowhead is 3 mm long, its back width must be exactly 1 mm. This specific data point is a major favorite for examiners testing pure drafting standards."
+  },
+  {
+    "id": 93,
+    "q": "​What is the standard assumed weight of one meter of an 8 mm diameter mild steel reinforcing bar used for BOQ calculations?",
+    "o": [
+      "0.222 kg",
+      "0.395 kg",
+      "0.616 kg",
+      "0.888 kg"
+    ],
+    "a": 1,
+    "e": "By using the standard formula D squared divided by 162, substituting D with 8 gives 64 divided by 162, which exactly equals 0.395 kg per meter. This is an essential data point for quick site estimations."
+  },
+  {
+    "id": 94,
+    "q": "​In traditional land measurement systems frequently encountered by Sub Engineers in Nepal, how many total square feet are exactly contained in one Ropani of land?",
+    "o": [
+      "342.25 square feet",
+      "5476 square feet",
+      "43560 square feet",
+      "72900 square feet"
+    ],
+    "a": 1,
+    "e": "1 Ropani consists of 16 Anna, and since 1 Anna is 342.25 square feet, multiplying 16 by 342.25 gives exactly 5476 square feet. This specific value is constantly tested in site planning exams."
+  },
+  {
+    "id": 95,
+    "q": "​When drawing the floor plan of a standard building, what is the typical specified width for an internal non-load-bearing half-brick partition wall including plaster?",
+    "o": [
+      "115 mm",
+      "150 mm",
+      "230 mm",
+      "300 mm"
+    ],
+    "a": 0,
+    "e": "A standard modular brick is 90 mm wide, or 100 mm nominal. With standard plaster applied to both sides, the partition wall thickness is universally drafted and calculated as 115 mm or 4.5 inches."
+  },
+  {
+    "id": 96,
+    "q": "​According to the standard building code provisions for residential measured drawings, what is the accepted standard dimension range for the tread horizontal step width of a staircase?",
+    "o": [
+      "150 mm to 200 mm",
+      "200 mm to 250 mm",
+      "250 mm to 300 mm",
+      "300 mm to 350 mm"
+    ],
+    "a": 2,
+    "e": "A tread less than 250 mm does not provide enough space for an adult foot to rest safely, making it a critical safety standard checked during municipal drawing approvals."
+  },
+  {
+    "id": 97,
+    "q": "​In standard working drawings for residential buildings in flood-safe zones, what is the minimum recommended plinth height above the general ground level?",
+    "o": [
+      "150 mm",
+      "300 mm",
+      "450 mm",
+      "900 mm"
+    ],
+    "a": 2,
+    "e": "A plinth height of 450 mm roughly equivalent to three standard steps ensures that surface runoff water from heavy rains does not enter the ground floor of the building."
+  },
+  {
+    "id": 98,
+    "q": "​According to standard codes of practice for taking measurements for a BOQ from a working drawing, to what exact degree of precision should areas be calculated?",
+    "o": [
+      "Nearest 0.01 square meter",
+      "Nearest 0.1 square meter",
+      "Nearest 1.0 square meter",
+      "Nearest 10 square meters"
+    ],
+    "a": 0,
+    "e": "Measurement codes dictate that while lengths are measured to 0.01 meters, the computed areas must also be strictly rounded to the nearest 0.01 square meters to prevent compounding financial errors in the final billing."
+  },
+  {
+    "id": 99,
+    "q": "​When detailing the reinforcement for a 90-degree standard bend hook on a tension bar, what is the required extra length added to the bar, where d is the diameter?",
+    "o": [
+      "4d",
+      "6d",
+      "9d",
+      "12d"
+    ],
+    "a": 3,
+    "e": "For a full 180-degree U-turn hook, 9d is used, but for a 90-degree L-shaped bend, the anchorage value is specified as 12d. This specific data is mandatory for drafting accurate bar bending schedules."
+  },
+  {
+    "id": 100,
+    "q": "​According to IS 456 detailing provisions, steel reinforcing bars above what specific diameter must not be lapped, but instead welded or mechanically spliced?",
+    "o": [
+      "20 mm",
+      "25 mm",
+      "32 mm",
+      "36 mm"
+    ],
+    "a": 3,
+    "e": "Lapping bars larger than 36 mm in diameter causes extreme concrete congestion and inadequate bond strength, therefore the code strictly mandates welding or mechanical couplers for these massive bars."
+  },
+  {
+    "id": 101,
+    "q": "​In the working drawing of an RCC solid slab, the maximum spacing of distribution bars must not exceed 5 times the effective depth of the slab or which of the following maximum absolute values?",
+    "o": [
+      "300 mm",
+      "450 mm",
+      "500 mm",
+      "600 mm"
+    ],
+    "a": 1,
+    "e": "While main bars have a maximum spacing of 3d or 300 mm, the temperature and shrinkage distribution bars can be spaced further apart, limited strictly to 5d or an absolute maximum of 450 mm."
+  },
+  {
+    "id": 102,
+    "q": "​What is the standard specified minimum thickness for a general load-bearing RCC roof slab in building drawings to prevent excessive deflection?",
+    "o": [
+      "75 mm",
+      "100 mm",
+      "150 mm",
+      "200 mm"
+    ],
+    "a": 1,
+    "e": "Structural codes state that the total thickness of a concrete roof slab should generally never be less than 100 mm to ensure it has enough stiffness to carry live loads and resist long-term sagging."
+  },
+  {
+    "id": 103,
+    "q": "​When calculating standard land plot measurements from traditional units on a site plan, exactly how many Paisa are in 1 Anna?",
+    "o": [
+      "4 Paisa",
+      "16 Paisa",
+      "20 Paisa",
+      "64 Paisa"
+    ],
+    "a": 0,
+    "e": "The traditional Nepali land measurement hierarchy is strictly defined as 1 Ropani equals 16 Anna, 1 Anna equals 4 Paisa, and 1 Paisa equals 4 Daam."
+  },
+  {
+    "id": 104,
+    "q": "​According to RCC detailing codes, what is the standard specified minimum nominal clear cover for longitudinal reinforcement in a structural beam?",
+    "o": [
+      "15 mm",
+      "20 mm",
+      "25 mm",
+      "40 mm"
+    ],
+    "a": 2,
+    "e": "Beams require more protection than slabs 15 mm but less than columns 40 mm. A 25 mm clear cover ensures the heavy main tension bars are protected from fire and atmospheric corrosion."
+  },
+  {
+    "id": 105,
+    "q": "​When using a standard Revenue Chain for measuring old cadastral boundary lines, what is the exact total length of the chain?",
+    "o": [
+      "20 feet",
+      "33 feet",
+      "66 feet",
+      "100 feet"
+    ],
+    "a": 1,
+    "e": "The Revenue chain, consisting of exactly 16 links, is strictly 33 feet long. It was historically used for property surveys and remains a frequently tested data point for provincial civil engineering exams."
+  },
+  {
+    "id": 106,
+    "q": "​In BOQ estimations, what is the exact standard weight of one cubic meter of structural steel as opposed to mild steel reinforcement?",
+    "o": [
+      "7500 kg",
+      "7850 kg",
+      "8000 kg",
+      "8500 kg"
+    ],
+    "a": 1,
+    "e": "All structural steel, including rolled I-beams, channels, and reinforcement bars, shares the exact same standard density of 7850 kg per cubic meter for calculation purposes."
+  },
+  {
+    "id": 107,
+    "q": "​When drafting an RCC staircase section, what is the minimum diameter of the main reinforcing steel bar that can be specified for the waist slab?",
+    "o": [
+      "6 mm",
+      "8 mm",
+      "10 mm",
+      "12 mm"
+    ],
+    "a": 2,
+    "e": "For staircase waist slabs acting as main structural members, codes mandate that the main tensile reinforcement shall not be less than 10 mm in diameter to safely carry dynamic human loads."
+  },
+  {
+    "id": 108,
+    "q": "​According to ISO A-series paper standards, what are the exact dimensions of an A2 size drawing sheet?",
+    "o": [
+      "297 mm x 420 mm",
+      "420 mm x 594 mm",
+      "594 mm x 841 mm",
+      "841 mm x 1189 mm"
+    ],
+    "a": 1,
+    "e": "The A2 sheet is created by halving the A1 sheet along its longest side. It is the standard size preferred for drawing detailed building components and is a vital numerical fact for draftsmen."
+  },
+  {
+    "id": 109,
+    "q": "​In standard engineering drafting equipment specifications, what are the exact dimensions of a B0 designated drawing board?",
+    "o": [
+      "1000 mm x 700 mm x 25 mm",
+      "1500 mm x 1000 mm x 25 mm",
+      "700 mm x 500 mm x 15 mm",
+      "500 mm x 350 mm x 15 mm"
+    ],
+    "a": 1,
+    "e": "The B0 board is the largest standard size, specifically manufactured to comfortably accommodate the massive A0 drawing sheets used for major master plans and large-scale mechanical assemblies."
+  },
+  {
+    "id": 110,
+    "q": "​What is the exact mathematical ratio of the width to the length of any standard engineering drawing sheet in the ISO A-series?",
+    "o": [
+      "1 to 1.5",
+      "1 to 1.618",
+      "1 to the square root of 2",
+      "1 to 2"
+    ],
+    "a": 2,
+    "e": "This magical ratio approximately 1:1.414 ensures that every time the paper is folded exactly in half, the resulting smaller rectangle maintains the exact same width-to-length proportions as the original sheet."
+  },
+  {
+    "id": 111,
+    "q": "​In isometric projection, the drawing is created smaller than the actual object. What is the exact mathematical multiplier used to convert true length into isometric length?",
+    "o": [
+      "0.500",
+      "0.707",
+      "0.815",
+      "0.866"
+    ],
+    "a": 2,
+    "e": "Isometric length is mathematically defined as the square root of 2 divided by the square root of 3 multiplied by the true length, which evaluates exactly to 0.815."
+  },
+  {
+    "id": 112,
+    "q": "​When setting up standard isometric axes on a drawing sheet, what is the exact angle maintained between any two of the three axes?",
+    "o": [
+      "60 degrees",
+      "90 degrees",
+      "120 degrees",
+      "150 degrees"
+    ],
+    "a": 2,
+    "e": "Isometric projection literally means equal measure. To achieve this, the 3D axes X, Y, and Z are flattened onto the 2D plane such that they are separated by exactly 120 degrees from one another."
+  },
+  {
+    "id": 113,
+    "q": "​In the classification of drafting pencils, which of the following represents the absolute hardest grade of graphite commercially available for engineering drawing?",
+    "o": [
+      "4H",
+      "6H",
+      "9H",
+      "HB"
+    ],
+    "a": 2,
+    "e": "The H scale ranges from H up to 9H. A 9H pencil contains the highest ratio of clay to graphite, making it extremely hard and capable of drawing the thinnest, lightest construction lines possible."
+  },
+  {
+    "id": 114,
+    "q": "​When using a T-square on a drawing board, what is the exact required angle between the working edge of the stock and the working edge of the blade?",
+    "o": [
+      "45 degrees",
+      "60 degrees",
+      "90 degrees",
+      "180 degrees"
+    ],
+    "a": 2,
+    "e": "The entire purpose of the T-square is to provide perfect horizontal lines. The stock slides against the vertical edge of the board, requiring the blade to be fixed at a perfect 90-degree right angle."
+  },
+  {
+    "id": 115,
+    "q": "​When drawing standard projection lines for the first-angle or third-angle orthographic symbols, the diameter of the larger circle is exactly how many times the diameter of the smaller circle?",
+    "o": [
+      "1.25 times",
+      "1.5 times",
+      "2.0 times",
+      "2.5 times"
+    ],
+    "a": 2,
+    "e": "The official symbol representing the frustum of a cone used in title blocks dictates that the ratio between the large diameter D and the small diameter d must be strictly 2:1."
+  },
+  {
+    "id": 116,
+    "q": "​In standard engineering drafting, what is the exact numerical eccentricity e required to geometrically construct a perfect ellipse?",
+    "o": [
+      "e equals 0",
+      "e is less than 1",
+      "e equals 1",
+      "e is greater than 1"
+    ],
+    "a": 1,
+    "e": "According to the mathematical principles of conic sections used in drafting, an eccentricity exactly equal to 1 creates a parabola, greater than 1 creates a hyperbola, and strictly less than 1 constructs an ellipse."
+  },
+  {
+    "id": 117,
+    "q": "​When drawing an octagon to represent a specialized architectural column on a plan, what exact internal angle must be constructed between every adjacent side?",
+    "o": [
+      "120 degrees",
+      "135 degrees",
+      "144 degrees",
+      "150 degrees"
+    ],
+    "a": 1,
+    "e": "Using the polygon interior angle formula n minus 2 times 180 divided by n, for an 8-sided octagon, it is 6 times 180 divided by 8, which results in exactly 135 degrees."
+  },
+  {
+    "id": 118,
+    "q": "​Which of the following scale designations represents a reducing scale commonly used for drawing large building floor plans?",
+    "o": [
+      "10:1",
+      "1:1",
+      "1:100",
+      "5:1"
+    ],
+    "a": 2,
+    "e": "A reducing scale means the drawing is smaller than the actual object. Ratios like 1:100 or 1:50 are standard for building plans, whereas 10:1 would mean the drawing is ten times larger than the object, which is an enlarging scale used for tiny mechanical parts."
+  },
+  {
+    "id": 119,
+    "q": "​If a specific structural detail on a working drawing is labeled with the abbreviation NTS, what does this practically instruct the site engineer to do?",
+    "o": [
+      "Not To Supervise the specific detail",
+      "Never Trust Scale, meaning do not physically measure the paper to find the dimension",
+      "Nominal Thickness Standard",
+      "National Technical Specification"
+    ],
+    "a": 1,
+    "e": "NTS stands for Not To Scale. It warns the site engineer that the drawing is just a schematic or has been stretched for clarity. You must build strictly according to the written numerical dimensions, never by placing a ruler on the paper."
+  },
+  {
+    "id": 120,
+    "q": "​In standard civil engineering section drawings, what specific hatching pattern is universally used to represent Plain Cement Concrete PCC?",
+    "o": [
+      "Continuous parallel lines at 45 degrees",
+      "A mixture of small triangles and random dots",
+      "Solid black fill",
+      "A series of wavy lines"
+    ],
+    "a": 1,
+    "e": "The symbol for concrete consists of random dots representing sand/cement and irregular small triangles or polygons representing the coarse aggregate gravel. Parallel lines represent brick or masonry."
+  },
+  {
+    "id": 121,
+    "q": "​On a site layout plan, the North arrow is an absolute requirement. For maximum accuracy in building orientation during site layout, which specific North does this arrow typically represent?",
+    "o": [
+      "Magnetic North",
+      "True North",
+      "Grid North",
+      "Arbitrary North"
+    ],
+    "a": 1,
+    "e": "Architectural and site plans align with True North geographical North to ensure accurate solar orientation, sun path analysis, and legal boundary alignments. Magnetic North shifts over time and is only used temporarily for basic compass surveying."
+  },
+  {
+    "id": 122,
+    "q": "​What specific geometric principle allows a diagonal scale to measure dimensions down to a fraction of a millimeter accurately?",
+    "o": [
+      "The principle of parallel lines",
+      "The principle of similar triangles",
+      "Pythagoras theorem",
+      "The principle of concentric circles"
+    ],
+    "a": 1,
+    "e": "A diagonal scale divides a small linear distance into even smaller, readable increments by drawing a diagonal line and using the proportional properties of similar right-angled triangles to read the second decimal place."
+  },
+  {
+    "id": 123,
+    "q": "​According to the Aligned System of dimensioning used in standard drafting, how should the dimension text be placed relative to the dimension line?",
+    "o": [
+      "Intersecting the middle of the dimension line",
+      "Below the dimension line",
+      "Perpendicular to the dimension line",
+      "Above and parallel to the dimension line, readable from the bottom or right edge of the sheet"
+    ],
+    "a": 3,
+    "e": "In the aligned system, the text is never broken by the line. It is placed just above the line so that you can read all horizontal dimensions from the bottom of the paper, and all vertical dimensions by turning your head to view from the right side."
+  },
+  {
+    "id": 124,
+    "q": "​On a residential floor plan, a door opening is drawn with two quarter-circles meeting in the middle. What specific type of door does this standard symbol represent?",
+    "o": [
+      "Single-leaf swing door",
+      "Sliding door",
+      "Double-leaf swing door",
+      "Revolving door"
+    ],
+    "a": 2,
+    "e": "A single quarter-circle represents a standard single door. Two quarter-circles opening outward or inward from the jambs and meeting in the center denote a double-leaf door, commonly used for main entrances."
+  },
+  {
+    "id": 125,
+    "q": "​When transferring a 90-degree building corner from a working drawing to the actual physical site, what is the most common and accurate mathematical rule used by site engineers with a simple measuring tape?",
+    "o": [
+      "The 2-4-6 rule",
+      "The 3-4-5 rule",
+      "The 1-2-3 rule",
+      "The 5-10-15 rule"
+    ],
+    "a": 1,
+    "e": "Based on the Pythagorean theorem, measuring 3 units along one string line, 4 units along the other, and adjusting them until the diagonal is exactly 5 units guarantees a perfect 90-degree right angle for the building's foundation trenches."
+  },
+  {
+    "id": 126,
+    "q": "​A site engineer often prints working details on an A3 sheet for easy handling in the wind. What are the exact dimensions of an A3 paper?",
+    "o": [
+      "210 mm x 297 mm",
+      "297 mm x 420 mm",
+      "420 mm x 594 mm",
+      "594 mm x 841 mm"
+    ],
+    "a": 1,
+    "e": "An A4 sheet is 210 x 297 mm. An A3 sheet is created by doubling the shorter side of the A4, making it 297 mm by 420 mm. This is an incredibly practical size for carrying readable structural details across a construction site."
+  },
+  {
+    "id": 127,
+    "q": "​In a complex building drawing, you see a line consisting of long dashes separated by two short dashes. What is this line called and what does it represent?",
+    "o": [
+      "Center line representing the axis of a column",
+      "Hidden line representing a buried foundation",
+      "Phantom line representing an alternate position of a moving part or future construction",
+      "Cutting plane line representing where a section is sliced"
+    ],
+    "a": 2,
+    "e": "Phantom lines long dash, two short dashes, long dash are used to indicate alternate positions of moving elements like a swinging crane, or to outline adjacent structures and future planned building extensions."
+  },
+  {
+    "id": 128,
+    "q": "​When reading a topographical site plan, you observe that the contour lines are drawn extremely close together. What practical site condition does this data indicate to the engineer?",
+    "o": [
+      "A flat, level ground ideal for building",
+      "A steep slope or hilly terrain",
+      "A deep water body",
+      "An existing paved road"
+    ],
+    "a": 1,
+    "e": "Contour lines connect points of equal elevation. If they are packed tightly together on the 2D paper, it means the elevation is changing very rapidly over a short horizontal distance, indicating a steep hill or cliff."
+  },
+  {
+    "id": 129,
+    "q": "​If an engineer is using a 1:50 engineering scale ruler to measure a line on a printed drawing, and the ruler reads 2 units, what is the actual physical length on the construction site?",
+    "o": [
+      "2 meters",
+      "50 meters",
+      "100 meters",
+      "100 centimeters"
+    ],
+    "a": 0,
+    "e": "Scale rulers do the math for you. If you are using the 1:50 edge of an engineering scale, the number 2 on that specific scale already represents 2 actual meters. You do not multiply it by 50 again; that is the entire purpose of using a specialized scale ruler."
+  },
+  {
+    "id": 130,
+    "q": "​In Nepal, official cadastral maps land ownership maps provided by the Survey Department are typically drawn in which of the following standard scale ratios?",
+    "o": [
+      "1:100 or 1:200",
+      "1:500 or 1:1250",
+      "1:50000",
+      "1:100000"
+    ],
+    "a": 1,
+    "e": "Traditional cadastral maps showing parcel boundaries in Nepal are usually drawn at scales of 1:500 for dense urban areas or 1:1250 and 1:2500 for rural areas. Knowing this is crucial for verifying municipal plots against actual site boundaries."
+  },
+  {
+    "id": 131,
+    "q": "​According to standard drafting conventions, which of the following solid elements should NEVER be shown hatched with section lines, even if the cutting plane passes directly through its longitudinal axis?",
+    "o": [
+      "Brick walls",
+      "Concrete slabs",
+      "Shafts, bolts, and reinforcing bars",
+      "Timber beams"
+    ],
+    "a": 2,
+    "e": "Standard drawing rules dictate that cylindrical solid parts like bolts, shafts, and longitudinal views of steel rebar are never hatched when cut lengthwise. Hatching them would make the drawing confusing and look like a flat plate rather than a solid cylinder."
+  },
+  {
+    "id": 132,
+    "q": "​During site execution, if you find a numerical dimension written on the drawing e.g. 4500 mm that contradicts the actual scaled measurement of that line on the paper e.g. measures 4200 mm with a scale ruler, what is the strict rule you must follow?",
+    "o": [
+      "Follow the scaled measurement",
+      "Take an average of the two numbers",
+      "Follow the written numerical dimension",
+      "Stop work and completely redesign the building"
+    ],
+    "a": 2,
+    "e": "Written dimensions always, absolutely overrule scaled measurements. Paper can shrink or stretch due to humidity, printers can distort scales, and draftsmen may revise a number without redrawing the lines. The written number is the binding legal contract."
+  },
+  {
+    "id": 133,
+    "q": "​In standard manual drafting for civil engineering, what is the specified thickness for drawing the main border lines on an A1 size sheet?",
+    "o": [
+      "0.2 mm",
+      "0.3 mm",
+      "0.5 mm to 0.6 mm",
+      "1.0 mm"
+    ],
+    "a": 2,
+    "e": "Standard drafting codes recommend border lines to be drawn significantly thicker than the main object lines to frame the drawing clearly. A thickness of 0.5 mm to 0.6 mm is universally accepted for this purpose."
+  },
+  {
+    "id": 134,
+    "q": "​According to general dimensioning principles, what is the mandatory minimum gap distance that must be left between the object outline and the start of the extension line?",
+    "o": [
+      "0.5 mm",
+      "1 mm to 2 mm",
+      "5 mm",
+      "10 mm"
+    ],
+    "a": 1,
+    "e": "Extension lines must never touch the actual object outline. Leaving a strict 1 mm to 2 mm gap ensures that the dimensioning is not mistaken as a physical part of the structural or architectural element being drawn."
+  },
+  {
+    "id": 135,
+    "q": "​For a public building drawing in Nepal, what is the maximum allowable height for a single staircase riser to ensure public safety and code compliance?",
+    "o": [
+      "120 mm",
+      "150 mm",
+      "190 mm",
+      "250 mm"
+    ],
+    "a": 1,
+    "e": "While residential stairs can have risers up to 175 mm or sometimes 190 mm, public buildings experience heavy and diverse foot traffic. Building codes strictly cap the public riser height at 150 mm to prevent tripping hazards."
+  },
+  {
+    "id": 136,
+    "q": "​When a standard direct Vernier scale is constructed for precision drawing, n divisions on the Vernier scale are exactly equal to how many divisions on the main scale?",
+    "o": [
+      "n plus 1",
+      "n minus 1",
+      "n divided by 2",
+      "n squared"
+    ],
+    "a": 1,
+    "e": "This is the fundamental mathematical definition of a direct Vernier scale. By making n Vernier divisions span exactly n minus 1 main scale divisions, the engineer can measure lengths with extreme precision based on the tiny difference between the two marks."
+  },
+  {
+    "id": 137,
+    "q": "​In structural column detailing, within which specific vertical zone of the column clear height L is lapping of main longitudinal bars strictly prohibited?",
+    "o": [
+      "The middle L divided by 2 zone",
+      "The bottom L divided by 4 zone and top L divided by 4 zone",
+      "The middle L divided by 3 zone",
+      "Lapping is allowed anywhere"
+    ],
+    "a": 1,
+    "e": "Seismic forces create maximum bending moments at the beam-column joints top and bottom. Therefore, standard detailing codes mandate that steel laps must only be placed in the safer middle zone of the column, never at the highly stressed ends."
+  },
+  {
+    "id": 138,
+    "q": "​According to the National Building Code of Nepal, what is the mandatory minimum clear room height from the finished floor to the ceiling for a standard residential habitable room?",
+    "o": [
+      "2.4 meters",
+      "2.75 meters",
+      "3.0 meters",
+      "3.5 meters"
+    ],
+    "a": 1,
+    "e": "This specific dimension is a critical health and safety standard for proper indoor air volume and ventilation. Any cross-section drawing submitted for municipal approval showing a habitable room lower than 2.75 meters will be instantly rejected."
+  },
+  {
+    "id": 139,
+    "q": "​If an old blueprint drawing has shrunk over time, and a line originally drawn as 10 cm now measures 9.5 cm on the paper, what is the exact Shrinkage Factor of this drawing?",
+    "o": [
+      "0.05",
+      "0.50",
+      "0.95",
+      "1.05"
+    ],
+    "a": 2,
+    "e": "The shrinkage factor is mathematically calculated as the shrunk length divided by the original length. Here, 9.5 divided by 10 equals 0.95. Sub-engineers must apply this exact numerical factor to all scaled dimensions from that old drawing to extract the true real-world measurements."
+  },
+  {
+    "id": 140,
+    "q": "​When preparing a BOQ from a measured drawing based on IS 1200 rules, for a door opening measuring exactly 2.5 square meters, how much area is deducted from the total wall plastering quantity?",
+    "o": [
+      "Zero deduction",
+      "Deduct exactly half the area of the opening",
+      "Deduct the full area of the opening",
+      "Deduct double the area of the opening"
+    ],
+    "a": 1,
+    "e": "For openings between 0.5 and 3.0 square meters, standard measurement codes dictate that you only deduct one face or half the total area for both faces to mathematically compensate for the extra labor and material required to finish the jambs, soffits, and sills around that opening."
+  },
+  {
+    "id": 141,
+    "q": "​When you open a fresh, standard metric template in AutoCAD to begin drafting a building plan, what is the default exact base unit recognized by the software engine?",
+    "o": [
+      "Meter",
+      "Centimeter",
+      "Millimeter",
+      "Inch"
+    ],
+    "a": 2,
+    "e": "Modern 4th level exams frequently test basic CAD awareness because it is the actual tool used in provincial offices today. The default metric template is hardcoded to use millimeters. If you type a line length of 10 without changing settings, the software mathematically registers it as 10 millimeters."
+  },
+  {
+    "id": 142,
+    "q": "​For structural drawings detailing RCC elements exposed directly to severe weather conditions like heavy coastal rain or freezing, what is the specified minimum clear cover for beams?",
+    "o": [
+      "25 mm",
+      "30 mm",
+      "45 mm",
+      "50 mm"
+    ],
+    "a": 3,
+    "e": "While a normal indoor beam requires 25 mm of cover, exposing concrete to severe environmental attacks requires a massive upgrade. Codes mandate increasing the beam cover to 50 mm to ensure the moisture takes decades to penetrate and rust the reinforcing steel."
+  },
+  {
+    "id": 143,
+    "q": "​When drafting a site plan for a relatively flat urban residential plot, which of the following contour intervals is most standard and appropriate to show meaningful elevation data?",
+    "o": [
+      "0.2 meters to 0.5 meters",
+      "2.0 meters to 5.0 meters",
+      "10 meters",
+      "50 meters"
+    ],
+    "a": 0,
+    "e": "The contour interval is the vertical distance between consecutive contour lines. On flat ground, if you use a large 2-meter interval, you might not get a single contour line on your plot. A tiny interval like 0.2 meters is mathematically required to accurately draft drainage and sewer pipe slopes."
+  },
+  {
+    "id": 144,
+    "q": "​The length of the blade of a standard T-square is designed to match the length of the drawing board. For a standard D2 drawing board, what is the exact length of the T-square blade?",
+    "o": [
+      "500 mm",
+      "700 mm",
+      "1000 mm",
+      "1500 mm"
+    ],
+    "a": 1,
+    "e": "A D2 wooden board has dimensions of 700 mm by 500 mm. The T-square blade must span the entire longer dimension to draw complete horizontal lines, making its standardized length exactly 700 mm."
+  },
+  {
+    "id": 145,
+    "q": "​When a perfect circle is drawn in an isometric projection plane, what exact geometric shape does it mathematically transform into?",
+    "o": [
+      "A smaller circle",
+      "A parabola",
+      "An ellipse",
+      "A cycloid"
+    ],
+    "a": 2,
+    "e": "Because isometric projection tilts the viewing angle by 30 degrees to the horizontal, any flat circular feature like a drilled hole or a cylindrical column is visually foreshortened, mathematically compressing into a perfect ellipse on the 2D paper."
+  },
+  {
+    "id": 146,
+    "q": "​According to structural detailing codes, what is the mandatory minimum percentage of mild steel reinforcement required in an RCC solid slab, based on its total cross-sectional area?",
+    "o": [
+      "0.12 percent",
+      "0.15 percent",
+      "0.80 percent",
+      "1.00 percent"
+    ],
+    "a": 1,
+    "e": "This is an absolute baseline data point for slab detailing. To prevent cracking from temperature changes and concrete shrinkage, you must provide at least 0.15 percent of the total concrete area in mild steel, or 0.12 percent if using High Yield Strength Deformed HYSD bars."
+  },
+  {
+    "id": 147,
+    "q": "​When detailing a concrete lintel over a 2 meter wide window opening, standard empirical drawing practices dictate that the depth of the lintel should be approximately what fraction of the clear span?",
+    "o": [
+      "1/4 to 1/6",
+      "1/8 to 1/12",
+      "1/15 to 1/20",
+      "1/30 to 1/40"
+    ],
+    "a": 1,
+    "e": "This empirical ratio is a rapid rule of thumb used by draftsmen. For a 2000 mm span, dividing by 10 gives a 200 mm depth. This structural proportion ensures the lintel has enough mathematical stiffness to carry the masonry wall above it without sagging."
+  }
+]

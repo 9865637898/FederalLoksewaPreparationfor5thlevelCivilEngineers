@@ -1,0 +1,662 @@
+[
+  {
+    "id": 1,
+    "q": "What is the standard dimension (Length × Width) of an A0 size drawing sheet in mm?",
+    "o": ["594 × 841", "841 × 1189", "420 × 594", "297 × 420"],
+    "a": 1
+  },
+  {
+    "id": 2,
+    "q": "The dimension of an A1 drawing sheet is:",
+    "o": ["594 × 841 mm", "210 × 297 mm", "148 × 210 mm", "420 × 594 mm"],
+    "a": 0
+  },
+  {
+    "id": 3,
+    "q": "Which of the following represents the dimensions for an A4 size sheet?",
+    "o": ["297 × 420 mm", "148 × 210 mm", "210 × 297 mm", "420 × 594 mm"],
+    "a": 2
+  },
+  {
+    "id": 4,
+    "q": "According to the standard, the length to breadth ratio of a drawing sheet remains in the ratio of:",
+    "o": ["1:2", "√3:1", "2:1", "√2:1"],
+    "a": 3
+  },
+  {
+    "id": 5,
+    "q": "What is the ratio of the area of successive drawing sheets (e.g., A1 to A2)?",
+    "o": ["1:2", "2:1", "1:√2", "1:1"],
+    "a": 0
+  },
+  {
+    "id": 6,
+    "q": "If the area of an A0 sheet is compared to an A1 sheet, the ratio is:",
+    "o": ["1:2", "2:1", "4:1", "1:4"],
+    "a": 1
+  },
+  {
+    "id": 7,
+    "q": "Which of the following is NOT listed as a primary drawing material in the text?",
+    "o": ["Drawing Board", "Drafting Tape", "Eraser", "Base Paper"],
+    "a": 2
+  },
+  {
+    "id": 8,
+    "q": "The surface of a quality engineering drawing sheet must be:",
+    "o": ["Rough", "Smooth", "Glossy", "Coated"],
+    "a": 1
+  },
+  {
+    "id": 9,
+    "q": "What are the dimensions of an A2 size drawing sheet?",
+    "o": ["420 × 594 mm", "594 × 841 mm", "297 × 420 mm", "841 × 1189 mm"],
+    "a": 0
+  },
+  {
+    "id": 10,
+    "q": "The dimensions of an A5 drawing sheet are:",
+    "o": ["210 × 297 mm", "148 × 210 mm", "297 × 420 mm", "105 × 148 mm"],
+    "a": 1
+  },
+  {
+    "id": 11,
+    "q": "Engineering drawings are typically carried out on paper in which format?",
+    "o": ["One-dimensional", "Three-dimensional", "Two-dimensional", "Isometric"],
+    "a": 2
+  },
+  {
+    "id": 12,
+    "q": "A good quality drawing sheet should have:",
+    "o": ["Uniform thickness", "White color", "Resistance to easy tearing", "All of the above"],
+    "a": 3
+  },
+  {
+    "id": 13,
+    "q": "What is the standard dimension (Length × Width × Thickness) of a B0 type drawing board in mm?",
+    "o": ["1000 × 700 × 25", "1500 × 1000 × 25", "700 × 500 × 15", "500 × 350 × 15"],
+    "a": 1
+  },
+  {
+    "id": 14,
+    "q": "The dimensions for a B1 size drawing board are:",
+    "o": ["700 × 500 × 15 mm", "500 × 350 × 15 mm", "1000 × 700 × 25 mm", "1500 × 1000 × 25 mm"],
+    "a": 2
+  },
+  {
+    "id": 15,
+    "q": "Which type of drawing board has the dimensions 700 × 500 × 15 mm?",
+    "o": ["B0", "B1", "B2", "B3"],
+    "a": 2
+  },
+  {
+    "id": 16,
+    "q": "Drawing boards are generally made of which type of wood?",
+    "o": ["Hard wood", "Plywood", "Soft wood", "Teak wood"],
+    "a": 2
+  },
+  {
+    "id": 17,
+    "q": "To prevent cracks, the wood portions of a drawing board are joined by which type of joint?",
+    "o": ["Butt joint", "Lap joint", "Tongue and grove type joint", "Mortise and tenon joint"],
+    "a": 2
+  },
+  {
+    "id": 18,
+    "q": "A straight ebony edge is provided at the edge of the drawing board for the usage of:",
+    "o": ["Set square", "T-square", "Protractor", "Drafter"],
+    "a": 1
+  },
+  {
+    "id": 19,
+    "q": "The thickness of B2 and B3 drawing boards is:",
+    "o": ["25 mm", "20 mm", "10 mm", "15 mm"],
+    "a": 3
+  },
+  {
+    "id": 20,
+    "q": "Drafting tape is coated with what type of adhesive?",
+    "o": ["Strong adhesive", "Weak adhesive", "Solvent-based adhesive", "No adhesive"],
+    "a": 1
+  },
+  {
+    "id": 21,
+    "q": "Which of the following is NOT a standard width for drafting tape mentioned in the text?",
+    "o": ["6 mm", "15 mm", "20 mm", "24 mm"],
+    "a": 2
+  },
+  {
+    "id": 22,
+    "q": "The size of the base paper is generally:",
+    "o": ["Smaller than the drawing sheet", "Equal to or slightly greater than the drawing sheet", "Exactly double the drawing sheet", "Half the size of the drawing sheet"],
+    "a": 1
+  },
+  {
+    "id": 23,
+    "q": "Which tool is used to check the level of the paper before fixing it with drafting tape?",
+    "o": ["Clinometer", "Spirit level", "T-square", "Set square"],
+    "a": 2
+  },
+  {
+    "id": 24,
+    "q": "The primary purpose of base paper is to:",
+    "o": ["Make the drawing colorful", "Support the drawing sheet and provide protection", "Increase the friction for the pencil", "Substitute the drawing board"],
+    "a": 1
+  },
+  {
+    "id": 25,
+    "q": "In an instrument box, the pencil must be placed at what position inside the box?",
+    "o": ["Left", "Right", "Top", "Bottom"],
+    "a": 1
+  },
+  {
+    "id": 26,
+    "q": "When using a compass, the pencil lead should be at least how many mm above the tip for grip?",
+    "o": ["0.5 mm", "1 mm", "2 mm", "5 mm"],
+    "a": 1
+  },
+  {
+    "id": 27,
+    "q": "Which instrument is described as a movable instrument used to draw horizontal, vertical, and inclined lines simultaneously?",
+    "o": ["Protractor", "Set Square", "Drafter", "French Curve"],
+    "a": 2
+  },
+  {
+    "id": 28,
+    "q": "Set squares are available in how many sets of triangular shapes?",
+    "o": ["One", "Two", "Three", "Four"],
+    "a": 1
+  },
+  {
+    "id": 29,
+    "q": "What are the angles of the two standard types of set squares?",
+    "o": ["30°-60° and 45°-45°", "30°-90° and 45°-90°", "60°-60° and 45°-45°", "15°-75° and 30°-60°"],
+    "a": 0
+  },
+  {
+    "id": 30,
+    "q": "A protractor typically measures angles from:",
+    "o": ["0° to 90°", "0° to 180°", "0° to 270°", "0° to 360°"],
+    "a": 1
+  },
+  {
+    "id": 31,
+    "q": "By rotating the protractor, angles up to what degree can be measured?",
+    "o": ["180°", "270°", "360°", "540°"],
+    "a": 2
+  },
+  {
+    "id": 32,
+    "q": "The angular marks on a standard protractor are divided into smaller divisions of:",
+    "o": ["0.5°", "1°", "2°", "5°"],
+    "a": 1
+  },
+  {
+    "id": 33,
+    "q": "How many set-scales are normally used in a standard set of scales?",
+    "o": ["4", "6", "8", "12"],
+    "a": 2
+  },
+  {
+    "id": 34,
+    "q": "Which tool consists of a lead bar inside rubber and is used to draw a smooth curve through any set of points?",
+    "o": ["French Curve", "Flexible Curve", "Drafter", "Set Square"],
+    "a": 1
+  },
+  {
+    "id": 35,
+    "q": "Which grade of pencil is specifically recommended for lettering and dimensioning in engineering drawing?",
+    "o": ["H", "2H", "HB", "3H"],
+    "a": 2
+  },
+  {
+    "id": 36,
+    "q": "In the grading of pencils, the hardness increases as the value of the number before which letter increases?",
+    "o": ["B", "H", "HB", "EB"],
+    "a": 1
+  },
+  {
+    "id": 37,
+    "q": "Which grade of pencil is used for drawing Visible outlines, visible edges, and boundary lines?",
+    "o": ["HB", "H", "2H", "3B"],
+    "a": 1
+  },
+  {
+    "id": 38,
+    "q": "2H (Hard grade) lead is primarily used for which of the following lines?",
+    "o": ["Lettering and dimensioning", "Visible outlines and boundary lines", "Construction lines, Extension lines, and Hatching lines", "Free sketching"],
+    "a": 2
+  },
+  {
+    "id": 39,
+    "q": "The grade HB in pencils denotes:",
+    "o": ["Very Hard", "Very Soft", "Medium hardness", "Extra Black"],
+    "a": 2
+  },
+  {
+    "id": 40,
+    "q": "What is the name of the thin metallic sheet with small geometrical figures used to erase specific portions of a drawing?",
+    "o": ["Erasing Shield", "French Curve", "Tracing Paper", "Drafting Tape"],
+    "a": 0
+  },
+  {
+    "id": 41,
+    "q": "Which transparent paper is specifically used to copy a drawing already drawn on a drawing sheet?",
+    "o": ["Base Paper", "Bond Paper", "Tracing Paper", "Glossy Paper"],
+    "a": 2
+  },
+  {
+    "id": 42,
+    "q": "A T-square is primarily used as a guide for drawing which type of lines?",
+    "o": ["Vertical lines", "Straight horizontal lines", "Inclined lines", "Curved lines"],
+    "a": 1
+  },
+  {
+    "id": 43,
+    "q": "The blade of a T-square is screwed to the head such that the working edge is at what angle to the head?",
+    "o": ["45°", "60°", "90°", "180°"],
+    "a": 2
+  },
+  {
+    "id": 44,
+    "q": "According to IS:1360-1989, what is the blade length for a T0 designation T-square in mm?",
+    "o": ["1000", "700", "500", "1500"],
+    "a": 3
+  },
+  {
+    "id": 45,
+    "q": "The T2 designation for a T-square corresponds to a blade length of:",
+    "o": ["1500 mm", "1000 mm", "700 mm", "500 mm"],
+    "a": 2
+  },
+  {
+    "id": 46,
+    "q": "Which designation of T-square has a blade length of 1000 mm?",
+    "o": ["T0", "T1", "T2", "T3"],
+    "a": 1
+  },
+  {
+    "id": 47,
+    "q": "Which grade of pencil lead is used for drawing Construction lines, Center lines, and Hidden lines?",
+    "o": ["HB", "H", "2H", "3B"],
+    "a": 2
+  },
+  {
+    "id": 48,
+    "q": "For Visible outlines, visible edges, and boundary lines, which grade of pencil is used?",
+    "o": ["HB", "H", "2H", "4H"],
+    "a": 1
+  },
+  {
+    "id": 49,
+    "q": "According to the text, the grade HB (Soft grade) lead is used for:",
+    "o": ["Construction lines", "Border lines, lettering and free sketching", "Center lines", "Dimension lines"],
+    "a": 1
+  },
+  {
+    "id": 50,
+    "q": "The softness of a pencil increases as the value of the number before which letter increases?",
+    "o": ["H", "HB", "B", "EB"],
+    "a": 2
+  },
+  {
+    "id": 51,
+    "q": "Which pencil grade provides a sharp black line and is often used for finishing a pencil drawing?",
+    "o": ["3B or 4B", "H or 2H", "HB", "B"],
+    "a": 1
+  },
+  {
+    "id": 52,
+    "q": "The number 0.5 or 0.70 on mechanical pens indicates the:",
+    "o": ["Length of the pen", "Hardness of the lead", "Thickness of the line or lead diameter", "Brand of the pen"],
+    "a": 2
+  },
+  {
+    "id": 53,
+    "q": "Which of the following lines is NOT mentioned as being drawn with 2H Hard grade lead?",
+    "o": ["Dimension lines", "Leader lines", "Hatching lines", "Border lines"],
+    "a": 3
+  },
+  {
+    "id": 54,
+    "q": "Templates are specifically used for drawing which of the following features?",
+    "o": ["Large maps", "Small features like circles, arcs, and symbols", "Only straight horizontal lines", "3D models"],
+    "a": 1
+  },
+  {
+    "id": 55,
+    "q": "In the hierarchy of pencil hardness, which of the following represents medium hardness?",
+    "o": ["3H", "3B", "HB", "2H"],
+    "a": 2
+  },
+  {
+    "id": 56,
+    "q": "In the metric system of length, 10 decameters is equal to:",
+    "o": ["1 kilometer", "1 hectameter", "1 decimeter", "1 nautical mile"],
+    "a": 1
+  },
+  {
+    "id": 57,
+    "q": "According to the British (FPS) system, how many feet make up 1 yard?",
+    "o": ["12 feet", "5.5 feet", "3 feet", "6 feet"],
+    "a": 2
+  },
+  {
+    "id": 58,
+    "q": "In the metric system for area, 100 square meters is equal to:",
+    "o": ["1 deca-are", "1 hecta-are", "1 are", "1 rood"],
+    "a": 2
+  },
+  {
+    "id": 59,
+    "q": "Based on the FPS system of length, 1 chain is equivalent to how many feet?",
+    "o": ["12 feet", "66 feet", "100 feet", "6 feet"],
+    "a": 1
+  },
+  {
+    "id": 60,
+    "q": "In the FPS system for volume, 1 cubic foot is equal to:",
+    "o": ["144 cubic inches", "1000 cubic inches", "1728 cubic inches", "27 cubic inches"],
+    "a": 2
+  },
+  {
+    "id": 61,
+    "q": "In the Centesimal system of angular measurement, the circumference of a circle is divided into how many equal parts?",
+    "o": ["180", "360", "400", "100"],
+    "a": 2
+  },
+  {
+    "id": 62,
+    "q": "What is the standard SI unit of a plane angle?",
+    "o": ["Degree", "Minute", "Radian", "Grad"],
+    "a": 2
+  },
+  {
+    "id": 63,
+    "q": "In the Sexagesimal system, 1° (one degree) is equal to:",
+    "o": ["10 minutes of arc", "60 minutes of arc", "100 minutes of arc", "360 minutes of arc"],
+    "a": 1
+  },
+  {
+    "id": 64,
+    "q": "According to the Centesimal system, 1 grad is equal to:",
+    "o": ["60 centigrade", "100 centigrade", "360 centigrade", "400 centigrade"],
+    "a": 1
+  },
+  {
+    "id": 65,
+    "q": "How many feet are equivalent to 1 meter?",
+    "o": ["1.0936", "3.2808", "12", "39.37"],
+    "a": 1
+  },
+  {
+    "id": 66,
+    "q": "For area conversion, 1 square meter is equal to how many square feet?",
+    "o": ["9", "1.196", "10.7639", "1550"],
+    "a": 2
+  },
+  {
+    "id": 67,
+    "q": "One Acre is equal to approximately how many square meters?",
+    "o": ["100", "119.6", "4840", "4046.9"],
+    "a": 3
+  },
+  {
+    "id": 68,
+    "q": "In the Sexagesimal system, 1 minute is equal to how many seconds of arc?",
+    "o": ["10", "60", "100", "360"],
+    "a": 1
+  },
+  {
+    "id": 69,
+    "q": "How many inches are there in 1 meter?",
+    "o": ["3.2808", "12", "39.37", "26"],
+    "a": 2
+  },
+  {
+    "id": 70,
+    "q": "1 square yard is equivalent to how many square feet?",
+    "o": ["3", "9", "12", "144"],
+    "a": 1
+  },
+  {
+    "id": 71,
+    "q": "Drawings prepared for the construction of a building, including details like foundations and walls, are known as:",
+    "o": ["Perspective drawings", "Building drawings", "Submission drawings", "Site plans"],
+    "a": 1
+  },
+  {
+    "id": 72,
+    "q": "Building drawings are prepared based on the local bye-laws set by the local government and which national codes?",
+    "o": ["IS Codes", "NBC codes", "BS Codes", "ASTM Codes"],
+    "a": 1
+  },
+  {
+    "id": 73,
+    "q": "Which lines are drawn to represent the visible edges or surface boundary lines of objects?",
+    "o": ["Construction Lines", "Dimension Lines", "Visible Outlines", "Hidden Lines"],
+    "a": 2
+  },
+  {
+    "id": 74,
+    "q": "The lines drawn to mark the specific measurements of various parts of an object are called:",
+    "o": ["Extension Lines", "Dimension Lines", "Leader Lines", "Center Lines"],
+    "a": 1
+  },
+  {
+    "id": 75,
+    "q": "Which lines are extended slightly beyond the respective dimension lines of the objects?",
+    "o": ["Extension Lines", "Border Lines", "Hatching Lines", "Guide Lines"],
+    "a": 0
+  },
+  {
+    "id": 76,
+    "q": "According to the text, Construction Lines should not be:",
+    "o": ["Drawn dark", "Erased after completion of the drawing", "Used for lettering", "Thicker than 0.5 mm"],
+    "a": 1
+  },
+  {
+    "id": 77,
+    "q": "Hatching or Section lines are typically drawn inclined at what angle to the axis or main outline?",
+    "o": ["30°", "45°", "60°", "90°"],
+    "a": 1
+  },
+  {
+    "id": 78,
+    "q": "Which lines are specifically drawn for lettering and should not be erased after the lettering is done?",
+    "o": ["Center Lines", "Guide Lines", "Border Lines", "Dimension Lines"],
+    "a": 1
+  },
+  {
+    "id": 79,
+    "q": "A wavy continuous narrow line drawn freehand is used to represent:",
+    "o": ["Hidden outlines", "Break of an object", "Center of a circle", "Dimension limits"],
+    "a": 1
+  },
+  {
+    "id": 80,
+    "q": "In Dashed Narrow Lines (Hidden lines), the dashes are approximately of what length?",
+    "o": ["1 mm", "2 mm", "3 mm", "5 mm"],
+    "a": 2
+  },
+  {
+    "id": 81,
+    "q": "What is the standard spacing between the dashes in a dashed narrow line?",
+    "o": ["1 mm", "2 mm", "3 mm", "0.5 mm"],
+    "a": 0
+  },
+  {
+    "id": 82,
+    "q": "Lines drawn at the center of drawings that are symmetrical about an axis are known as:",
+    "o": ["Cutting Plane Lines", "Center Lines", "Section Lines", "Extension Lines"],
+    "a": 1
+  },
+  {
+    "id": 83,
+    "q": "Which type of line is long-dashed dotted, made wide at the ends and bends to show location?",
+    "o": ["Border Line", "Center Line", "Cutting Plane Line", "Hidden Line"],
+    "a": 2
+  },
+  {
+    "id": 84,
+    "q": "What is the minimum thickness of Border Lines in engineering drawing according to the provided text?",
+    "o": ["0.5 mm", "0.7 mm", "1.0 mm", "0.3 mm"],
+    "a": 1
+  },
+  {
+    "id": 85,
+    "q": "In the representation table, a line consists of 'long dashed double-dotted' segments. This is item number:",
+    "o": ["03", "04", "05", "06"],
+    "a": 2
+  },
+  {
+    "id": 86,
+    "q": "The line width series in engineering drawing is based on a common ratio of:",
+    "o": ["1:2", "1:√2", "1:3", "1:√3"],
+    "a": 1
+  },
+  {
+    "id": 87,
+    "q": "Which of the following is NOT a standard line width mentioned in the series?",
+    "o": ["0.13 mm", "0.35 mm", "0.45 mm", "0.7 mm"],
+    "a": 2
+  },
+  {
+    "id": 88,
+    "q": "The widths of extra wide, wide, and narrow lines are in the ratio of:",
+    "o": ["1:2:4", "4:3:2", "4:2:1", "√2:1:0.5"],
+    "a": 2
+  },
+  {
+    "id": 89,
+    "q": "Vertical lines are defined as lines that are at what angle to the horizontal axis?",
+    "o": ["0°", "45°", "90°", "180°"],
+    "a": 2
+  },
+  {
+    "id": 90,
+    "q": "Vertical lines make an angle of how many degrees with the vertical axis?",
+    "o": ["0°", "90°", "180°", "45°"],
+    "a": 0
+  },
+  {
+    "id": 91,
+    "q": "Lines extending from left to right or right to left in the horizontal axis are called:",
+    "o": ["Inclined lines", "Vertical lines", "Horizontal lines", "Parallel lines"],
+    "a": 2
+  },
+  {
+    "id": 92,
+    "q": "Lines which are inclined with respect to the horizontal or vertical axis are called:",
+    "o": ["Perpendicular lines", "Straight lines", "Inclined lines", "Curved lines"],
+    "a": 2
+  },
+  {
+    "id": 93,
+    "q": "In which system of dimensioning are dimensions provided aligned and placed perpendicular to the dimension line?",
+    "o": ["Uni-directional system", "Aligned system", "Parallel system", "Running system"],
+    "a": 1
+  },
+  {
+    "id": 94,
+    "q": "In the Aligned system, dimensions are placed in such a way that they can be read from:",
+    "o": ["Bottom edge only", "Right side only", "Bottom and right side", "Bottom and left side"],
+    "a": 2
+  },
+  {
+    "id": 95,
+    "q": "In the Aligned system, dimensions are placed at the:",
+    "o": ["Middle and on the top of dimension lines", "Middle by breaking the dimension line", "End of the line", "Bottom of the line"],
+    "a": 0
+  },
+  {
+    "id": 96,
+    "q": "In the Aligned system, angular dimensions should NOT be placed in which zone?",
+    "o": ["45° zone", "90° zone", "30° zone", "60° zone"],
+    "a": 2
+  },
+  {
+    "id": 97,
+    "q": "In the Uni-directional system, dimensions are placed so they can be read from:",
+    "o": ["Both bottom and right side", "Bottom edge of drawing sheet only", "Top edge only", "Left side only"],
+    "a": 1
+  },
+  {
+    "id": 98,
+    "q": "In the Uni-directional system, the numerals of dimensions are provided at the:",
+    "o": ["Top of the line", "Bottom of the line", "Middle of the line (usually by breaking it)", "Side of the line"],
+    "a": 2
+  },
+  {
+    "id": 99,
+    "q": "According to the Principles of Dimensioning, each feature shall be dimensioned how many times on a drawing?",
+    "o": ["Twice", "Once only", "In every view", "Only in the top view"],
+    "a": 1
+  },
+  {
+    "id": 100,
+    "q": "As far as possible, dimensions in engineering drawing should be expressed in which unit?",
+    "o": ["Centimeters", "Meters", "Millimeters", "Inches"],
+    "a": 2
+  },
+  {
+    "id": 101,
+    "q": "Where should dimensions be ideally placed in a drawing?",
+    "o": ["Inside the view", "On the object line", "Outside the view", "At the corners"],
+    "a": 2
+  },
+  {
+    "id": 102,
+    "q": "Dimensions should preferably be taken from which type of lines?",
+    "o": ["Hidden lines", "Center lines", "Visible outlines", "Extension lines"],
+    "a": 2
+  },
+  {
+    "id": 103,
+    "q": "The crossing of center lines should be done by:",
+    "o": ["A short dash", "A long dash", "A solid dot", "An arrowhead"],
+    "a": 1
+  },
+  {
+    "id": 104,
+    "q": "The minimum space between parallel lines should never be less than:",
+    "o": ["Thickness of heaviest line", "Twice thickness of heaviest line", "Half thickness", "1.0 mm"],
+    "a": 1
+  },
+  {
+    "id": 105,
+    "q": "It is recommended that the space between parallel lines should be:",
+    "o": ["0.5 mm or greater", "0.7 mm or greater", "1.0 mm or greater", "2.0 mm or greater"],
+    "a": 1
+  },
+  {
+    "id": 106,
+    "q": "Which of the following represents a Full Size Scale?",
+    "o": ["1:2", "2:1", "1:1", "10:1"],
+    "a": 2
+  },
+  {
+    "id": 107,
+    "q": "Which of the following is an example of a Reducing Scale?",
+    "o": ["1:10", "5:1", "10:1", "100:1"],
+    "a": 0
+  },
+  {
+    "id": 108,
+    "q": "In an Enlarging Scale of 500:1, the number 1 represents the size in the:",
+    "o": ["Drawing sheet", "Actual field", "Both A and B", "Representative fraction"],
+    "a": 1
+  },
+  {
+    "id": 109,
+    "q": "The ratio of the distance on the drawing to the corresponding actual length is known as:",
+    "o": ["Scale factor", "Representative Fraction (RF)", "Proportion", "Linear ratio"],
+    "a": 1
+  },
+  {
+    "id": 110,
+    "q": "If a scale is given as 1 cm = 10 m, what is the Representative Fraction (RF)?",
+    "o": ["1/10", "1/100", "1/1000", "1/10000"],
+    "a": 2
+  }
+]

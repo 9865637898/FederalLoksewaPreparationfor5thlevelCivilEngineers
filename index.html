@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -592,6 +593,33 @@
         };
 
         window.onload = () => app.init();
+
+        // --- KEYBOARD EVENT LISTENER ---
+        document.addEventListener('keydown', function(event) {
+            const quizScreen = document.getElementById('screen-quiz');
+            const skipModal = document.getElementById('skip-modal');
+            
+            // Only capture keystrokes if the user is actively on the quiz screen and not navigating the skip modal
+            if (!quizScreen.classList.contains('active') || skipModal.classList.contains('active')) return;
+
+            const nextBtn = document.getElementById('btn-next');
+            const isAnswered = !nextBtn.classList.contains('hidden'); // If Next Button is visible, question is answered
+
+            if (event.key === '0') {
+                if (isAnswered) {
+                    app.nextQuestion();
+                }
+            } else if (['1', '2', '3', '4'].includes(event.key)) {
+                if (!isAnswered) {
+                    const options = document.querySelectorAll('#options-container .option-row');
+                    const index = parseInt(event.key) - 1; // '1' becomes 0, '2' becomes 1, etc.
+                    
+                    if (options[index]) {
+                        options[index].click(); // Simulate user clicking the specific option
+                    }
+                }
+            }
+        });
     </script>
     <script>
   if ('serviceWorker' in navigator) {
@@ -601,17 +629,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,823 +1,823 @@
 [
   {
     "id": 1,
-    "q": "संयुक्त राष्ट्र संघ (UNO) को बडापत्र (Charter) मा कहिले हस्ताक्षर भएको थियो?",
+    "q": "When was the United Nations (UNO) Charter signed?",
     "o": [
-      "सन् १९४५ अक्टोबर २४",
-      "सन् १९४५ जुन २६",
-      "सन् १९४५ जनवरी १०",
-      "सन् १९४४ अक्टोबर ३०"
+      "October 24, 1945",
+      "June 26, 1945",
+      "January 10, 1945",
+      "October 30, 1944"
     ],
     "a": 1,
-    "e": "(सन् १९४५ जुन २६)"
+    "e": "(June 26, 1945)"
   },
   {
     "id": 2,
-    "q": "संयुक्त राष्ट्र संघका संस्थापक राष्ट्रहरू (Founding Members) कति रहेका छन्?",
+    "q": "How many founding members does the United Nations have?",
     "o": [
-      "५०",
-      "५१",
-      "५२",
-      "५३"
+      "50",
+      "51",
+      "52",
+      "53"
     ],
     "a": 1,
-    "e": "(५१)"
+    "e": "(51)"
   },
   {
     "id": 3,
-    "q": "संयुक्त राष्ट्र संघको ५१ औं वा अन्तिम संस्थापक राष्ट्र कुन हो?",
+    "q": "Which country is the 51st or the last founding member of the United Nations?",
     "o": [
-      "पोल्याण्ड (Poland)",
-      "भारत",
-      "युक्रेन",
-      "इजिप्ट"
+      "Poland",
+      "India",
+      "Ukraine",
+      "Egypt"
     ],
     "a": 0,
-    "e": "(पोल्याण्ड)"
+    "e": "(Poland)"
   },
   {
     "id": 4,
-    "q": "UNO का क्षेत्रीय कार्यालयहरू (Regional Headquarters) कति ठाउँमा रहेका छन्?",
+    "q": "In how many places are the Regional Headquarters of the UNO located?",
     "o": [
-      "२",
-      "३",
-      "४",
-      "५"
+      "2",
+      "3",
+      "4",
+      "5"
     ],
     "a": 1,
-    "e": "(जेनेभा, भियना र नैरोबी)"
+    "e": "(Geneva, Vienna, and Nairobi)"
   },
   {
     "id": 5,
-    "q": "संयुक्त राष्ट्र संघको महासभा (General Assembly) को बैठक प्रत्येक वर्ष कहिले बस्छ?",
+    "q": "When does the United Nations General Assembly meet each year?",
     "o": [
-      "सेप्टेम्बरको पहिलो मंगलबार",
-      "सेप्टेम्बरको तेस्रो मंगलबार",
-      "अक्टोबरको पहिलो मंगलबार",
-      "अक्टोबरको २४ गते"
+      "First Tuesday of September",
+      "Third Tuesday of September",
+      "First Tuesday of October",
+      "24th of October"
     ],
     "a": 1,
-    "e": "(सेप्टेम्बरको तेस्रो मंगलबार)"
+    "e": "(Third Tuesday of September)"
   },
   {
     "id": 6,
-    "q": "UNO को सबैभन्दा ठूलो सम्मेलन कुनलाई मानिन्छ?",
+    "q": "Which is considered the largest conference of the UNO?",
     "o": [
-      "कोपनहेगन सम्मेलन",
-      "रियो सम्मेलन (पृथ्वी सम्मेलन)",
-      "पेरिस सम्झौता",
-      "मानव अधिकार सम्मेलन"
+      "Copenhagen Conference",
+      "Rio Conference (Earth Summit)",
+      "Paris Agreement",
+      "Human Rights Conference"
     ],
     "a": 1,
-    "e": "(पृथ्वी सम्मेलन - Earth Summit)"
+    "e": "(Earth Summit)"
   },
   {
     "id": 7,
-    "q": "UNO को हालसम्मको अन्तिम (१९३ औं) सदस्य राष्ट्र दक्षिणी सुडानलाई कहिले सदस्यता प्रदान गरियो?",
+    "q": "When was South Sudan granted membership as the last (193rd) member state of the UNO so far?",
     "o": [
-      "सन् २०११ जुलाई ९",
-      "सन् २०११ जुलाई १४",
-      "सन् २०१० जुलाई १४",
-      "सन् २०१२ सेप्टेम्बर ५"
+      "July 9, 2011",
+      "July 14, 2011",
+      "July 14, 2010",
+      "September 5, 2012"
     ],
     "a": 1,
-    "e": "(सन् २०११ जुलाई १४)"
+    "e": "(July 14, 2011)"
   },
   {
     "id": 8,
-    "q": "नेपालले UNO को सदस्यता कहिले प्राप्त गर्यो?",
+    "q": "When did Nepal obtain membership in the UNO?",
     "o": [
-      "सन् १९५५ डिसेम्बर १४",
-      "सन् १९५५ डिसेम्बर १५",
-      "सन् १९४९ फेब्रुअरी १३",
-      "सन् १९५६ नोभेम्बर १४"
+      "December 14, 1955",
+      "December 15, 1955",
+      "February 13, 1949",
+      "November 14, 1956"
     ],
     "a": 0,
-    "e": "(सन् १९५५ डिसेम्बर १४)"
+    "e": "(December 14, 1955)"
   },
   {
     "id": 9,
-    "q": "नेपालले कुन प्रधानमन्त्रीको पालामा UNO को सदस्यता प्राप्त गरेको थियो?",
+    "q": "Under which Prime Minister did Nepal obtain membership in the UNO?",
     "o": [
-      "बि.पी. कोइराला",
-      "टंक प्रसाद आचार्य",
-      "मोहन शमशेर",
-      "मातृका प्रसाद कोइराला"
+      "B.P. Koirala",
+      "Tanka Prasad Acharya",
+      "Mohan Shamsher",
+      "Matrika Prasad Koirala"
     ],
     "a": 1,
-    "e": "(टंक प्रसाद आचार्य)"
+    "e": "(Tanka Prasad Acharya)"
   },
   {
     "id": 10,
-    "q": "'United Nations' (संयुक्त राष्ट्र संघ) नामाकरण कहिले गरिएको थियो?",
+    "q": "When was the name 'United Nations' coined?",
     "o": [
-      "सन् १९४५ अक्टोबर २४",
-      "सन् १९४२ जनवरी १",
-      "सन् १९४४ अक्टोबर ३०",
-      "सन् १९४५ जुन २६"
+      "October 24, 1945",
+      "January 1, 1942",
+      "October 30, 1944",
+      "June 26, 1945"
     ],
     "a": 1,
-    "e": "(अमेरिकी राष्ट्रपति फ्याङ्कलिन डी. रुजबेल्टद्वारा सन् १९४२ जनवरी १)"
+    "e": "(By American President Franklin D. Roosevelt on January 1, 1942)"
   },
   {
     "id": 11,
-    "q": "UNO ले आफ्नो झण्डाको प्रयोग कहिलेबाट गर्न थालेको हो?",
+    "q": "When did the UNO start using its flag?",
     "o": [
-      "सन् १९४५ अक्टोबर २०",
-      "सन् १९४६ अक्टोबर २०",
-      "सन् १९४७ अक्टोबर २०",
-      "सन् १९४८ अक्टोबर २०"
+      "October 20, 1945",
+      "October 20, 1946",
+      "October 20, 1947",
+      "October 20, 1948"
     ],
     "a": 2,
-    "e": "(सन् १९४७ अक्टोबर २०)"
+    "e": "(October 20, 1947)"
   },
   {
     "id": 12,
-    "q": "सर्वप्रथम महासभामा नेपालको तर्फबाट भाग लिने व्यक्ति को हुन्?",
+    "q": "Who was the first person to participate in the General Assembly on behalf of Nepal?",
     "o": [
-      "ऋषिकेश शाह",
-      "चुडा प्रसाद शर्मा",
-      "बि.पी. कोइराला",
-      "पदम बहादुर खत्री"
+      "Rishikesh Shaha",
+      "Chuda Prasad Sharma",
+      "B.P. Koirala",
+      "Padam Bahadur Khatri"
     ],
     "a": 1,
-    "e": "(चुडा प्रसाद शर्मा - सन् १९५६)"
+    "e": "(Chuda Prasad Sharma - 1956)"
   },
   {
     "id": 13,
-    "q": "सर्वप्रथम UNO को महासभामा नेपालको तर्फबाट भाग लिने प्रधानमन्त्री को हुन्?",
+    "q": "Who was the first Prime Minister to participate in the UNO General Assembly on behalf of Nepal?",
     "o": [
-      "टंक प्रसाद आचार्य",
-      "बि.पी. कोइराला",
-      "कृष्ण प्रसाद भट्टराई",
-      "गिरिजा प्रसाद कोइराला"
+      "Tanka Prasad Acharya",
+      "B.P. Koirala",
+      "Krishna Prasad Bhattarai",
+      "Girija Prasad Koirala"
     ],
     "a": 1,
-    "e": "(बि.पी. कोइराला - सन् १९६०)"
+    "e": "(B.P. Koirala - 1960)"
   },
   {
     "id": 14,
-    "q": "UNO को स्टाफ कलेज (Staff College) कहाँ रहेको छ?",
+    "q": "Where is the UNO Staff College located?",
     "o": [
-      "अमेरिका",
-      "बेलायत",
-      "इटाली",
-      "जापान"
+      "USA",
+      "UK",
+      "Italy",
+      "Japan"
     ],
     "a": 2,
-    "e": "(इटाली)"
+    "e": "(Italy)"
   },
   {
     "id": 15,
-    "q": "UNO को विश्वविद्यालय (UN University) कहाँ स्थापना भएको छ?",
+    "q": "Where is the UN University established?",
     "o": [
-      "टोकियो, जापान",
-      "न्यूयोर्क, अमेरिका",
-      "पेरिस, फ्रान्स",
-      "लण्डन, बेलायत"
+      "Tokyo, Japan",
+      "New York, USA",
+      "Paris, France",
+      "London, UK"
     ],
     "a": 0,
-    "e": "(जापान - सन् १९७२ डिसेम्बर ११ मा स्थापना)"
+    "e": "(Japan - Established on December 11, 1972)"
   },
   {
     "id": 16,
-    "q": "UNO को पुस्तकालय (Library) कहाँ रहेको छ?",
+    "q": "Where is the UNO Library located?",
     "o": [
-      "जेनेभा",
-      "न्यूयोर्क",
-      "वासिङ्टन डी.सी.",
-      "हेग"
+      "Geneva",
+      "New York",
+      "Washington D.C.",
+      "The Hague"
     ],
     "a": 1,
-    "e": "(न्यूयोर्क - ड्याग ह्यामरसोल्ड लाइब्रेरी)"
+    "e": "(New York - Dag Hammarskjöld Library)"
   },
   {
     "id": 17,
-    "q": "UNO दिवस कहिले मनाइन्छ?",
+    "q": "When is UNO Day celebrated?",
     "o": [
-      "जुन २६",
-      "अक्टोबर २४",
-      "डिसेम्बर १०",
-      "सेप्टेम्बर २१"
+      "June 26",
+      "October 24",
+      "December 10",
+      "September 21"
     ],
     "a": 1,
-    "e": "(अक्टोबर २४)"
+    "e": "(October 24)"
   },
   {
     "id": 18,
-    "q": "UNO मानव अधिकार पुरस्कार प्राप्त गर्ने पहिलो नेपाली को हुन्?",
+    "q": "Who is the first Nepali to receive the UNO Human Rights Prize?",
     "o": [
-      "पासाङ ल्हामु शेर्पा",
-      "स्व. गणेशमान सिंह",
-      "अनुराधा कोइराला",
-      "पुष्पा बस्नेत"
+      "Pasang Lhamu Sherpa",
+      "Late Ganesh Man Singh",
+      "Anuradha Koirala",
+      "Pushpa Basnet"
     ],
     "a": 1,
-    "e": "(स्व. गणेशमान सिंह)"
+    "e": "(Late Ganesh Man Singh)"
   },
   {
     "id": 19,
-    "q": "UNO मानव अधिकार पुरस्कार कहिले स्थापना भएको थियो?",
+    "q": "When was the UNO Human Rights Prize established?",
     "o": [
-      "सन् १९६५",
-      "सन् १९६६",
-      "सन् १९६८",
-      "सन् १९७०"
+      "1965",
+      "1966",
+      "1968",
+      "1970"
     ],
     "a": 1,
-    "e": "(सन् १९६६)"
+    "e": "(1966)"
   },
   {
     "id": 20,
-    "q": "कुन वर्षलाई 'Africa Year' भनिन्छ?",
+    "q": "Which year is known as the 'Africa Year'?",
     "o": [
-      "सन् १९५५",
-      "सन् १९६०",
-      "सन् १९६५",
-      "सन् १९७०"
+      "1955",
+      "1960",
+      "1965",
+      "1970"
     ],
     "a": 1,
-    "e": "(सन् १९६०)"
+    "e": "(1960)"
   },
   {
     "id": 21,
-    "q": "नेपालले UNO को सदस्यता प्राप्त गर्नका लागि कहिले निवेदन दिएको थियो?",
+    "q": "When did Nepal apply for membership in the UNO?",
     "o": [
-      "सन् १९४९ फेब्रुअरी १३",
-      "सन् १९५५ डिसेम्बर १४",
-      "सन् १९४८ फेब्रुअरी १३",
-      "सन् १९५० मार्च १३"
+      "February 13, 1949",
+      "December 14, 1955",
+      "February 13, 1948",
+      "March 13, 1950"
     ],
     "a": 0,
-    "e": "(सन् १९४९ फेब्रुअरी १३)"
+    "e": "(February 13, 1949)"
   },
   {
     "id": 22,
-    "q": "नेपालले UNO को सदस्यता प्राप्त गर्नका लागि आवेदन दिँदा नेवारी भाषाको कुन लिपि प्रयोग गरिएको थियो?",
+    "q": "Which script of the Newari language was used when Nepal applied for membership in the UNO?",
     "o": [
-      "रञ्जना लिपि",
-      "ब्राह्मी लिपि",
-      "देवनागरी लिपि",
-      "भूजिमोल लिपि"
+      "Ranjana script",
+      "Brahmi script",
+      "Devanagari script",
+      "Bhujimol script"
     ],
     "a": 0,
-    "e": "(रञ्जना लिपि)"
+    "e": "(Ranjana script)"
   },
   {
     "id": 23,
-    "q": "नेपालले सदस्यताका लागि निवेदन दिँदा नेपालका प्रधानमन्त्री को थिए?",
+    "q": "Who was the Prime Minister of Nepal when Nepal applied for membership?",
     "o": [
-      "टंक प्रसाद आचार्य",
-      "मोहन शमशेर",
-      "जुद्ध शमशेर",
-      "पद्म शमशेर"
+      "Tanka Prasad Acharya",
+      "Mohan Shamsher",
+      "Juddha Shamsher",
+      "Padma Shamsher"
     ],
     "a": 1,
-    "e": "(मोहन शमशेर)"
+    "e": "(Mohan Shamsher)"
   },
   {
     "id": 24,
-    "q": "नेपालले कति पटक UNO को सुरक्षा परिषद्को अस्थायी सदस्यता प्राप्त गरेको छ?",
+    "q": "How many times has Nepal served as a non-permanent member of the UNO Security Council?",
     "o": [
-      "१ पटक",
-      "२ पटक",
-      "३ पटक",
-      "४ पटक"
+      "1 time",
+      "2 times",
+      "3 times",
+      "4 times"
     ],
     "a": 1,
-    "e": "(२ पटक - सन् १९६९-७० र १९८८-८९)"
+    "e": "(2 times - 1969-70 and 1988-89)"
   },
   {
     "id": 25,
-    "q": "UNO को बडापत्र हालसम्म कतिपटक संशोधन भइसकेका छन्?",
+    "q": "How many times has the UNO Charter been amended so far?",
     "o": [
-      "३ पटक",
-      "४ पटक",
-      "५ पटक",
-      "६ पटक"
+      "3 times",
+      "4 times",
+      "5 times",
+      "6 times"
     ],
     "a": 2,
-    "e": "(५ पटक)"
+    "e": "(5 times)"
   },
   {
     "id": 26,
-    "q": "'Package Deal' मा कति मुलुकलाई UNO को सदस्यता दिलाइएको थियो?",
+    "q": "How many countries were granted UNO membership under the 'Package Deal'?",
     "o": [
-      "१४",
-      "१५",
-      "१६",
-      "१०"
+      "14",
+      "15",
+      "16",
+      "10"
     ],
     "a": 2,
-    "e": "(१६) (सन् १९५५ डिसेम्बर १४ मा)"
+    "e": "(16) (On December 14, 1955)"
   },
   {
     "id": 27,
-    "q": "UNO का कतिवटा सिद्धान्तहरू रहेका छन्?",
+    "q": "How many principles does the UNO have?",
     "o": [
-      "५",
-      "६",
-      "७",
-      "८"
+      "5",
+      "6",
+      "7",
+      "8"
     ],
     "a": 2,
-    "e": "(७) (नोट: तपाईँको नोटमा ५ लेखिएको छ, तर आधिकारिक रूपमा ७ सिद्धान्त हुन्छन्)"
+    "e": "(7) (Note: Your note says 5, but officially there are 7 principles)"
   },
   {
     "id": 28,
-    "q": "UNO मा जम्मा कति आधिकारिक भाषाहरू रहेका छन्?",
+    "q": "How many official languages are there in total in the UNO?",
     "o": [
-      "४",
-      "५",
-      "६",
-      "७"
+      "4",
+      "5",
+      "6",
+      "7"
     ],
     "a": 2,
-    "e": "(६) (अं, फ्रे, रु, स्पे, चि, अ)"
+    "e": "(6) (English, French, Russian, Spanish, Chinese, Arabic)"
   },
   {
     "id": 29,
-    "q": "महासभामा प्रथम अध्यक्ष पाउल हेनरी स्पार्क हुन् भने हाल (Current) ७९ औं महासभाका अध्यक्ष को हुन्?",
+    "q": "If Paul-Henri Spaak was the first President of the General Assembly, who is the current President of the 80th General Assembly?",
     "o": [
-      "डेनिस फ्रान्सिस",
-      "फिलिमोन याङ (Philemon Yang)",
-      "अब्दुल्ला शाहिद",
-      "चाबा कोरोसी"
+      "Dennis Francis",
+      "Philemon Yang",
+      "Annalena Baerbock",
+      "Csaba Kőrösi"
     ],
-    "a": 1,
-    "e": "(फिलिमोन याङ - क्यामरुन, ७९ औं सत्रका लागि)"
+    "a": 2,
+    "e": "(Philemon Yang - Cameroon, for the 79th session)"
   },
   {
     "id": 30,
-    "q": "आठौं महासभामा विजया लक्ष्मी पण्डितले कहिले अध्यक्षता ग्रहण गरिन?",
+    "q": "When did Vijaya Lakshmi Pandit assume the presidency of the eighth General Assembly?",
     "o": [
-      "सन् १९५३",
-      "सन् १९५८",
-      "सन् १९६०",
-      "सन् १९५५"
+      "1953",
+      "1958",
+      "1960",
+      "1955"
     ],
     "a": 0,
-    "e": "(सन् १९५३)"
+    "e": "(1953)"
   },
   {
     "id": 31,
-    "q": "हालसम्म कतिवटा महिलाले UNO को महासभामा अध्यक्षता ग्रहण गरिसकेका छन्?",
+    "q": "How many women have presided over the UNO General Assembly so far?",
     "o": [
-      "३",
-      "४",
-      "५",
-      "६"
+      "3",
+      "4",
+      "5",
+      "6"
     ],
-    "a": 1,
-    "e": "(४) (विजया लक्ष्मी पण्डित, एन्जी ब्रुक्स, हया रसिद अल खलिफा, मारिया फर्नान्डा एस्पिनोसा)"
+    "a": 2,
+    "e": "(4) (Vijaya Lakshmi Pandit, Angie Brooks, Haya Rashed Al Khalifa, María Fernanda Espinosa)"
   },
   {
     "id": 32,
-    "q": "सबैभन्दा धेरै पटक सुरक्षा परिषद्को अस्थायी सदस्य हुने राष्ट्र कुन हो?",
+    "q": "Which nation has been a non-permanent member of the Security Council the highest number of times?",
     "o": [
-      "अर्जेन्टिना",
-      "ब्राजिल",
-      "जापान",
-      "भारत"
+      "Argentina",
+      "Brazil",
+      "Japan",
+      "India"
     ],
     "a": 2,
-    "e": "(जापान - १२ पटक)"
+    "e": "(Japan - 12 times)"
   },
   {
     "id": 33,
-    "q": "हालसम्म सुरक्षा परिषद्‍मा एकपटक पनि सदस्य नहुने राष्ट्रहरू कति छन्?",
+    "q": "How many nations have never been a member of the Security Council so far?",
     "o": [
-      "५० भन्दा बढी",
-      "६० भन्दा बढी",
-      "४०",
-      "३०"
+      "More than 50",
+      "More than 60",
+      "40",
+      "30"
     ],
     "a": 1,
-    "e": "(करिब ६० भन्दा बढी राष्ट्रहरू)"
+    "e": "(Around more than 60 nations)"
   },
   {
     "id": 34,
-    "q": "सबैभन्दा कम Veto प्रयोग गर्ने राष्ट्र कुन हो?",
+    "q": "Which nation has used the Veto power the least?",
     "o": [
-      "बेलायत",
-      "फ्रान्स",
-      "चीन",
-      "अमेरिका"
+      "UK",
+      "France",
+      "China",
+      "USA"
     ],
-    "a": 2,
-    "e": "(चीन)"
+    "a": 1,
+    "e": "(France) 18× "
   },
   {
     "id": 35,
-    "q": "सबैभन्दा धेरै Veto प्रयोग गर्ने राष्ट्र कुन हो?",
+    "q": "Which nation has used the Veto power the most?",
     "o": [
-      "अमेरिका",
-      "रुस (Russia)",
-      "बेलायत",
-      "चीन"
+      "USA",
+      "Russia",
+      "UK",
+      "China"
     ],
     "a": 1,
-    "e": "(रुस)"
+    "e": "(Russia) 162 ×"
   },
   {
     "id": 36,
-    "q": "आर्थिक तथा सामाजिक परिषद्‍मा (ECOSOC) कति आयोगहरू पर्दछन्?",
+    "q": "How many functional commissions fall under the Economic and Social Council (ECOSOC)?",
     "o": [
-      "८",
-      "९",
-      "१०",
-      "११"
+      "8",
+      "9",
+      "10",
+      "11"
     ],
     "a": 1,
-    "e": "(९)"
+    "e": "(9)"
   },
   {
     "id": 37,
-    "q": "आर्थिक तथा सामाजिक परिषद्‍मा (ECOSOC) नेपाल कति पटक निर्वाचित भएको छ?",
+    "q": "How many times has Nepal been elected to the Economic and Social Council (ECOSOC)?",
     "o": [
-      "२ पटक",
-      "३ पटक",
-      "४ पटक",
-      "५ पटक"
+      "2 times",
+      "3 times",
+      "4 times",
+      "5 times"
     ],
     "a": 2,
-    "e": "(४ पटक)"
+    "e": "(4 times)"
   },
   {
     "id": 38,
-    "q": "भौगोलिक क्षेत्र अन्तर्गत आर्थिक तथा सामाजिक परिषद्‍मा एसियाली देशहरूबाट कति सदस्य प्रतिनिधित्व गर्दछन्?",
+    "q": "Under the geographical distribution, how many member seats represent Asian countries in the Economic and Social Council?",
     "o": [
-      "१०",
-      "११",
-      "१३",
-      "१४"
+      "10",
+      "11",
+      "13",
+      "14"
     ],
     "a": 1,
-    "e": "(११)"
+    "e": "(11)"
   },
   {
     "id": 39,
-    "q": "जिम्मा जमानी परिषद् (Trusteeship Council) कहिले देखि निष्क्रिय छ?",
+    "q": "Since when has the Trusteeship Council been inactive?",
     "o": [
-      "सन् १९९०",
-      "सन् १९९२",
-      "सन् १९९४",
-      "सन् १९९६"
+      "1990",
+      "1992",
+      "1994",
+      "1996"
     ],
     "a": 2,
-    "e": "(सन् १९९४ नोभेम्बर १ बाट)"
+    "e": "(From November 1, 1994)"
   },
   {
     "id": 40,
-    "q": "अन्तर्राष्ट्रिय न्यायालयमा जम्मा कति न्यायाधीशहरू हुन्छन्?",
+    "q": "How many total judges are there in the International Court of Justice?",
     "o": [
-      "९",
-      "११",
-      "१३",
-      "१५"
+      "9",
+      "11",
+      "13",
+      "15"
     ],
     "a": 3,
-    "e": "(१५)"
+    "e": "(15)"
   },
   {
     "id": 41,
-    "q": "अन्तर्राष्ट्रिय न्यायालयका न्यायाधीशहरूको कार्यकाल कति वर्षको हुन्छ?",
+    "q": "What is the term of office for the judges of the International Court of Justice?",
     "o": [
-      "५ वर्ष",
-      "७ वर्ष",
-      "९ वर्ष",
-      "१० वर्ष"
+      "5 years",
+      "7 years",
+      "9 years",
+      "10 years"
     ],
     "a": 2,
-    "e": "(९ वर्ष)"
+    "e": "(9 years)"
   },
   {
     "id": 42,
-    "q": "हाल अन्तर्राष्ट्रिय न्यायालयको अध्यक्ष (President) को हुनुहुन्छ?",
+    "q": "Who is the current President of the International Court of Justice?",
     "o": [
-      "इवासावा युजी",
-      "नवाफ सलाम (Nawaf Salam)",
-      "जोन डोनोग्यु",
-      "रनी अब्राहम"
+      "Iwasawa Yuji",
+      "Nawaf Salam",
+      "Joan Donoghue",
+      "Ronny Abraham"
     ],
-    "a": 1,
-    "e": "(नवाफ सलाम - लेबनान)"
+    "a": 0,
+    "e": "japan"
   },
   {
     "id": 43,
-    "q": "महासचिवको पदावधि कति वर्षको हुन्छ?",
+    "q": "What is the term of office for the Secretary-General?",
     "o": [
-      "३ वर्ष",
-      "४ वर्ष",
-      "५ वर्ष",
-      "६ वर्ष"
+      "3 years",
+      "4 years",
+      "5 years",
+      "6 years"
     ],
     "a": 2,
-    "e": "(५ वर्ष)"
+    "e": "(5 years)"
   },
   {
     "id": 44,
-    "q": "उपमहासचिव रहने व्यवस्था कहिले देखि रहेको छ?",
+    "q": "Since when has the provision for a Deputy Secretary-General been in place?",
     "o": [
-      "सन् १९९७",
-      "सन् १९९८ जनवरी १२",
-      "सन् १९९९",
-      "सन् २०००"
+      "1997",
+      "January 12, 1998",
+      "1999",
+      "2000"
     ],
     "a": 1,
-    "e": "(सन् १९९८ देखि)"
+    "e": "(Since 1998)"
   },
   {
     "id": 45,
-    "q": "UNO मा हालसम्म कतिजना महासचिव भएका छन्?",
+    "q": "How many Secretaries-General have there been in the UNO so far?",
     "o": [
-      "८",
-      "९",
-      "१०",
-      "७"
+      "8",
+      "9",
+      "10",
+      "7"
     ],
     "a": 1,
-    "e": "(९)"
+    "e": "(9)"
   },
   {
     "id": 46,
-    "q": "UNO को पहिलो महासचिव को हुन्?",
+    "q": "Who is the first Secretary-General of the UNO?",
     "o": [
-      "ड्याग ह्यामरसोल्ड",
-      "उत्थान्त",
-      "ट्रिग्वेली (Trygve Lie)",
-      "कुर्त वाइल्डहाइम"
+      "Dag Hammarskjöld",
+      "U Thant",
+      "Trygve Lie",
+      "Kurt Waldheim"
     ],
     "a": 2,
-    "e": "(ट्रिग्वेली - नर्वे)"
+    "e": "(Trygve Lie - Norway)"
   },
   {
     "id": 47,
-    "q": "UNO को हालको (अन्तिम) महासचिव एन्टोनियो गुटेरस कुन देशका हुन्?",
+    "q": "Which country is the current (latest) UNO Secretary-General António Guterres from?",
     "o": [
-      "स्पेन",
-      "पोर्चुगल",
-      "ब्राजिल",
-      "अर्जेन्टिना"
+      "Spain",
+      "Portugal",
+      "Brazil",
+      "Argentina"
     ],
     "a": 1,
-    "e": "(पोर्चुगल)"
+    "e": "(Portugal)"
   },
   {
     "id": 48,
-    "q": "नोबेल पुरस्कार पाउने महासचिव कति जना छन्?",
+    "q": "How many Secretaries-General have received the Nobel Prize?",
     "o": [
-      "१",
-      "२",
-      "३",
-      "४"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "a": 1,
-    "e": "(२ जना - ड्याग ह्यामरसोल्ड र कोफी अन्नान)"
+    "e": "(2 persons - Dag Hammarskjöld and Kofi Annan)"
   },
   {
     "id": 49,
-    "q": "हालसम्म UNO मा कति उपमहासचिव भएका छन्?",
+    "q": "How many Deputy Secretaries-General have there been in the UNO so far?",
     "o": [
-      "४",
-      "५",
-      "६",
-      "७"
+      "4",
+      "5",
+      "6",
+      "7"
     ],
     "a": 1,
-    "e": "(५)"
+    "e": "(5)"
   },
   {
     "id": 50,
-    "q": "UNO को पहिलो उपमहासचिव को थिए?",
+    "q": "Who was the first Deputy Secretary-General of the UNO?",
     "o": [
-      "लुइस फ्रेचेटे (Louise Frechette)",
-      "आशा-रोज मिगिरो",
-      "जान इलियसन",
-      "अमिन जे. मोहम्मद"
+      "Louise Fréchette",
+      "Asha-Rose Migiro",
+      "Jan Eliasson",
+      "Amina J. Mohammed"
     ],
     "a": 0,
-    "e": "(लुइस फ्रेचेटे - क्यानडा)"
+    "e": "(Louise Fréchette - Canada)"
   },
   {
     "id": 51,
-    "q": "नेपाल भ्रमण आउने पहिलो महासचिव को हुन्?",
+    "q": "Who was the first Secretary-General to visit Nepal?",
     "o": [
-      "कुर्त वाइल्डहाइम",
-      "उत्थान्त",
-      "हाभियर पेरेज",
-      "कोफी अन्नान"
+      "Kurt Waldheim",
+      "U Thant",
+      "Javier Pérez",
+      "Kofi Annan"
     ],
     "a": 1,
-    "e": "(उत्थान्त)"
+    "e": "(U Thant)"
   },
   {
     "id": 52,
-    "q": "UNO मा सदस्यता प्राप्त नगरेका (Observer State) देशहरू कति छन्?",
+    "q": "How many countries are Observer States without full membership in the UNO?",
     "o": [
-      "१",
-      "२",
-      "३",
-      "४"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "a": 1,
-    "e": "(२ - भ्याटिकन सिटी र प्यालेस्टाइन)"
+    "e": "(2 - Vatican City and Palestine)"
   },
   {
     "id": 53,
-    "q": "UNO मा बिना सदस्यता खर्च बेहोर्ने राष्ट्र कुन हो?",
+    "q": "Which state bears expenses in the UNO without holding membership?",
     "o": [
-      "ताइवान",
-      "भ्याटिकन सिटी (Holy See)",
-      "प्यालेस्टाइन",
-      "कोसोभो"
+      "Taiwan",
+      "Vatican City (Holy See)",
+      "Palestine",
+      "Kosovo"
     ],
     "a": 1,
-    "e": "(भ्याटिकन सिटी)"
+    "e": "(Vatican City)"
   },
   {
     "id": 54,
-    "q": "सन् २०२५-२०२७ का लागि निर्धारण गरिएको बजेट स्केल अनुसार सबैभन्दा कम (०.००१%) बजेट व्यहोर्ने राष्ट्रहरू कति छन्?",
+    "q": "According to the budget scale set for 2025–2027, how many countries bear the lowest (0.001%) budget share?",
     "o": [
-      "२६",
-      "३४",
+      "26",
+      "34",
       "60+",
-      "१९"
+      "19"
     ],
     "a": 2,
-    "e": "(४९ LDC मध्ये धेरैले न्यूनतम शुल्क बुझाउँछन्)"
+    "e": "(Most of the 49 LDCs pay the minimum fee)"
   },
   {
     "id": 55,
-    "q": "UNO को बजेटमा नेपालको योगदान कति प्रतिशत रहेको छ?",
+    "q": "What is the percentage of Nepal's contribution to the UNO budget?",
     "o": [
-      "०.००६%",
-      "०.००९%",
-      "०.०१०%",
-      "०.०१२%"
+      "0.006%",
+      "0.009%",
+      "0.010%",
+      "0.012%"
     ],
     "a": 2,
-    "e": "(०.०१०%)"
+    "e": "(0.010%)"
   },
   {
     "id": 56,
-    "q": "UNO का कति विशिष्टिकृत संस्थाहरू (Specialized Agencies) रहेका छन्?",
+    "q": "How many Specialized Agencies does the UNO have?",
     "o": [
-      "१४",
-      "१५",
-      "१६",
-      "१७"
+      "14",
+      "15",
+      "16",
+      "17"
     ],
     "a": 1,
-    "e": "(१५)"
+    "e": "(15)"
   },
   {
     "id": 57,
-    "q": "हाल UNO का लागि नेपालको स्थायी प्रतिनिधि (Permanent Representative) को हुनुहुन्छ?",
+    "q": "Who is currently the Permanent Representative of Nepal to the UNO?",
     "o": [
-      "अमृत राई",
-      "लोक बहादुर थापा",
-      "दुर्गा प्रसाद भट्टराई",
-      "मधुरमण आचार्य"
+      "Amrit Rai",
+      "Lok Bahadur Thapa",
+      "Durga Prasad Bhattarai",
+      "Madhu Raman Acharya"
     ],
     "a": 1,
-    "e": "(लोक बहादुर थापा)"
+    "e": "(Lok Bahadur Thapa)"
   },
   {
     "id": 58,
-    "q": "UNO मा 'जैविक विविधता वर्ष' कहिले मनाएको थियो?",
+    "q": "When did the UNO celebrate the 'International Year of Biodiversity'?",
     "o": [
-      "सन् २००९",
-      "सन् २०१०",
-      "सन् २०११",
-      "सन् २०१२"
+      "2009",
+      "2010",
+      "2011",
+      "2012"
     ],
     "a": 1,
-    "e": "(सन् २०१०)"
+    "e": "(2010)"
   },
   {
     "id": 59,
-    "q": "UNESCO को प्रधान कार्यालय कहाँ छ?",
+    "q": "Where is the headquarters of UNESCO?",
     "o": [
-      "जेनेभा",
-      "पेरिस (फ्रान्स)",
-      "रोम",
-      "न्यूयोर्क"
+      "Geneva",
+      "Paris (France)",
+      "Rome",
+      "New York"
     ],
     "a": 1,
-    "e": "(पेरिस)"
+    "e": "(Paris)"
   },
   {
     "id": 60,
-    "q": "विश्व पर्यटन संगठन (UNWTO) को प्रधान कार्यालय कहाँ छ?",
+    "q": "Where is the headquarters of the World Tourism Organization (UNWTO)?",
     "o": [
-      "म्याड्रिड (स्पेन)",
-      "रोम (इटाली)",
-      "लण्डन (बेलायत)",
-      "जेनेभा (स्वीजरल्याण्ड)"
+      "Madrid (Spain)",
+      "Rome (Italy)",
+      "London (UK)",
+      "Geneva (Switzerland)"
     ],
     "a": 0,
-    "e": "(म्याड्रिड, स्पेन)"
+    "e": "(Madrid, Spain)"
   },
   {
     "id": 61,
-    "q": "अन्तर्राष्ट्रिय श्रम संगठन (ILO) को स्थापना कहिले भएको हो?",
+    "q": "When was the International Labour Organization (ILO) established?",
     "o": [
-      "सन् १९१९ अप्रिल ११",
-      "सन् १९४५ अक्टोबर २४",
-      "सन् १९४६",
-      "सन् १९४८"
+      "April 11, 1919",
+      "October 24, 1945",
+      "1946",
+      "1948"
     ],
     "a": 0,
-    "e": "(सन् १९१९ अप्रिल ११)"
+    "e": "(April 11, 1919)"
   },
   {
     "id": 62,
-    "q": "खाद्य तथा कृषि संगठन (FAO) को स्थापना कहिले भएको हो?",
+    "q": "When was the Food and Agriculture Organization (FAO) established?",
     "o": [
-      "सन् १९४५ अक्टोबर १६",
-      "सन् १९४८ अप्रिल ७",
-      "सन् १९४६ नोभेम्बर ४",
-      "सन् १९५०"
+      "October 16, 1945",
+      "April 7, 1948",
+      "November 4, 1946",
+      "1950"
     ],
     "a": 0,
-    "e": "(सन् १९४५ अक्टोबर १६)"
+    "e": "(October 16, 1945)"
   },
   {
     "id": 63,
-    "q": "UNESCO को स्थापना कहिले भएको हो?",
+    "q": "When was UNESCO established?",
     "o": [
-      "सन् १९४५ नोभेम्बर १६, ",
-      "सन् १९४६ नोभेम्बर ४",
-      "सन् १९४७",
-      "सन् १९४८"
+      "November 16, 1945",
+      "November 4, 1946",
+      "1947",
+      "1948"
     ],
     "a": 0,
-    "e": "founding/signing date of the constitution as the establishment date. is November 16, 1945"
+    "e": "(Founding/signing date of the constitution as the establishment date is November 16, 1945)"
   },
   {
     "id": 64,
-    "q": "विश्व स्वास्थ्य संगठन (WHO) को स्थापना कहिले भएको हो?",
+    "q": "When was the World Health Organization (WHO) established?",
     "o": [
-      "सन् १९४८ अप्रिल ७",
-      "सन् १९४५",
-      "सन् १९१९",
-      "सन् १९५०"
+      "April 7, 1948",
+      "1945",
+      "1919",
+      "1950"
     ],
     "a": 0,
-    "e": "(सन् १९४८ अप्रिल ७)"
+    "e": "(April 7, 1948)"
   },
   {
     "id": 65,
-    "q": "विश्व बैंक (World Bank) को स्थापना कहिले भएको हो?",
+    "q": "When was the World Bank established?",
     "o": [
-      "सन् १९४४",
-      "सन् १९४५ डिसेम्बर २७",
-      "सन् १९४६",
-      "सन् १९४८"
+      "1944",
+      "December 27, 1945",
+      "1946",
+      "1948"
     ],
     "a": 1,
-    "e": "(सन् १९४५ डिसेम्बर २७)"
+    "e": "(December 27, 1945)"
   },
   {
     "id": 66,
-    "q": "WHO मा नेपालले सदस्यता कहिले प्राप्त गर्यो?",
+    "q": "When did Nepal obtain membership in WHO?",
     "o": [
-      "सन् १९५३ मे १०",
-      "सन् १९५४ मे १०",
-      "सन् १९५४ सेप्टेम्बर २",
-      "सन् १९५६"
+      "May 10, 1953",
+      "May 10, 1954",
+      "September 2, 1954",
+      "1956"
     ],
     "a": 2,
-    "e": "(सन् १९५४ सेप्टेम्बर २)"
+    "e": "(September 2, 1954)"
   },
   {
     "id": 67,
-    "q": "ILO मा नेपालले सदस्यता कहिले प्राप्त गर्यो?",
+    "q": "When did Nepal obtain membership in the ILO?",
     "o": [
-      "सन् १९६६ अगस्ट ३०",
-      "सन् १९६०",
-      "सन् १९७०",
-      "सन् १९५५"
+      "August 30, 1966",
+      "1960",
+      "1970",
+      "1955"
     ],
     "a": 0,
-    "e": "(सन् १९६६ अगस्ट ३०)"
+    "e": "(August 30, 1966)"
   },
   {
     "id": 68,
-    "q": "UNESCO मा नेपालले सदस्यता कहिले प्राप्त गर्यो?",
+    "q": "When did Nepal obtain membership in UNESCO?",
     "o": [
-      "सन् १९५३ मे १",
-      "सन् १९५५",
-      "सन् १९६०",
-      "सन् १९५२"
+      "May 1, 1953",
+      "1955",
+      "1960",
+      "1952"
     ],
     "a": 0,
-    "e": "(सन् १९५३ मे १)"
+    "e": "(May 1, 1953)"
   },
   {
     "id": 69,
-    "q": "सबैभन्दा धेरै पटक Nobel पुरस्कार पाउने संस्था कुन हो?",
+    "q": "Which organization has received the Nobel Prize the highest number of times?",
     "o": [
       "ILO",
       "UNHCR",
@@ -829,19 +829,19 @@
   },
   {
     "id": 70,
-    "q": "अन्तर्राष्ट्रिय भ्रष्टाचार विरुद्धको दिवस (Anti-Corruption Day) कहिले मनाइन्छ?",
+    "q": "When is International Anti-Corruption Day celebrated?",
     "o": [
-      "डिसेम्बर ५",
-      "डिसेम्बर ९",
-      "डिसेम्बर १०",
-      "डिसेम्बर १२"
+      "December 5",
+      "December 9",
+      "December 10",
+      "December 12"
     ],
     "a": 1,
-    "e": "(डिसेम्बर ९)"
+    "e": "(December 9)"
   },
   {
     "id": 71,
-    "q": "नेपालले पहिलो पटक अन्तर्राष्ट्रिय संगठनमा सहभागिता कुन संगठनबाट जनाएको थियो?",
+    "q": "Through which organization did Nepal mark its first participation in an international organization?",
     "o": [
       "UNO",
       "SAARC",
@@ -853,38 +853,38 @@
   },
   {
     "id": 72,
-    "q": "संयुक्त राष्ट्र संघको सेवामा 'सहायक महासचिव' (Assistant Secretary-General - ASG) को पदमा पुग्ने पहिलो नेपाली को हुन्?",
+    "q": "Who is the first Nepali to reach the position of 'Assistant Secretary-General' (ASG) in the service of the United Nations?",
     "o": [
-      "ऋषिकेश शाह",
-      "कुलचन्द्र गौतम",
-      "ज्ञानचन्द्र आचार्य",
-      "यदुनाथ खनाल"
+      "Rishikesh Shaha",
+      "Kul Chandra Gautam",
+      "Gyan Chandra Acharya",
+      "Yadu Nath Khanal"
     ],
     "a": 1,
-    "e": "(कुलचन्द्र गौतम)"
+    "e": "(Kul Chandra Gautam)"
   },
   {
     "id": 73,
-    "q": "संयुक्त राष्ट्र संघको प्रशासनिक संरचनामा हालसम्मकै सबैभन्दा उच्च पद 'उप-महासचिव' (Under-Secretary-General - USG) मा पुग्ने नेपाली को हुन्?",
+    "q": "Who is the Nepali to reach the position of 'Under-Secretary-General' (USG), which is the highest post held by a Nepali in the administrative structure of the United Nations so far?",
     "o": [
-      "कुलचन्द्र गौतम",
-      "डा. भेष बहादुर थापा",
-      "ज्ञानचन्द्र आचार्य",
-      "दुर्गा प्रसाद भट्टराई"
+      "Kul Chandra Gautam",
+      "Dr. Bhekh Bahadur Thapa",
+      "Gyan Chandra Acharya",
+      "Durga Prasad Bhattarai"
     ],
     "a": 2,
-    "e": "(ज्ञानचन्द्र आचार्य)"
+    "e": "(Gyan Chandra Acharya)"
   },
   {
     "id": 74,
-    "q": "UNO ले सन् २०२४ लाई कुन अन्तर्राष्ट्रिय वर्षको रूपमा मनाउँदैछ?",
+    "q": "As which international year is the UNO celebrating 2024?",
     "o": [
-      "अन्तर्राष्ट्रिय कोदो वर्ष (International Year of Millets)",
-      "अन्तर्राष्ट्रिय क्यामेलिड्स वर्ष (International Year of Camelids)",
-      "अन्तर्राष्ट्रिय गेडागुडी वर्ष",
-      "अन्तर्राष्ट्रिय ग्लेसियर संरक्षण वर्ष"
+      "International Year of Millets",
+      "International Year of Camelids",
+      "International Year of Pulses",
+      "International Year of Glaciers' Preservation"
     ],
     "a": 1,
     "e": "(International Year of Camelids)"
   }
-    ]
+]

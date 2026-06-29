@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,16 +356,15 @@
             { id: "2.11", title: "मानवीय मूल्य मान्यता, नागरिक कर्तव्य र अनुशासन" },
             { id: "2.12", title: "Extra Preparation" },
             { id: "2.13", title: "Revision" },
-                { id: "2.14", title: "भ्रष्टाचार न्यूनीकरण ऐन २०५९" },
-        { id: "2.15", title: "स्थानीय सरकार सञ्चालन ऐन २०७४" },
-        { id: "2.16", title: "मुख्य मन्त्रालय तथा मन्त्रिपरिषद्को कार्यालय " },
+            { id: "2.14", title: "भ्रष्टाचार न्यूनीकरण ऐन २०५९" },
+            { id: "2.15", title: "स्थानीय सरकार सञ्चालन ऐन २०७४" },
+            { id: "2.16", title: "मुख्य मन्त्रालय तथा मन्त्रिपरिषद्को कार्यालय " },
             { id: "2.17", title: "अख्तियार दुरुपयोग अनुसन्धन आयोग र लोकसेवा आयोग" },
             { id: "2.18", title: "गण्डकी प्रदेश निजामती सेवा ऐन र नियमावली " },
             { id: "2.19", title: "सार्वजनिक खरिद ऐन र नियमावली " },
             { id: "2.20", title: "एकीकृत कार्यालय व्यवस्थापन प्रणालीको प्रयोग " },
             { id: "2.21", title: "लैङ्गिक समानता, अपाङ्गता तथा सामाजिक समावेशीकरण (GEDSI) सम्बन्धी सामान्य जानकारी " }
-            
-            ];
+        ];
 
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         const AudioEngine = {
@@ -398,8 +396,8 @@
             state: {
                 user: { name: "", qual: "", pic: "" },
                 isPremium: false, currentTopicId: null, quizSet: [], 
-                currentIndex: 0, score: 0, isMuted: false, mistakes: {}, isMistakeMode: false,
-                answered: [] // Tracks answered questions for grid coloring
+                currentIndex: 0, currentCorrectIndex: null, score: 0, isMuted: false, mistakes: {}, isMistakeMode: false,
+                answered: []
             },
 
             init: function() {
@@ -514,10 +512,23 @@
                 const optsDiv = document.getElementById('options-container'); optsDiv.innerHTML = "";
                 document.getElementById('explanation-box').style.display = 'none';
                 document.getElementById('btn-next').classList.add('hidden');
+                
                 const labels = ['A', 'B', 'C', 'D'];
-                q.o.forEach((opt, index) => {
+                
+                // NEW LOGIC: Map options with their original index, then shuffle
+                let optionsWithIndex = q.o.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+                for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+                }
+                
+                // Track where the original correct answer (q.a) ended up after the shuffle
+                this.state.currentCorrectIndex = optionsWithIndex.findIndex(opt => opt.originalIndex === q.a);
+
+                optionsWithIndex.forEach((optObj, index) => {
                     const row = document.createElement('div'); row.className = 'option-row';
-                    row.innerHTML = `<span class="opt-letter">${labels[index]}</span> <span>${opt}</span>`;
+                    row.innerHTML = `<span class="opt-letter">${labels[index]}</span> <span>${optObj.text}</span>`;
+                    // Send the new visual index to handleAnswer
                     row.onclick = () => this.handleAnswer(index, row); optsDiv.appendChild(row);
                 });
             },
@@ -525,17 +536,45 @@
             handleAnswer: function(selectedIndex, rowElement) {
                 const allRows = document.querySelectorAll('.option-row');
                 allRows.forEach(r => r.style.pointerEvents = 'none');
-                this.state.answered[this.state.currentIndex] = true; // Mark as answered for the grid
+                this.state.answered[this.state.currentIndex] = true; 
                 const topicId = this.state.currentTopicId; const q = this.state.quizSet[this.state.currentIndex];
-                const isCorrect = selectedIndex === q.a;
+                
+                // Check if they clicked the new shuffled location of the correct answer
+                const isCorrect = selectedIndex === this.state.currentCorrectIndex;
+                
                 if (!this.state.mistakes[topicId]) this.state.mistakes[topicId] = [];
+                
                 if (isCorrect) {
                     rowElement.classList.add('correct'); this.state.score++; AudioEngine.correct();
-                    if (this.state.isMistakeMode) { this.state.mistakes[topicId] = this.state.mistakes[topicId].filter(item => item.q !== q.q); localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes)); }
+                    
+                    // NEW MISTAKE LOGIC: Correct path
+                    if (this.state.isMistakeMode) {
+                        let mistakeEntry = this.state.mistakes[topicId].find(item => item.q === q.q);
+                        if (mistakeEntry) {
+                            mistakeEntry.correctCount = (mistakeEntry.correctCount || 0) + 1; // Increment counter
+                            if (mistakeEntry.correctCount >= 4) {
+                                // Only remove it if they've answered correctly 4 times
+                                this.state.mistakes[topicId] = this.state.mistakes[topicId].filter(item => item.q !== q.q);
+                            }
+                            localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
+                        }
+                    }
                 } else {
-                    rowElement.classList.add('wrong'); allRows[q.a].classList.add('correct'); AudioEngine.wrong();
-                    if (!this.state.mistakes[topicId].find(item => item.q === q.q)) { this.state.mistakes[topicId].push(q); localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes)); }
+                    // Highlight the correct shuffled row
+                    rowElement.classList.add('wrong'); allRows[this.state.currentCorrectIndex].classList.add('correct'); AudioEngine.wrong();
+                    
+                    // NEW MISTAKE LOGIC: Incorrect path
+                    let mistakeEntry = this.state.mistakes[topicId].find(item => item.q === q.q);
+                    if (!mistakeEntry) {
+                        // First time making the mistake: Add it and set count to 0
+                        this.state.mistakes[topicId].push({ ...q, correctCount: 0 });
+                    } else {
+                        // If they get it wrong again in the Mistake Bank, reset the counter to 0!
+                        mistakeEntry.correctCount = 0; 
+                    }
+                    localStorage.setItem('loksewa_mistakes', JSON.stringify(this.state.mistakes));
                 }
+                
                 if (q.e) { const exp = document.getElementById('explanation-box'); exp.innerText = `💡 Info: ${q.e}`; exp.style.display = 'block'; }
                 document.getElementById('btn-next').classList.remove('hidden');
                 if (this.state.currentIndex === this.state.quizSet.length - 1) { document.getElementById('btn-next').innerText = "Finish Exam 🎉"; } 
@@ -559,7 +598,6 @@
                 document.getElementById('result-advice').innerText = percentage >= 80 ? "Outstanding! Keep it up." : "Good effort. Focus on mistakes.";
             },
 
-            // --- SKIP GRID NAVIGATION ---
             openSkipGrid: function() {
                 const container = document.getElementById('skip-grid-container');
                 container.innerHTML = ''; const total = this.state.quizSet.length;
@@ -594,29 +632,21 @@
 
         window.onload = () => app.init();
 
-        // --- KEYBOARD EVENT LISTENER ---
         document.addEventListener('keydown', function(event) {
             const quizScreen = document.getElementById('screen-quiz');
             const skipModal = document.getElementById('skip-modal');
-            
-            // Only capture keystrokes if the user is actively on the quiz screen and not navigating the skip modal
             if (!quizScreen.classList.contains('active') || skipModal.classList.contains('active')) return;
 
             const nextBtn = document.getElementById('btn-next');
-            const isAnswered = !nextBtn.classList.contains('hidden'); // If Next Button is visible, question is answered
+            const isAnswered = !nextBtn.classList.contains('hidden');
 
             if (event.key === '0') {
-                if (isAnswered) {
-                    app.nextQuestion();
-                }
+                if (isAnswered) { app.nextQuestion(); }
             } else if (['1', '2', '3', '4'].includes(event.key)) {
                 if (!isAnswered) {
                     const options = document.querySelectorAll('#options-container .option-row');
-                    const index = parseInt(event.key) - 1; // '1' becomes 0, '2' becomes 1, etc.
-                    
-                    if (options[index]) {
-                        options[index].click(); // Simulate user clicking the specific option
-                    }
+                    const index = parseInt(event.key) - 1; 
+                    if (options[index]) { options[index].click(); }
                 }
             }
         });
@@ -629,4 +659,3 @@
 
 </body>
 </html>
-
